@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HamburgerContainer = styled.button`
-  background: grey;
+  background: transparent;
   position: fixed;
   cursor: pointer;
   right: 100px;
@@ -19,9 +19,12 @@ const HamburgerContainer = styled.button`
   }
 `;
 
-function Hamburger({ color, navActive, toggleActive }) {
+function Hamburger({ navActive, toggleActive }) {
   return (
-    <HamburgerContainer onClick={() => toggleActive(!navActive)}>
+    <HamburgerContainer
+      navActive={navActive}
+      onClick={() => toggleActive(!navActive)}
+    >
       <svg
         id="hamburger"
         width="50px"

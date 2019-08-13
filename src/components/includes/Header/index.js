@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import routes from '../../../data/routes';
+import { routes } from '../../../data/routes';
 import MainLogo from './MainLogo.js';
 import Hamburger from './Hamburger.js';
 
@@ -43,6 +43,7 @@ const NavigationOverlay = styled.div`
       }
     }
   }
+
   footer {
     bottom: 0;
     width: 100%;
@@ -80,7 +81,9 @@ function Header() {
         <ul>
           {routes.map(route => (
             <li key={route.href.replace('/', '')}>
-              <Link to={route.href}>{route.title}</Link>
+              <Link to={route.href} onClick={() => toggleActive(!navActive)}>
+                {route.title}
+              </Link>
             </li>
           ))}
         </ul>

@@ -15,6 +15,15 @@ const Typographystyles = createGlobalStyle`
   .underline {
     text-decoration: underline;
   }
+
+  a {
+    &:link,
+    &:active,
+    &:focus,
+    &:visited {
+      color: inherited;
+    }
+  }
 `;
 
 export default Typographystyles;

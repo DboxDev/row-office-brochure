@@ -3,10 +3,11 @@ import {
   Facts,
   Maps,
   Availability,
-  Contact
+  Contact,
+  Legal
 } from '../components/pages/_module';
 
-export const routes = [
+const routes = [
   {
     title: 'The Pitch',
     href: '/',
@@ -34,4 +35,12 @@ export const routes = [
   }
 ];
 
-export default routes;
+const secondaryRoutes = [
+  {
+    title: 'Legal',
+    href: '/legal',
+    component: Legal
+  }
+];
+
+export { routes, secondaryRoutes };

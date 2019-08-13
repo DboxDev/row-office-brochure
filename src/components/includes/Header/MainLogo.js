@@ -14,7 +14,6 @@ const MainLogoContainer = styled.svg`
 `;
 
 function MainLogo({ navActive }) {
-  console.log(navActive);
   return (
     <MainLogoContainer
       xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { routes } from './data/routes';
+import { routes, secondaryRoutes } from './data/routes';
 
 import { Header } from './components/includes/_module';
 import { GlobalStyles, TypographyStyles } from './styles/global/_module';
@@ -13,9 +13,12 @@ function App() {
       <GlobalStyles />
       <TypographyStyles />
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Switch>
           {routes.map(route => (
+            <Route exact path={route.href} component={route.component} />
+          ))}
+          {secondaryRoutes.map(route => (
             <Route exact path={route.href} component={route.component} />
           ))}
         </Switch>
