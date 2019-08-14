@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { routes } from '../../../data/routes';
+import { routes } from 'data/routes';
+
+import { BackgroundStyles } from 'styles/global/_module';
 import MainLogo from './MainLogo.js';
 import Hamburger from './Hamburger.js';
 
@@ -13,7 +15,7 @@ const NavigationOverlay = styled.div`
   height: 100%;
   width: 100%;
   background: black;
-  transition: all 500ms ease;
+  transition: all 300ms ease;
   opacity: ${props => (props.navActive ? 1 : 0)};
   visibility: ${props => (props.navActive ? 'visible' : 'hidden')};
   display: flex;
@@ -68,37 +70,50 @@ const NavigationOverlay = styled.div`
   }
 `;
 
-function Header() {
+const backgroundColorMap = {
+  home: {
+    backgroundColor: '#FFF'
+  },
+  facts: {
+    backgroundColor: '#000'
+  }
+};
+
+function Header(props) {
+  let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
+  const { backgroundColor } = backgroundColorMap[route];
+
   const [navActive, toggleActive] = useState(false);
 
   return (
     <React.Fragment>
+      <BackgroundStyles backgroundColor={backgroundColor} />
       <header>
-        <MainLogo navActive={navActive} />
-        <Hamburger navActive={navActive} toggleActive={toggleActive} />
-      </header>
-      <NavigationOverlay navActive={navActive}>
-        <ul>
-          {routes.map(route => (
-            <li key={route.href.replace('/', '')}>
-              <Link to={route.href} onClick={() => toggleActive(!navActive)}>
-                {route.title}
+        <MainLogo backgroundColor={backgroundColor} navActive={navActive} />
+        <Hamburger backgroundColor={backgroundColor} navActive={navActive} toggleActive={toggleActive} />
+        <NavigationOverlay navActive={navActive}>
+          <ul>
+            {routes.map(route => (
+              <li key={route.href.replace('/', '')}>
+                <Link to={route.href} onClick={() => toggleActive(!navActive)}>
+                  {route.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <footer>
+            <p className="underline legal-link">
+              <Link to="/legal" onClick={() => toggleActive(!navActive)}>
+                LEGAL
               </Link>
-            </li>
-          ))}
-        </ul>
-        <footer>
-          <p className="underline legal-link">
-            <Link to="/legal" onClick={() => toggleActive(!navActive)}>
-              LEGAL
-            </Link>
-          </p>
-          <p>WWW.ROWDTLA.COM</p>
-          <p>&copy; ROW DTLA</p>
-        </footer>
-      </NavigationOverlay>
+            </p>
+            <p>WWW.ROWDTLA.COM</p>
+            <p>&copy; ROW DTLA</p>
+          </footer>
+        </NavigationOverlay>
+      </header>
     </React.Fragment>
   );
 }
 
-export default Header;
+export default withRouter(Header);
