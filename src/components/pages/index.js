@@ -5,6 +5,7 @@ import Swiper from 'react-id-swiper';
 
 import { mediaMin } from '../../styles/MediaQueries';
 import ResponsiveImage from '../utils/responsive-image';
+import { brandGrid } from '../../data/home';
 
 const HorizontalContainer = styled.div`
   height: 100vh;
@@ -30,6 +31,7 @@ const ScrollColumn = styled.div`
   padding: 10%;
   opacity: ${props => (props.revealed ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
+  ${props => (props['space-between'] ? 'justify-content: space-between;' : '')}
 `;
 
 const BlackSlide = styled.div`
@@ -63,9 +65,9 @@ const BlackSlide = styled.div`
 `;
 
 const BigText = styled.h3`
-  margin: 5% 0 0 0;
   font-size: 55px;
   color: ${props => (props.black ? '#000' : '#5a5a5a')};
+  ${props => (props['margin-top'] ? 'margin-top: auto;' : 'margin-top: 5%;')}
 `;
 
 const MedText = styled.h3`
@@ -97,6 +99,52 @@ const PhotoRow = styled.div`
     }
   }
 `;
+
+const BrandRow = styled.div`
+  height: 30%
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const BrandItem = styled.div`
+  position: relative;
+  width: 30%;
+  .logo {
+    position: absolute;
+    left: 0;
+    height: 50%;
+    width: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .background {
+    height: 100%;
+    z-index: -1;
+  }
+`;
+
+const generateBrandGrid = () => {
+  return brandGrid.map(row => {
+    return (
+      <BrandRow>
+        {row.map(el => {
+          return (
+            <BrandItem>
+              <img src={el.logo} alt={`${el.alt} logo`} className="logo" />
+              <ResponsiveImage
+                srcPath={el.background}
+                imgAlt={el.alt}
+                imgClass="background"
+              />
+            </BrandItem>
+          );
+        })}
+      </BrandRow>
+    );
+  });
+};
 
 const Index = () => {
   const [swiper, setSwiper] = useState(null);
@@ -148,7 +196,10 @@ const Index = () => {
         </BlackSlide>
         <ScrollColumn revealed={revealed >= 1}>
           <PhotoRow>
-            <ResponsiveImage srcPath="/images/home/row_1" imgAlt="test" />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_1"
+              imgAlt="test"
+            />
           </PhotoRow>
           <BigText black>
             Welcome to
@@ -158,8 +209,14 @@ const Index = () => {
         </ScrollColumn>
         <ScrollColumn revealed={revealed >= 2}>
           <PhotoRow>
-            <ResponsiveImage srcPath="/images/home/row_2" imgAlt="test" />
-            <ResponsiveImage srcPath="/images/home/row_3" imgAlt="test" />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_2"
+              imgAlt="test"
+            />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_3"
+              imgAlt="test"
+            />
           </PhotoRow>
           <BigText>
             100 years of history and
@@ -182,20 +239,38 @@ const Index = () => {
         </ScrollColumn>
         <ScrollColumn revealed={revealed >= 4}>
           <PhotoRow grid>
-            <ResponsiveImage srcPath="/images/home/row_4" imgAlt="test" />
-            <ResponsiveImage srcPath="/images/home/row_5" imgAlt="test" />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_4"
+              imgAlt="test"
+            />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_5"
+              imgAlt="test"
+            />
           </PhotoRow>
           <PhotoRow grid>
-            <ResponsiveImage srcPath="/images/home/row_6" imgAlt="test" />
-            <ResponsiveImage srcPath="/images/home/row_7" imgAlt="test" />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_6"
+              imgAlt="test"
+            />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_7"
+              imgAlt="test"
+            />
           </PhotoRow>
         </ScrollColumn>
         <ScrollColumn revealed={revealed >= 5}>
-          <ResponsiveImage srcPath="/images/home/row_1" imgAlt="test" />
+          <ResponsiveImage
+            srcPath="/images/home/section_1/row_1"
+            imgAlt="test"
+          />
         </ScrollColumn>
         <ScrollColumn revealed={revealed >= 6}>
           <PhotoRow>
-            <ResponsiveImage srcPath="/images/home/row_8" imgAlt="test" />
+            <ResponsiveImage
+              srcPath="/images/home/section_1/row_8"
+              imgAlt="test"
+            />
           </PhotoRow>
           <MedText margin-top>
             Authentic experiences in a district
@@ -207,7 +282,13 @@ const Index = () => {
             <br /> creativity in every aspect
           </MedText>
         </ScrollColumn>
-        <BlackSlide revealed={revealed >= 7}>
+        <ScrollColumn revealed={revealed >= 7}>
+          <ResponsiveImage
+            srcPath="/images/home/section_1/row_9"
+            imgAlt="test"
+          />
+        </ScrollColumn>
+        <BlackSlide revealed={revealed >= 8}>
           <p className="quote">
             "In Downtown Los Angeles, ROW DTLA has continued to take shape,
             transforming 32 acres into an all-encompassing iconic destination.
@@ -217,6 +298,80 @@ const Index = () => {
           </p>
           <span className="credit">LA MAGAZINE</span>
         </BlackSlide>
+        <ScrollColumn revealed={revealed >= 9}>
+          <PhotoRow>
+            <ResponsiveImage
+              srcPath="/images/home/section_2/row_1"
+              imgAlt="test"
+            />
+          </PhotoRow>
+          <BigText black>
+            A vibrant district that
+            <br /> pushes the boundaries
+            <br /> between work, culture
+            <br />
+            and play
+          </BigText>
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 10} space-between>
+          {generateBrandGrid()}
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 11}>
+          <ResponsiveImage
+            srcPath="/images/home/section_2/row_2"
+            imgAlt="test"
+          />
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 12}>
+          <BigText margin-top>
+            Elevate your routine with the
+            <br /> essentials—dining, working,
+            <br /> exercising, pampering—always
+            <br /> within reach
+          </BigText>
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 13}>
+          <PhotoRow grid>
+            <ResponsiveImage
+              srcPath="/images/home/section_2/row_3"
+              imgAlt="test"
+            />
+            <ResponsiveImage
+              srcPath="/images/home/section_2/row_4"
+              imgAlt="test"
+            />
+          </PhotoRow>
+          <PhotoRow grid>
+            <ResponsiveImage
+              srcPath="/images/home/section_2/row_5"
+              imgAlt="test"
+            />
+            <ResponsiveImage
+              srcPath="/images/home/section_2/row_6"
+              imgAlt="test"
+            />
+          </PhotoRow>
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 14}>
+          <MedText margin-top>
+            ROW DTLA strives to
+            <br /> bring people together,
+            <br /> through workshops,
+            <br />
+            activated events and social
+            <br /> gatherings that pave the
+            <br /> way for a community that
+            <br /> continues to grow, adapt,
+            <br /> and change day by day in a<br />
+            truly meaningful way
+          </MedText>
+        </ScrollColumn>
+        <ScrollColumn revealed={revealed >= 14}>
+          <ResponsiveImage
+            srcPath="/images/home/section_2/row_7"
+            imgAlt="test"
+          />
+        </ScrollColumn>
       </Swiper>
     </HorizontalContainer>
   );
