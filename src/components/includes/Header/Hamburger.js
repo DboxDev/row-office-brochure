@@ -12,7 +12,7 @@ const HamburgerContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
   border: 0;
   g {
     transition: fill 300ms ease;

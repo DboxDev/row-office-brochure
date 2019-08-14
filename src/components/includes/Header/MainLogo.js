@@ -7,7 +7,7 @@ const MainLogoWrapper = styled.svg`
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 3;
   path,
   polygon {
     transition: fill 300ms ease;

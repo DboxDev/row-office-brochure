@@ -6,7 +6,7 @@ const Typographystyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-  li, p, button {
+  li, p, button, tr, td {
     font-family: 'Apercu', 'sans-serif';
     font-weight: 300;
     font-style: normal;
