@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes, secondaryRoutes } from 'data/routes';
 
-import { Header } from 'components/includes/_module';
+import Header from 'components/includes/header';
 import { ContainerStyles, GlobalStyles, TypographyStyles } from 'styles/global/_module';
 
 import 'fonts.scss';
