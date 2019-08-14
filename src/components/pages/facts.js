@@ -65,13 +65,13 @@ const factsArray = [
 
 function Facts() {
   return (
-    <FactContainer className="fact-container">
-      <h1 className="title">The Facts</h1>
-      {factsArray.map(factArray => {
+    <FactContainer className="container">
+      <h1 className="page-title">The Facts</h1>
+      {factsArray.map((factArray, arrayIdx) => {
         return (
-          <ul>
-            {factArray.map(fact => (
-              <li>{fact}</li>
+          <ul key={`fact-section-${arrayIdx}`}>
+            {factArray.map((fact, factIdx) => (
+              <li key={`array-${arrayIdx}-fact-${factIdx}`}>{fact}</li>
             ))}
           </ul>
         );

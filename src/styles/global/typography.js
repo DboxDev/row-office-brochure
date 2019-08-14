@@ -6,7 +6,7 @@ const Typographystyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-  li, p {
+  li, p, button {
     font-family: 'Apercu', 'sans-serif';
     font-weight: 300;
     font-style: normal;
@@ -23,6 +23,11 @@ const Typographystyles = createGlobalStyle`
     &:visited {
       color: inherited;
     }
+  }
+
+  .page-title {
+    font-size: 4rem;
+    font-weight: 500;
   }
 `;
 
