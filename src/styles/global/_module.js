@@ -1,6 +1,6 @@
 import BackgroundStyles from './background';
 import ContainerStyles from './containers';
-import RootStyles from './root';
 import TypographyStyles from './typography';
+import RootStyles from './root';
 
 export { BackgroundStyles, ContainerStyles, RootStyles, TypographyStyles };
