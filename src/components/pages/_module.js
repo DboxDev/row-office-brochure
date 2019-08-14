@@ -1,4 +1,4 @@
-import Index from './index';
+import Index from './home';
 import Facts from './facts';
 import Maps from './maps';
 import Availability from './availability';

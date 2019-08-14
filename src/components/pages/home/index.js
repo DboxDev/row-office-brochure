@@ -3,8 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
-import { mediaMin } from '../../styles/MediaQueries';
-import { SectionOne, SectionTwo, SectionThree } from '../includes/home/_module';
+import { SectionOne, SectionTwo, SectionThree } from 'components/pages/home/components/_module';
 
 const HorizontalContainer = styled.div`
   height: 100vh;

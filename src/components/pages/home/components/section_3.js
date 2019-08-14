@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { keyFacts, featuredIn } from '../../../data/home';
-import ResponsiveImage from '../../utils/responsive-image';
+import { keyFacts, featuredIn } from '../../../../data/home';
+import ResponsiveImage from '../../../utils/responsive-image';
 import {
   ScrollColumn,
   BlackSlide,
@@ -53,20 +53,15 @@ const SectionThree = ({ revealed }) => {
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed={revealed >= 15}>
         <p className="quote">
-          "The thing that’s unique about the ROW is that it’s this incredible
-          modern space, but it’s also really historied. The buildings are over
-          100 years old and so when you’re walking through campus, there’s not
-          really many places in LA where you can really feel like you’re a part
-          of LA’s history."
+          "The thing that’s unique about the ROW is that it’s this incredible modern space, but it’s also really
+          historied. The buildings are over 100 years old and so when you’re walking through campus, there’s not really
+          many places in LA where you can really feel like you’re a part of LA’s history."
         </p>
         <span className="credit">RACHEL MADDEN, WC + A</span>
       </BlackSlide>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 16}>
         <PhotoRow>
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_1"
-            imgAlt="test"
-          />
+          <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
         </PhotoRow>
         <BigText black>
           Our non-traditional
@@ -87,24 +82,12 @@ const SectionThree = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
         <PhotoRow grid>
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_2"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_3"
-            imgAlt="test"
-          />
+          <ResponsiveImage srcPath="/images/home/section_3/row_2" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_3" imgAlt="test" />
         </PhotoRow>
         <PhotoRow grid>
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_4"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_5"
-            imgAlt="test"
-          />
+          <ResponsiveImage srcPath="/images/home/section_3/row_4" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_5" imgAlt="test" />
         </PhotoRow>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
@@ -134,52 +117,26 @@ const SectionThree = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 22}>
         <PhotoRow grid>
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_6"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_7"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_8"
-            imgAlt="test"
-          />
+          <ResponsiveImage srcPath="/images/home/section_3/row_6" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_7" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_8" imgAlt="test" />
         </PhotoRow>
         <PhotoRow grid>
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_9"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_10"
-            imgAlt="test"
-          />
-          <ResponsiveImage
-            srcPath="/images/home/section_3/row_11"
-            imgAlt="test"
-          />
+          <ResponsiveImage srcPath="/images/home/section_3/row_9" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_10" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_11" imgAlt="test" />
         </PhotoRow>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 22}>
         <BigText margin-top>Key Facts</BigText>
       </ScrollColumn>
-      <ScrollColumn
-        className="swiper-slide"
-        revealed={revealed >= 23}
-        space-between
-      >
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 23} space-between>
         {generateFacts()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 24}>
         <BigText margin-top>Featured In</BigText>
       </ScrollColumn>
-      <ScrollColumn
-        className="swiper-slide"
-        revealed={revealed >= 25}
-        space-between
-      >
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 25} space-between>
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 25}>
