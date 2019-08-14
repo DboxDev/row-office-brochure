@@ -2,7 +2,7 @@ import React from 'react';
 
 import { brandGrid } from 'data/home';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem } from './home_components';
+import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem } from './styles';
 
 const generateBrandGrid = () => {
   return brandGrid.map(row => {
