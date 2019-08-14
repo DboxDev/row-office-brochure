@@ -6,14 +6,7 @@ const ResponsiveImg = styled.img`
   max-height: 100%;
 `;
 
-const ResponsiveImage = ({
-  ariaHidden,
-  srcPath,
-  imgClass,
-  imgAlt,
-  onClickProp,
-  refProp
-}) => {
+function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp }) {
   return (
     <ResponsiveImg
       src={`${srcPath}.jpg`}
@@ -25,6 +18,6 @@ const ResponsiveImage = ({
       aria-hidden={ariaHidden === undefined ? false : ariaHidden}
     />
   );
-};
+}
 
 export default ResponsiveImage;
