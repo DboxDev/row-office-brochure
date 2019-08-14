@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { brandGrid } from '../../../../data/home';
-import ResponsiveImage from '../../../utils/responsive-image';
+import { brandGrid } from 'data/home';
+import ResponsiveImage from 'components/images/ResponsiveImage';
 import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem } from './home_components';
 
 const generateBrandGrid = () => {

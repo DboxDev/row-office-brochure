@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ResponsiveImage from '../../../utils/responsive-image';
+import ResponsiveImage from 'components/images/ResponsiveImage';
 import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow } from './home_components';
 
 const SectionOne = ({ revealed }) => {
