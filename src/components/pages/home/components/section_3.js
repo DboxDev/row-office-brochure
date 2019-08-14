@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { keyFacts, featuredIn } from '../../../../data/home';
-import ResponsiveImage from '../../../utils/responsive-image';
+import { keyFacts, featuredIn } from 'data/home';
+import ResponsiveImage from 'components/images/ResponsiveImage';
 import {
   ScrollColumn,
   BlackSlide,
