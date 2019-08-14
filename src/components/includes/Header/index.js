@@ -21,6 +21,7 @@ const NavigationOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
   ul {
     color: #fff;
     padding: 0;
@@ -76,6 +77,9 @@ const backgroundColorMap = {
   },
   facts: {
     backgroundColor: '#000'
+  },
+  maps: {
+    backgroundColor: '#FFF'
   }
 };
 

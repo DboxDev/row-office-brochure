@@ -1,10 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
 const ContainerStyles = createGlobalStyle`
-  .fact-container {
+  .container {
+    height: 100%;
     width: 90%;
     margin: 0 auto;
-    margin-top: 200px;
+    padding-top: 200px;
+    padding-bottom: 5%;
+
   }
 `;
 

@@ -19,7 +19,7 @@ function App() {
         <Header />
         <Switch>
           {allRoutes.map(route => (
-            <Route exact path={route.href} component={route.component} />
+            <Route key={route.href.replace('/', '')} exact path={route.href} component={route.component} />
           ))}
         </Switch>
       </Router>
