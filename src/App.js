@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes, secondaryRoutes } from 'data/routes';
 
-import Header from 'components/includes/header';
-import { ContainerStyles, GlobalStyles, TypographyStyles } from 'styles/global/_module';
+import Header from 'components/includes/Header';
+import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
 
 import 'fonts.scss';
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <React.Fragment>
       <ContainerStyles />
-      <GlobalStyles />
+      <RootStyles />
       <TypographyStyles />
       <Router>
         <Header />

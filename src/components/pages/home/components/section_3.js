@@ -1,18 +1,8 @@
 import React from 'react';
 
-import { keyFacts, featuredIn } from '../../../../data/home';
-import ResponsiveImage from '../../../utils/responsive-image';
-import {
-  ScrollColumn,
-  BlackSlide,
-  BigText,
-  MedText,
-  PhotoRow,
-  BrandRow,
-  BrandItem,
-  Fact,
-  FactRow
-} from './home_components';
+import { keyFacts, featuredIn } from 'data/home';
+import ResponsiveImage from 'components/images/ResponsiveImage';
+import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem, Fact, FactRow } from './styles';
 
 const generateFacts = () => {
   const result = [];
