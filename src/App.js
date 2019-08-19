@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ContextProvider from 'provider/ContextProvider';
+
 import { routes, secondaryRoutes } from 'data/routes';
 
 import Header from 'components/includes/Header';
@@ -11,7 +13,7 @@ const allRoutes = routes.concat(secondaryRoutes);
 
 function App() {
   return (
-    <React.Fragment>
+    <ContextProvider>
       <ContainerStyles />
       <RootStyles />
       <TypographyStyles />
@@ -23,7 +25,7 @@ function App() {
           ))}
         </Switch>
       </Router>
-    </React.Fragment>
+    </ContextProvider>
   );
 }
 

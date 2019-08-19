@@ -6,7 +6,6 @@ const ScrollColumn = styled.div`
   height: 100%;
   width: fit-content;
   max-height: 100vh;
-  box-sizing: border-box;
   padding: 10%;
   opacity: ${props => (props.revealed ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
@@ -19,7 +18,6 @@ const BlackSlide = styled.div`
   height: 100%;
   width: 100%;
   max-height: 100vh;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   background-color: #000;
@@ -79,6 +77,11 @@ const PhotoRow = styled.div`
   }
 `;
 
+const GridRow = styled.div`
+  width: 900px;
+  ${props => (props.grid ? 'padding: 5% 0' : '')};
+`;
+
 const BrandRow = styled.div`
   height: ${props => (props.quarter ? '10%' : '30%')};
   width: ${props => (props.quarter ? '80vw' : '100vw')};
@@ -132,14 +135,4 @@ const Fact = styled.div`
   }
 `;
 
-export {
-  ScrollColumn,
-  BlackSlide,
-  BigText,
-  MedText,
-  PhotoRow,
-  BrandRow,
-  BrandItem,
-  FactRow,
-  Fact
-};
+export { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, GridRow, BrandRow, BrandItem, FactRow, Fact };

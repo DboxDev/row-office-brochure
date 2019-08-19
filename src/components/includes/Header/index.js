@@ -83,6 +83,9 @@ const backgroundColorMap = {
   },
   maps: {
     backgroundColor: '#FFF'
+  },
+  test: {
+    backgroundColor: '#FFF'
   }
 };
 

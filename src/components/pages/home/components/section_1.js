@@ -1,7 +1,10 @@
 import React from 'react';
 
+import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
 import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow } from './styles';
+
+import { welcomeGrid } from 'data/rotatingImages';
 
 const SectionOne = ({ revealed }) => {
   return (
@@ -48,14 +51,7 @@ const SectionOne = ({ revealed }) => {
         </MedText>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_1/row_4" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_1/row_5" imgAlt="test" />
-        </PhotoRow>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_1/row_6" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_1/row_7" imgAlt="test" />
-        </PhotoRow>
+        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 4} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
         <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />

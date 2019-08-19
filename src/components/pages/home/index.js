@@ -6,10 +6,10 @@ import Swiper from 'react-id-swiper';
 import { SectionOne, SectionTwo, SectionThree } from 'components/pages/home/components/_module';
 
 const HorizontalContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   .swiper-container {
     display: block;
-    height: 100vh;
+    height: 100%;
     .swiper-wrapper {
       height: 100%;
       .swiper-slide {
@@ -29,7 +29,9 @@ const Index = () => {
     mousewheel: true,
     slidesPerView: 'auto',
     spaceBetween: 0,
-    getSwiper: setSwiper
+    getSwiper: setSwiper,
+    simulateTouch: false,
+    touchRatio: 0.8
   };
 
   const updateIndex = useCallback(() => {
