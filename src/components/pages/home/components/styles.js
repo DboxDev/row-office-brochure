@@ -5,8 +5,10 @@ const ScrollColumn = styled.div`
   flex-direction: column;
   height: 100%;
   width: fit-content;
-  max-height: 100vh;
-  padding: 10%;
+  padding-top: 160px;
+  padding-bottom: 100px;
+  padding-left: ${props => (props.paddingLeft ? props.paddingLeft : '10%')};
+  padding-right: ${props => (props.paddingRight ? props.paddingRight : '10%')};
   opacity: ${props => (props.revealed ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
   ${props => (props['space-between'] ? 'justify-content: space-between;' : '')}
@@ -17,16 +19,16 @@ const BlackSlide = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  max-height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: #000;
   transform: ${props => (props.revealed ? 'traslateY(0)' : 'translateY(100%)')};
   transition: transform 1s ease-in-out;
-  p.quote {
-    font-size: 32px;
+  h1.quote {
     color: #fff;
     width: 50%;
+    font-style: italic;
+    font-size: 3rem;
   }
   span.credit {
     font-size: 32px;
@@ -35,22 +37,34 @@ const BlackSlide = styled.div`
   }
   span.scroll-reminder {
     position: absolute;
-    bottom: 5%;
+    right: 0;
+    bottom: 8%;
     font-size: 16px;
-    color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: #fff;
+    p {
+      color: #fff;
+      position: relative;
+      bottom: 25px;
+      right: 70px;
+      letter-spacing: 2px;
+    }
   }
 `;
 
 const BigText = styled.h3`
   font-size: 55px;
-  color: ${props => (props.black ? '#000' : '#5a5a5a')};
+  color: ${props => (props.intro ? '#000' : '#999999')};
   ${props => (props['margin-top'] ? 'margin-top: auto;' : 'margin-top: 5%;')}
+  font-weight: ${props => (props.intro ? '700' : '400')};
 `;
 
 const MedText = styled.h3`
   ${props => (props['margin-top'] ? 'margin-top: auto;' : '')}
   font-size: 24px;
-  color: ${props => (props.black ? '#000' : '#5a5a5a')};
+  color: ${props => (props.black ? '#000' : '#999999')};
 `;
 
 const PhotoRow = styled.div`

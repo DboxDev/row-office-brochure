@@ -30,7 +30,6 @@ const Index = () => {
     slidesPerView: 'auto',
     spaceBetween: 0,
     getSwiper: setSwiper,
-    simulateTouch: false,
     touchRatio: 0.8
   };
 

@@ -10,23 +10,25 @@ const SectionOne = ({ revealed }) => {
   return (
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed>
-        <p className="quote">
+        <h1 className="quote">
           ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace, that if you celebrate
           innovation, collaboration and community, you get something very special, that just keeps getting better.
-        </p>
-        <span className="scroll-reminder">SCROLL</span>
+        </h1>
+        <span className="scroll-reminder">
+          <p>SCROLL</p>
+        </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 1}>
+      <ScrollColumn className="swiper-slide" leftRightPadding="200px" revealed={revealed >= 1}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
-        <BigText black>
+        <BigText intro>
           Welcome to
           <br />
           ROW DTLA
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 2}>
+      <ScrollColumn className="swiper-slide" leftRightPadding="100px" revealed={revealed >= 2}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_2" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />

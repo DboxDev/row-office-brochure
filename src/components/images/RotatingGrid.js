@@ -32,7 +32,6 @@ function RotatingGrid({ imgGrid }) {
 
   const context = useContext(Context);
   const { height } = context.state.windowDimensions;
-  console.log(height * 0.8);
 
   function renderGrid(imgGrid) {
     let rows = [];
