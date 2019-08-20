@@ -65,6 +65,12 @@ const BigText = styled.h2`
   font-weight: ${props => (props.intro ? '500' : '400')};
   font-size: 4rem;
   line-height: 100%;
+  ${mediaMin.desktop`
+    font-size: 5rem;
+  `}
+  ${mediaMin.desktopLarge`
+    font-size: 5.5rem;
+  `}
 `;
 
 const MedText = styled.h3`

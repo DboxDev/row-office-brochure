@@ -97,7 +97,7 @@ function Header(props) {
   let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
   const { backgroundColor } = backgroundColorMap[route];
 
-  const [navActive, toggleActive] = useState(true);
+  const [navActive, toggleActive] = useState(false);
 
   return (
     <React.Fragment>

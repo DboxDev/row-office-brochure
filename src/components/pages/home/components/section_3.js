@@ -113,7 +113,7 @@ const SectionThree = ({ revealed }) => {
           <ResponsiveImage srcPath="/images/home/section_3/row_11" imgAlt="test" />
         </PhotoRow>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 22}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 22}>
         <BigText marginTop marginBottom="200px">
           Key facts
         </BigText>
@@ -127,7 +127,7 @@ const SectionThree = ({ revealed }) => {
       >
         {generateFacts()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 24}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 24}>
         <BigText marginTop marginBottom="200px">
           In the news
         </BigText>
