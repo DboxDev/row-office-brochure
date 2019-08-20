@@ -26,7 +26,7 @@ function RotatingGrid({ imgGrid }) {
     }
 
     if (carouselActive) {
-      setTimeout(() => changeImage(), 5000);
+      setTimeout(() => changeImage(), 3000);
     }
   });
 

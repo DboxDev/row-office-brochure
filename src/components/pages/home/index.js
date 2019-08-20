@@ -29,8 +29,7 @@ const Index = () => {
     mousewheel: true,
     slidesPerView: 'auto',
     spaceBetween: 0,
-    getSwiper: setSwiper,
-    touchRatio: 0.8
+    getSwiper: setSwiper
   };
 
   const updateIndex = useCallback(() => {

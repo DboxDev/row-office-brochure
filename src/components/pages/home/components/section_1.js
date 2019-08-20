@@ -18,7 +18,7 @@ const SectionOne = ({ revealed }) => {
           <p>SCROLL</p>
         </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" leftRightPadding="200px" revealed={revealed >= 1}>
+      <ScrollColumn className="swiper-slide" paddingRight="100px" revealed={revealed >= 1}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
@@ -28,21 +28,20 @@ const SectionOne = ({ revealed }) => {
           ROW DTLA
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" leftRightPadding="100px" revealed={revealed >= 2}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 2}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_2" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />
         </PhotoRow>
         <BigText>
-          100 years of history and
-          <br />
-          32 acres of space mark the
-          <br /> beginning of LA’s future as
-          <br />a creative and cultural hub
+          100 years of history and 32
+          <br /> acres of space mark the
+          <br /> beginning of LA’s future as a
+          <br /> creative and cultural hub
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
-        <MedText margin-top>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 3}>
+        <MedText marginTop>
           Contemporary offices, bespoke
           <br /> boutiques, and artisanal eateries
           <br />
@@ -52,17 +51,17 @@ const SectionOne = ({ revealed }) => {
           connoisseurs of Los Angeles
         </MedText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 4}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 4} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
         <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 6}>
-        <PhotoRow>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 6} paddingLeft="100px" paddingRight="100px">
+        <PhotoRow height="60%">
           <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
         </PhotoRow>
-        <MedText margin-top>
+        <MedText>
           Authentic experiences in a district
           <br /> charged with innovation, collaboration
           <br /> and community. Curated down to

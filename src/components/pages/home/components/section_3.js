@@ -1,34 +1,37 @@
 import React from 'react';
 
-import { keyFacts, featuredIn } from 'data/home';
+import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
 import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem, Fact, FactRow } from './styles';
 
+import { keyFacts, featuredIn } from 'data/home';
+import { welcomeGrid } from 'data/rotatingImages';
+
 const generateFacts = () => {
-  const result = [];
-  let temp = [];
+  const rows = [];
+  let cols = [];
   keyFacts.forEach((el, idx) => {
-    temp.push(
-      <Fact>
+    cols.push(
+      <Fact key={`fact-${idx}`} index={idx + 1}>
         <span className="fact-index">{idx + 1}</span>
         <span className="fact-body">{el}</span>
       </Fact>
     );
     if ((idx + 1) % 3 === 0) {
-      result.push(<FactRow>{temp}</FactRow>);
-      temp = [];
+      rows.push(<FactRow key={`fact-${idx}`}>{cols}</FactRow>);
+      cols = [];
     }
   });
-  return result;
+  return rows;
 };
 
 const generateBrandGrid = () => {
-  return featuredIn.map(row => {
+  return featuredIn.map((row, rowIdx) => {
     return (
-      <BrandRow quarter>
-        {row.map(el => {
+      <BrandRow key={`row-${rowIdx}`} quarter>
+        {row.map((el, elIdx) => {
           return (
-            <BrandItem quarter>
+            <BrandItem key={`row-${rowIdx}-el-${elIdx}`}>
               <img src={el.logo} alt={`${el.alt} logo`} className="grey-logo" />
             </BrandItem>
           );
@@ -42,26 +45,26 @@ const SectionThree = ({ revealed }) => {
   return (
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed={revealed >= 15}>
-        <p className="quote">
+        <h1 className="quote">
           "The thing that’s unique about the ROW is that it’s this incredible modern space, but it’s also really
           historied. The buildings are over 100 years old and so when you’re walking through campus, there’s not really
           many places in LA where you can really feel like you’re a part of LA’s history."
-        </p>
+        </h1>
         <span className="credit">RACHEL MADDEN, WC + A</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 16}>
+      <ScrollColumn className="swiper-slide" paddingRight="100px" revealed={revealed >= 16}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
         </PhotoRow>
-        <BigText black>
+        <BigText intro>
           Our non-traditional
           <br /> lives need a<br />
           non-traditional
           <br /> workplace
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 17}>
-        <MedText margin-top>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 17}>
+        <MedText marginTop>
           Work in creative offices that
           <br /> foster growth and productivity
           <br /> with added benefits of natural
@@ -71,17 +74,10 @@ const SectionThree = ({ revealed }) => {
         </MedText>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_3/row_2" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_3" imgAlt="test" />
-        </PhotoRow>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_3/row_4" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_5" imgAlt="test" />
-        </PhotoRow>
+        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 18} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
-        <MedText margin-top>
+        <MedText marginTop>
           As your business grows, your
           <br /> work space grows
           <br />
@@ -94,8 +90,8 @@ const SectionThree = ({ revealed }) => {
       <ScrollColumn className="swiper-slide" revealed={revealed >= 20}>
         <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 21}>
-        <MedText margin-top>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 21}>
+        <MedText marginTop>
           Where the workplace extends beyond
           <br /> your own office. Indoor and outdoor
           <br />
@@ -118,19 +114,35 @@ const SectionThree = ({ revealed }) => {
         </PhotoRow>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 22}>
-        <BigText margin-top>Key Facts</BigText>
+        <BigText marginTop marginBottom="200px">
+          Key facts
+        </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 23} space-between>
+      <ScrollColumn
+        className="swiper-slide"
+        paddingLeft="100px"
+        paddingRight="100px"
+        revealed={revealed >= 23}
+        space-between
+      >
         {generateFacts()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 24}>
-        <BigText margin-top>Featured In</BigText>
+        <BigText marginTop marginBottom="200px">
+          In the news
+        </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 25} space-between>
+      <ScrollColumn
+        className="swiper-slide"
+        paddingLeft="100px"
+        paddingRight="100px"
+        revealed={revealed >= 25}
+        space-between
+      >
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 25}>
-        <BigText margin-top black>
+        <BigText marginTop intro>
           ROW DTLA.
           <br />
           Work life has never

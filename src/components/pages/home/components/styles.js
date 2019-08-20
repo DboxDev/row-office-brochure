@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import { mediaMin } from 'styles/mediaQueries';
 
 const ScrollColumn = styled.div`
   display: flex !important;
   flex-direction: column;
   height: 100%;
   width: fit-content;
-  padding-top: 160px;
-  padding-bottom: 100px;
+  padding-top: ${props => props.paddingTop || '160px'};
+  padding-bottom: 80px;
   padding-left: ${props => (props.paddingLeft ? props.paddingLeft : '10%')};
   padding-right: ${props => (props.paddingRight ? props.paddingRight : '10%')};
   opacity: ${props => (props.revealed ? '1' : '0')};
@@ -28,7 +29,10 @@ const BlackSlide = styled.div`
     color: #fff;
     width: 50%;
     font-style: italic;
-    font-size: 3rem;
+    font-size: 2.4rem;
+    ${mediaMin.desktop`
+      font-size: 3rem;
+    `}
   }
   span.credit {
     font-size: 32px;
@@ -39,7 +43,7 @@ const BlackSlide = styled.div`
     position: absolute;
     right: 0;
     bottom: 8%;
-    font-size: 16px;
+    font-size: 1rem;
     display: inline-block;
     width: 40px;
     height: 1px;
@@ -54,23 +58,30 @@ const BlackSlide = styled.div`
   }
 `;
 
-const BigText = styled.h3`
-  font-size: 55px;
+const BigText = styled.h2`
   color: ${props => (props.intro ? '#000' : '#999999')};
-  ${props => (props['margin-top'] ? 'margin-top: auto;' : 'margin-top: 5%;')}
-  font-weight: ${props => (props.intro ? '700' : '400')};
+  ${props => (props.marginTop ? 'margin-top: auto;' : '')}
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
+  font-weight: ${props => (props.intro ? '500' : '400')};
+  font-size: 4rem;
+  line-height: 100%;
 `;
 
 const MedText = styled.h3`
-  ${props => (props['margin-top'] ? 'margin-top: auto;' : '')}
-  font-size: 24px;
+  ${props => (props.marginTop ? 'margin-top: auto;' : '')}
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : '100px')};
+  font-size: 1.8rem;
   color: ${props => (props.black ? '#000' : '#999999')};
+
+  ${mediaMin.desktop`
+    font-size: 2rem;
+  `}
 `;
 
 const PhotoRow = styled.div`
   display: flex;
   flex-direction: row;
-  height: 50%;
+  height: ${props => props.height || '50%'};
   width: 100%;
   ${props => (props.grid ? 'padding: 5% 0' : '')};
   &:first-child {
@@ -136,17 +147,44 @@ const FactRow = styled.div`
 const Fact = styled.div`
   display: flex;
   flex-direction: row;
-  width: 30%;
+  margin: 0 50px;
   .fact-index {
-    font-size: 64px;
-    color: white;
+    color: #d8d8d8;
+    font-family: 'SangBleu Kingdom', serif;
+    width: 60px;
+    font-size: 3rem;
   }
   .fact-body {
-    line-height: 32px;
-    font-size: 24px;
     color: #000;
-    padding-left: 10%;
+    font-family: 'Apercu', 'sans-serif';
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    width: 300px;
+    ${mediaMin.desktop`
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+    `}
   }
 `;
 
-export { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, GridRow, BrandRow, BrandItem, FactRow, Fact };
+const CaptionText = styled.p`
+  font-size: 1.4rem;
+  color: #7f7f7f;
+  letter-spacing: 1px;
+`;
+
+export {
+  ScrollColumn,
+  BlackSlide,
+  BigText,
+  MedText,
+  PhotoRow,
+  GridRow,
+  BrandRow,
+  BrandItem,
+  FactRow,
+  Fact,
+  CaptionText
+};

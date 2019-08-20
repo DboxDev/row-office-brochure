@@ -4,9 +4,10 @@ import styled from 'styled-components';
 const ResponsiveImg = styled.img`
   max-width: 100%;
   max-height: 100%;
+  height: ${props => props.height || '100%'};
 `;
 
-function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp }) {
+function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp, height }) {
   return (
     <ResponsiveImg
       src={`${srcPath}.jpg`}
@@ -16,6 +17,7 @@ function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, r
       className={`responsive-image ${imgClass}`}
       onClick={onClickProp}
       aria-hidden={ariaHidden === undefined ? false : ariaHidden}
+      height={height}
     />
   );
 }

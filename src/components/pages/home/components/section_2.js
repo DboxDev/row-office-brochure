@@ -1,16 +1,19 @@
 import React from 'react';
 
-import { brandGrid } from 'data/home';
+import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem } from './styles';
+import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem, CaptionText } from './styles';
+
+import { brandGrid } from 'data/home';
+import { welcomeGrid } from 'data/rotatingImages';
 
 const generateBrandGrid = () => {
-  return brandGrid.map(row => {
+  return brandGrid.map((row, rowIdx) => {
     return (
-      <BrandRow>
-        {row.map(el => {
+      <BrandRow key={`brand-row-${rowIdx}`}>
+        {row.map((el, itemIdx) => {
           return (
-            <BrandItem>
+            <BrandItem key={`brand-row-${rowIdx}-item-${itemIdx}`}>
               <img src={el.logo} alt={`${el.alt} logo`} className="logo" />
               <ResponsiveImage srcPath={el.background} imgAlt={el.alt} imgClass="background" />
             </BrandItem>
@@ -25,18 +28,18 @@ const SectionTwo = ({ revealed }) => {
   return (
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed={revealed >= 8}>
-        <p className="quote">
-          "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into an all-encompassing
+        <h1 className="quote">
+          "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into an all-encompassing
           iconic destination. It is a growing collective of globally recognized shops, restaurants and innovative
           offices that are spread over six buildings to create their own unique L.A. environment."
-        </p>
+        </h1>
         <span className="credit">LA MAGAZINE</span>
       </BlackSlide>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 9}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_2/row_1" imgAlt="test" />
         </PhotoRow>
-        <BigText black>
+        <BigText intro>
           A vibrant district that
           <br /> pushes the boundaries
           <br /> between work, culture
@@ -47,29 +50,22 @@ const SectionTwo = ({ revealed }) => {
       <ScrollColumn className="swiper-slide" revealed={revealed >= 10} space-between>
         {generateBrandGrid()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 11}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 11}>
         <ResponsiveImage srcPath="/images/home/section_2/row_2" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 12}>
-        <BigText margin-top>
-          Elevate your routine with the
-          <br /> essentials—dining, working,
-          <br /> exercising, pampering—always
-          <br /> within reach
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 12}>
+        <BigText marginTop>
+          Easily elevate your routine
+          <br /> essentials with gyms, salons,
+          <br /> workplaces, and restaurants
+          <br /> all within reach
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 13}>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_2/row_3" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_2/row_4" imgAlt="test" />
-        </PhotoRow>
-        <PhotoRow grid>
-          <ResponsiveImage srcPath="/images/home/section_2/row_5" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_2/row_6" imgAlt="test" />
-        </PhotoRow>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 13}>
+        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 13} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 14}>
-        <MedText margin-top>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 14}>
+        <MedText marginTop>
           ROW DTLA strives to
           <br /> bring people together,
           <br /> through workshops,
@@ -83,7 +79,8 @@ const SectionTwo = ({ revealed }) => {
         </MedText>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 14}>
-        <ResponsiveImage srcPath="/images/home/section_2/row_7" imgAlt="test" />
+        <ResponsiveImage srcPath="/images/home/section_2/row_7" imgAlt="test" height="95%" />
+        <CaptionText>AN INTERCHANGEABLE WORK AND PLAY DYNAMIC </CaptionText>
       </ScrollColumn>
     </React.Fragment>
   );
