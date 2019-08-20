@@ -31,7 +31,7 @@ const generateBrandGrid = () => {
       <BrandRow key={`row-${rowIdx}`} quarter>
         {row.map((el, elIdx) => {
           return (
-            <BrandItem key={`row-${rowIdx}-el-${elIdx}`}>
+            <BrandItem key={`row-${rowIdx}-el-${elIdx}`} quarter>
               <img src={el.logo} alt={`${el.alt} logo`} className="grey-logo" />
             </BrandItem>
           );

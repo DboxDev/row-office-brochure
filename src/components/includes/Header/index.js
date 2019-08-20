@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { routes } from 'data/routes';
 
+import { mediaMin } from 'styles/mediaQueries';
 import { BackgroundStyles } from 'styles/global/_module';
 import MainLogo from './MainLogo.js';
 import Hamburger from './Hamburger.js';
@@ -29,12 +30,15 @@ const NavigationOverlay = styled.div`
     li {
       list-style-type: none;
       text-align: center;
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 0.5em 0;
       font-family: 'SangBleu Kingdom', serif;
       font-weight: normal;
       font-style: normal;
       color: #fff;
+      ${mediaMin.desktop`
+        font-size: 4rem;
+      `}
       a {
         text-decoration: none;
         &:link,
@@ -93,7 +97,7 @@ function Header(props) {
   let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
   const { backgroundColor } = backgroundColorMap[route];
 
-  const [navActive, toggleActive] = useState(false);
+  const [navActive, toggleActive] = useState(true);
 
   return (
     <React.Fragment>

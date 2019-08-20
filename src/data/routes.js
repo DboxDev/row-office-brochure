@@ -2,22 +2,22 @@ import { Index, Facts, Maps, Availability, Contact, Legal, Test } from '../compo
 
 const routes = [
   {
-    title: 'The Pitch',
+    title: 'Story',
     href: '/',
     component: Index
   },
   {
-    title: 'The Facts',
+    title: 'Facts',
     href: '/facts',
     component: Facts
   },
   {
-    title: 'The Map',
+    title: 'Map',
     href: '/maps',
     component: Maps
   },
   {
-    title: 'The Available Spaces',
+    title: 'Availability',
     href: '/availability',
     component: Availability
   },

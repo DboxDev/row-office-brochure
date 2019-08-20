@@ -6,7 +6,7 @@ const HamburgerContainer = styled.button`
   position: fixed;
   cursor: pointer;
   right: 100px;
-  top: 30px;
+  top: 28px;
   height: 80px;
   width: 80px;
   display: flex;
@@ -31,7 +31,7 @@ function Hamburger({ backgroundColor, navActive, toggleActive }) {
     <HamburgerContainer navActive={navActive} onClick={() => toggleActive(!navActive)}>
       <svg
         id="hamburger"
-        width="50px"
+        width="40px"
         viewBox="0 0 24 18"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
