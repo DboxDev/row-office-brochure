@@ -19,12 +19,12 @@ const HamburgerContainer = styled.button`
   }
 `;
 
-function Hamburger({ backgroundColor, navActive, toggleActive }) {
+function Hamburger({ backgroundColor, navActive, toggleActive, darkColorScheme }) {
   const setColor = (activeColor, inactiveColor) => {
     if (backgroundColor === '#000') {
       return activeColor;
     }
-    return navActive ? activeColor : inactiveColor;
+    return navActive || darkColorScheme ? activeColor : inactiveColor;
   };
 
   return (
@@ -38,7 +38,13 @@ function Hamburger({ backgroundColor, navActive, toggleActive }) {
         xlinkHref="http://www.w3.org/1999/xlink"
       >
         <title>Hamburger</title>
-        <g id="line-container" stroke="none" strokeWidth="1" fill={setColor('#FFF', '#000')} fillRule="evenodd">
+        <g
+          id="line-container"
+          stroke="none"
+          strokeWidth="1"
+          fill={setColor('#FFF', '#000')}
+          fillRule="evenodd"
+        >
           <polygon id="line-1" points="0 0 24 0 23 2 0 2" />
           <polygon id="line-2" points="0 8 21 8 20 10 0 10" />
           <polygon id="line-3" points="0 16 18 16 17 18 0 18" />

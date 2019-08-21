@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Context from 'config/Context';
 import { routes } from 'data/routes';
 
 import { mediaMin } from 'styles/mediaQueries';
@@ -93,18 +94,39 @@ const backgroundColorMap = {
   }
 };
 
+const darkSlideIndices = [0, 8, 16];
+
 function Header(props) {
+  const context = useContext(Context);
+  const { storyIndex } = context.state;
+
   let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
   const { backgroundColor } = backgroundColorMap[route];
 
+  const [darkColorScheme, toggleDarkColorScheme] = useState(false);
   const [navActive, toggleActive] = useState(false);
+
+  useEffect(() => {
+    darkSlideIndices.includes(storyIndex)
+      ? toggleDarkColorScheme(true)
+      : toggleDarkColorScheme(false);
+  }, [storyIndex]);
 
   return (
     <React.Fragment>
       <BackgroundStyles backgroundColor={backgroundColor} />
       <header>
-        <MainLogo backgroundColor={backgroundColor} navActive={navActive} />
-        <Hamburger backgroundColor={backgroundColor} navActive={navActive} toggleActive={toggleActive} />
+        <MainLogo
+          backgroundColor={backgroundColor}
+          navActive={navActive}
+          darkColorScheme={darkColorScheme}
+        />
+        <Hamburger
+          backgroundColor={backgroundColor}
+          navActive={navActive}
+          darkColorScheme={darkColorScheme}
+          toggleActive={toggleActive}
+        />
         <NavigationOverlay navActive={navActive}>
           <ul>
             {routes.map(route => (

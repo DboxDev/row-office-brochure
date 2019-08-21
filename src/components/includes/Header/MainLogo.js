@@ -14,12 +14,12 @@ const MainLogoWrapper = styled.svg`
   }
 `;
 
-function MainLogo({ backgroundColor, navActive }) {
+function MainLogo({ backgroundColor, navActive, darkColorScheme }) {
   const setColor = (activeColor, inactiveColor) => {
     if (backgroundColor === '#000') {
       return activeColor;
     }
-    return navActive ? activeColor : inactiveColor;
+    return navActive || darkColorScheme ? activeColor : inactiveColor;
   };
 
   return (

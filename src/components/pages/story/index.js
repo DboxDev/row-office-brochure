@@ -37,6 +37,7 @@ const Story = () => {
 
   const updateIndex = useCallback(() => {
     setSwiperIndex(swiper.realIndex);
+    console.log(swiper.realIndex);
     context.updateStoryIndex(swiper.realIndex);
   }, [swiper]);
 

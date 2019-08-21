@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Context from '../config/Context';
+import Context from 'config/Context';
 
 function ContextProvider({ children }) {
   const [windowDimensions, setWindowDimensions] = useState(null);
