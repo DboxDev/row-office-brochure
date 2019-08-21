@@ -6,13 +6,13 @@ const ScrollColumn = styled.div`
   flex-direction: column;
   height: 100%;
   width: fit-content;
-  padding-top: ${props => props.paddingTop || '160px'};
-  padding-bottom: 80px;
-  padding-left: ${props => (props.paddingLeft ? props.paddingLeft : '10%')};
-  padding-right: ${props => (props.paddingRight ? props.paddingRight : '10%')};
+  padding-top: ${props => props.paddingTop || '120px'};
+  padding-right: ${props => props.paddingRight || '80px'};
+  padding-bottom: ${props => props.paddingTop || '80px'};
+  padding-left: ${props => props.paddingLeft || '80px'};
   opacity: ${props => (props.revealed ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
-  ${props => (props['space-between'] ? 'justify-content: space-between;' : '')}
+  ${props => props.spaceBetween && 'justify-content: space-between;'}
 `;
 
 const BlackSlide = styled.div`
@@ -29,9 +29,9 @@ const BlackSlide = styled.div`
     color: #fff;
     width: 50%;
     font-style: italic;
-    font-size: 2.4rem;
-    ${mediaMin.desktop`
-      font-size: 3rem;
+    font-size: 4vh;
+    ${mediaMin.desktopLarge`
+      font-size: 5vh;
     `}
   }
   span.credit {
@@ -60,34 +60,26 @@ const BlackSlide = styled.div`
 
 const BigText = styled.h2`
   color: ${props => (props.intro ? '#000' : '#999999')};
-  ${props => (props.marginTop ? 'margin-top: auto;' : '')}
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
   font-weight: ${props => (props.intro ? '500' : '400')};
-  font-size: 4rem;
+  margin: 0;
+  font-size: 7vh;
   line-height: 100%;
-  ${mediaMin.desktop`
-    font-size: 5rem;
-  `}
-  ${mediaMin.desktopLarge`
-    font-size: 5.5rem;
-  `}
+  ${'' /* ${mediaMin.desktop`
+    font-size: 7vh;
+  `} */}
 `;
 
 const MedText = styled.h3`
-  ${props => (props.marginTop ? 'margin-top: auto;' : '')}
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : '100px')};
-  font-size: 1.8rem;
+  margin: 0;
+  font-size: 3vh;
   color: ${props => (props.black ? '#000' : '#999999')};
-
-  ${mediaMin.desktop`
-    font-size: 2rem;
-  `}
+  line-height: 4vh;
 `;
 
 const PhotoRow = styled.div`
   display: flex;
   flex-direction: row;
-  height: ${props => props.height || '50%'};
+  height: ${props => props.height || '55%'};
   width: 100%;
   ${props => (props.grid ? 'padding: 5% 0' : '')};
   &:first-child {
@@ -175,6 +167,13 @@ const Fact = styled.div`
   }
 `;
 
+const Row = styled.div`
+  height: ${props => props.height || '50%'};
+  width: 100%;
+  background: ${props => props.background || 'teal'};
+  padding-top: 3vh;
+`;
+
 const CaptionText = styled.p`
   font-size: 1.4rem;
   color: #7f7f7f;
@@ -192,5 +191,6 @@ export {
   BrandItem,
   FactRow,
   Fact,
-  CaptionText
+  CaptionText,
+  Row
 };

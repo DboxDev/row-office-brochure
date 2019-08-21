@@ -2,7 +2,7 @@ import React from 'react';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow } from './styles';
+import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, Row } from './styles';
 
 import { welcomeGrid } from 'data/rotatingImages';
 
@@ -18,40 +18,47 @@ const SectionOne = ({ revealed }) => {
           <p>SCROLL</p>
         </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingRight="100px" revealed={revealed >= 1}>
+      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 1}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
-        <BigText intro>
-          Welcome to
-          <br />
-          ROW DTLA
-        </BigText>
+        <Row height="45%">
+          <BigText intro>
+            Welcome to
+            <br />
+            ROW DTLA
+          </BigText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 2}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 2}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_2" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />
         </PhotoRow>
-        <BigText>
-          100 years of history and 32
-          <br /> acres of space mark the
-          <br /> beginning of LA’s future as a
-          <br /> creative and cultural hub
-        </BigText>
+        <Row height="45%">
+          <BigText>
+            100 years of history and a
+            <br /> 32-acre district mark the
+            <br /> beginning of LA’s future as a
+            <br /> new creative and cultural hub
+          </BigText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 3}>
-        <MedText marginTop>
-          Contemporary offices, bespoke
-          <br /> boutiques, and artisanal eateries
-          <br />
-          catered to the entrepreneurial
-          <br /> visionaries, style icons, and food
-          <br />
-          connoisseurs of Los Angeles
-        </MedText>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
+        <Row background="navy" height="55%" />
+        <Row height="45%">
+          <MedText marginTop>
+            Contemporary offices, bespoke
+            <br /> boutiques, and artisanal eateries
+            <br />
+            catered to the entrepreneurial
+            <br /> visionaries, style icons, and food
+            <br />
+            connoisseurs of Los Angeles
+          </MedText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 4}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 4} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>

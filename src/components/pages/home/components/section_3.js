@@ -123,7 +123,7 @@ const SectionThree = ({ revealed }) => {
         paddingLeft="100px"
         paddingRight="100px"
         revealed={revealed >= 23}
-        space-between
+        spaceBetween
       >
         {generateFacts()}
       </ScrollColumn>
@@ -137,7 +137,7 @@ const SectionThree = ({ revealed }) => {
         paddingLeft="100px"
         paddingRight="100px"
         revealed={revealed >= 25}
-        space-between
+        spaceBetween
       >
         {generateBrandGrid()}
       </ScrollColumn>

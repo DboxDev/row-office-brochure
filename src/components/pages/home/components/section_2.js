@@ -47,7 +47,7 @@ const SectionTwo = ({ revealed }) => {
           and play
         </BigText>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 10} space-between>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 10} spaceBetween>
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 11}>
