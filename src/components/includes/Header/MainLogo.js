@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const MainLogoWrapper = styled.svg`
   position: fixed;
-  top: 50px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;

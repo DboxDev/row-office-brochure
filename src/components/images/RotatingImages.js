@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const RotatingImagesContainer = styled.div`
   position: relative;
-  width: 50%;
+  width: 40vh;
 `;
 
 function RotatingImages({ imgArray, activeImage, position }) {
@@ -30,10 +30,11 @@ const AnimatedResponsiveImageWrapper = styled.img`
   top: 0;
   left: 0;
   opacity: 0;
+  height: 36vh;
+  width: 36vh;
   max-width: 100%;
   transition: opacity 500ms ease;
-  padding: ${props => props.padding};
-  height: 100%;
+  ${'' /* padding: ${props => props.padding}; */}
   &.active {
     opacity: 1;
   }

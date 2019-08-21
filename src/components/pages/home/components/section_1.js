@@ -45,7 +45,7 @@ const SectionOne = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
-        <Row background="navy" height="55%" />
+        <Row height="55%" />
         <Row height="45%">
           <MedText marginTop>
             Contemporary offices, bespoke
@@ -65,20 +65,22 @@ const SectionOne = ({ revealed }) => {
         <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 6} paddingLeft="100px" paddingRight="100px">
-        <PhotoRow height="60%">
+        <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
         </PhotoRow>
-        <MedText>
-          Authentic experiences in a district
-          <br /> charged with innovation, collaboration
-          <br /> and community. Curated down to
-          <br /> every last detail, ROW DTLA's ever-
-          <br />
-          changing environment fosters
-          <br /> creativity in every aspect
-        </MedText>
+        <Row height="45%">
+          <MedText>
+            Authentic experiences in a
+            <br /> district charged with innovation,
+            <br /> collaboration and community.
+            <br /> Curated down to every last detail,
+            <br /> ROW DTLA's ever- changing
+            <br /> environment fosters creativity in
+            <br /> every aspect
+          </MedText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 7}>
+      <ScrollColumn className="swiper-slide" paddingRight="10%" revealed={revealed >= 7}>
         <ResponsiveImage srcPath="/images/home/section_1/row_9" imgAlt="test" />
       </ScrollColumn>
     </React.Fragment>

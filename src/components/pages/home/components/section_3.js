@@ -2,7 +2,19 @@ import React from 'react';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem, Fact, FactRow } from './styles';
+import {
+  ScrollColumn,
+  BlackSlide,
+  BigText,
+  MedText,
+  PhotoRow,
+  PhotoGridRow,
+  BrandRow,
+  BrandItem,
+  Fact,
+  FactRow,
+  Row
+} from './styles';
 
 import { keyFacts, featuredIn } from 'data/home';
 import { welcomeGrid } from 'data/rotatingImages';
@@ -52,102 +64,104 @@ const SectionThree = ({ revealed }) => {
         </h1>
         <span className="credit">RACHEL MADDEN, WC + A</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingRight="100px" revealed={revealed >= 16}>
+      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 16}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
         </PhotoRow>
-        <BigText intro>
-          Our non-traditional
-          <br /> lives need a<br />
-          non-traditional
-          <br /> workplace
-        </BigText>
+        <Row height="45%">
+          <BigText intro>
+            Our non-traditional
+            <br /> lives need a<br />
+            non-traditional
+            <br /> workplace
+          </BigText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 17}>
-        <MedText marginTop>
-          Work in creative offices that
-          <br /> foster growth and productivity
-          <br /> with added benefits of natural
-          <br /> light, lofted ceilings, an
-          <br /> exclusive athletic club, and
-          <br /> community events
-        </MedText>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 17}>
+        <Row height="55%" />
+        <Row height="45%">
+          <MedText marginTop>
+            Work in creative offices that
+            <br /> foster growth and productivity
+            <br /> with added benefits of natural
+            <br /> light, lofted ceilings, an
+            <br /> exclusive athletic club, and
+            <br /> community events
+          </MedText>
+        </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 18} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
-        <MedText marginTop>
-          As your business grows, your
-          <br /> work space grows
-          <br />
-          with it. Invent and customize
-          <br /> your office
-          <br />
-          with complete flexibility
-        </MedText>
+        <Row height="55%" />
+        <Row height="45%">
+          <MedText marginTop>
+            Never move again—ROW
+            <br /> accomodates and adapts to
+            <br /> growth. As your business
+            <br /> evolves, your workspace
+            <br /> evolves with it.
+          </MedText>
+        </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 20}>
         <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 21}>
-        <MedText marginTop>
-          Where the workplace extends beyond
-          <br /> your own office. Indoor and outdoor
-          <br />
-          communal spaces, inviting lobbies,
-          <br /> roof decks and more provide for a<br />
-          more flexible and productive work
-          <br /> environment
-        </MedText>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 21}>
+        <Row height="55%" />
+        <Row height="45%">
+          <MedText marginTop>
+            Where the workplace extends beyond
+            <br /> your own office. Indoor and outdoor
+            <br />
+            communal spaces, inviting lobbies,
+            <br /> roof decks and more provide for a<br />
+            more flexible and productive work
+            <br /> environment
+          </MedText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 22}>
-        <PhotoRow grid>
+      <ScrollColumn className="swiper-slide" paddingRight="200px" revealed={revealed >= 22}>
+        <PhotoGridRow>
           <ResponsiveImage srcPath="/images/home/section_3/row_6" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_3/row_7" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_3/row_8" imgAlt="test" />
-        </PhotoRow>
-        <PhotoRow grid>
+        </PhotoGridRow>
+        <PhotoGridRow>
           <ResponsiveImage srcPath="/images/home/section_3/row_9" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_3/row_10" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_3/row_11" imgAlt="test" />
-        </PhotoRow>
+        </PhotoGridRow>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 22}>
-        <BigText marginTop marginBottom="200px">
-          Key facts
-        </BigText>
+      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 22}>
+        <Row height="55%" />
+        <Row height="45%">
+          <BigText>Key facts</BigText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn
-        className="swiper-slide"
-        paddingLeft="100px"
-        paddingRight="100px"
-        revealed={revealed >= 23}
-        spaceBetween
-      >
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 23} spaceBetween>
         {generateFacts()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 24}>
-        <BigText marginTop marginBottom="200px">
-          In the news
-        </BigText>
+      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 24}>
+        <Row height="55%" />
+        <Row height="45%">
+          <BigText>In the news</BigText>
+        </Row>
       </ScrollColumn>
-      <ScrollColumn
-        className="swiper-slide"
-        paddingLeft="100px"
-        paddingRight="100px"
-        revealed={revealed >= 25}
-        spaceBetween
-      >
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 25} spaceBetween>
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 25}>
-        <BigText marginTop intro>
-          ROW DTLA.
-          <br />
-          Work life has never
-          <br /> looked better.
-        </BigText>
+        <Row height="55%" />
+        <Row height="45%">
+          <BigText marginTop intro>
+            ROW DTLA.
+            <br />
+            Work life has never
+            <br /> looked better.
+          </BigText>
+        </Row>
       </ScrollColumn>
     </React.Fragment>
   );

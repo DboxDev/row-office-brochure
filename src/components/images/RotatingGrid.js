@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Context from 'config/Context';
 
 import RotatingImages from 'components/images/RotatingImages';
 
 const RotatingGridContainer = styled.div`
   height: 100%;
-  width: ${props => `${props.height}px` || '1000px'};
+  width: 800px;
   .rotating-image-row {
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 40vh;
   }
 `;
 
@@ -29,9 +28,6 @@ function RotatingGrid({ imgGrid }) {
       setTimeout(() => changeImage(), 3000);
     }
   });
-
-  const context = useContext(Context);
-  const { height } = context.state.windowDimensions;
 
   function renderGrid(imgGrid) {
     let rows = [];
@@ -59,11 +55,7 @@ function RotatingGrid({ imgGrid }) {
     return rows;
   }
 
-  return (
-    <RotatingGridContainer className="image-grid-container" height={height * 0.73}>
-      {renderGrid(imgGrid)}
-    </RotatingGridContainer>
-  );
+  return <RotatingGridContainer className="image-grid-container">{renderGrid(imgGrid)}</RotatingGridContainer>;
 }
 
 export default RotatingGrid;

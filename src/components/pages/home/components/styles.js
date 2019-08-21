@@ -59,20 +59,17 @@ const BlackSlide = styled.div`
 `;
 
 const BigText = styled.h2`
-  color: ${props => (props.intro ? '#000' : '#999999')};
+  color: ${props => (props.intro ? '#000' : '#8E8E8E')};
   font-weight: ${props => (props.intro ? '500' : '400')};
   margin: 0;
   font-size: 7vh;
   line-height: 100%;
-  ${'' /* ${mediaMin.desktop`
-    font-size: 7vh;
-  `} */}
 `;
 
 const MedText = styled.h3`
   margin: 0;
   font-size: 3vh;
-  color: ${props => (props.black ? '#000' : '#999999')};
+  color: ${props => (props.black ? '#000' : '#747474')};
   line-height: 4vh;
 `;
 
@@ -81,7 +78,6 @@ const PhotoRow = styled.div`
   flex-direction: row;
   height: ${props => props.height || '55%'};
   width: 100%;
-  ${props => (props.grid ? 'padding: 5% 0' : '')};
   &:first-child {
     padding-top: 0;
   }
@@ -100,6 +96,15 @@ const PhotoRow = styled.div`
   }
 `;
 
+const PhotoGridRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  img {
+    padding: 20px;
+  }
+`;
+
 const GridRow = styled.div`
   width: 900px;
   ${props => (props.grid ? 'padding: 5% 0' : '')};
@@ -107,7 +112,6 @@ const GridRow = styled.div`
 
 const BrandRow = styled.div`
   height: ${props => (props.quarter ? '10%' : '30%')};
-  width: ${props => (props.quarter ? '80vw' : '100vw')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -115,23 +119,24 @@ const BrandRow = styled.div`
 
 const BrandItem = styled.div`
   position: relative;
-  width: ${props => (props.quarter ? '10%' : '30%')};
+  max-width: 350px;
+  margin: 0 5vw;
   .logo {
     position: absolute;
     left: 0;
-    height: 50%;
+    height: 40%;
     width: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-65%, -50%);
+  }
+  .background {
+    height: 100%;
+    z-index: -1;
   }
   .grey-logo {
     height: 100%;
     width: 100%;
     object-fit: contain;
-  }
-  .background {
-    height: 100%;
-    z-index: -1;
   }
 `;
 
@@ -150,28 +155,24 @@ const Fact = styled.div`
     color: #d8d8d8;
     font-family: 'SangBleu Kingdom', serif;
     width: 60px;
-    font-size: 3rem;
+    font-size: 4vh;
   }
   .fact-body {
     color: #000;
     font-family: 'Apercu', 'sans-serif';
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 2vh;
     letter-spacing: 1px;
     padding-top: 10px;
     width: 300px;
-    ${mediaMin.desktop`
-      font-size: 1.4rem;
-      letter-spacing: 3px;
-    `}
+    letter-spacing: 3px;
   }
 `;
 
 const Row = styled.div`
   height: ${props => props.height || '50%'};
   width: 100%;
-  background: ${props => props.background || 'teal'};
-  padding-top: 3vh;
+  padding-top: 4vh;
 `;
 
 const CaptionText = styled.p`
@@ -186,6 +187,7 @@ export {
   BigText,
   MedText,
   PhotoRow,
+  PhotoGridRow,
   GridRow,
   BrandRow,
   BrandItem,

@@ -6,7 +6,7 @@ const HamburgerContainer = styled.button`
   position: fixed;
   cursor: pointer;
   right: 100px;
-  top: 28px;
+  top: 18px;
   height: 80px;
   width: 80px;
   display: flex;
