@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { mediaMin } from 'styles/mediaQueries';
 
 const ScrollColumn = styled.div`
   display: flex !important;
@@ -27,12 +26,9 @@ const BlackSlide = styled.div`
   transition: transform 1s ease-in-out;
   h1.quote {
     color: #fff;
-    width: 50%;
+    width: 45%;
     font-style: italic;
-    font-size: 4vh;
-    ${mediaMin.desktopLarge`
-      font-size: 5vh;
-    `}
+    font-size: 3.4vh;
   }
   span.credit {
     font-size: 32px;
@@ -62,15 +58,15 @@ const BigText = styled.h2`
   color: ${props => (props.intro ? '#000' : '#8E8E8E')};
   font-weight: ${props => (props.intro ? '500' : '400')};
   margin: 0;
-  font-size: 7vh;
+  font-size: 6vh;
   line-height: 100%;
 `;
 
 const MedText = styled.h3`
   margin: 0;
-  font-size: 3vh;
+  font-size: 2vh;
   color: ${props => (props.black ? '#000' : '#747474')};
-  line-height: 4vh;
+  line-height: 3vh;
 `;
 
 const PhotoRow = styled.div`
@@ -78,20 +74,10 @@ const PhotoRow = styled.div`
   flex-direction: row;
   height: ${props => props.height || '55%'};
   width: 100%;
-  &:first-child {
-    padding-top: 0;
-  }
-  &:last-child {
-    padding-bottom: 0;
-  }
   .responsive-image {
     object-fit: cover;
-    padding: 0 5%;
-    &:first-child {
-      padding-left: 0;
-    }
-    &:last-child {
-      padding-right: 0;
+    &:nth-child(2) {
+      margin-left: 50px;
     }
   }
 `;

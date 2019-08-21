@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
-import { SectionOne, SectionTwo, SectionThree } from 'components/pages/home/components/_module';
+import { SectionOne, SectionTwo, SectionThree } from 'components/pages/story/components/_module';
 
 const HorizontalContainer = styled.div`
   height: 100%;
@@ -21,8 +21,8 @@ const HorizontalContainer = styled.div`
 
 const Index = () => {
   const [swiper, setSwiper] = useState(null);
-  const [swiperIndex, setSwiperIndex] = useState(2);
-  const [revealed, setRevealed] = useState(2);
+  const [swiperIndex, setSwiperIndex] = useState(0);
+  const [revealed, setRevealed] = useState(0);
 
   const swiperSettings = {
     freeMode: true,
@@ -33,6 +33,7 @@ const Index = () => {
   };
 
   const updateIndex = useCallback(() => {
+    console.log(swiper);
     console.log(swiper.realIndex);
     setSwiperIndex(swiper.realIndex + 1);
   }, [swiper]);

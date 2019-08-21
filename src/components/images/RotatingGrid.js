@@ -5,11 +5,12 @@ import RotatingImages from 'components/images/RotatingImages';
 
 const RotatingGridContainer = styled.div`
   height: 100%;
-  width: 800px;
   .rotating-image-row {
     display: flex;
     width: 100%;
-    height: 40vh;
+    &:nth-child(1) {
+      margin-bottom: 4vh;
+    }
   }
 `;
 

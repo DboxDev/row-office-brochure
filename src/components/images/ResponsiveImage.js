@@ -4,10 +4,11 @@ import styled from 'styled-components';
 const ResponsiveImg = styled.img`
   max-width: 100%;
   max-height: 100%;
-  height: ${props => props.height || '100%'};
+  ${props => props.height && `height: ${props.height};`};
+  ${props => props.width && `width: ${props.width};`}
 `;
 
-function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp, height }) {
+function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp, height, width }) {
   return (
     <ResponsiveImg
       src={`${srcPath}.jpg`}
@@ -18,6 +19,7 @@ function ResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, r
       onClick={onClickProp}
       aria-hidden={ariaHidden === undefined ? false : ariaHidden}
       height={height}
+      width={width}
     />
   );
 }

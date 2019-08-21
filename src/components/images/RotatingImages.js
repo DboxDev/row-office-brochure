@@ -3,7 +3,20 @@ import styled from 'styled-components';
 
 const RotatingImagesContainer = styled.div`
   position: relative;
-  width: 40vh;
+  height: 35vh;
+  width: 35vh;
+  &:nth-child(1) {
+    margin-right: 2vh;
+  }
+  &:nth-child(2) {
+    margin-left: 2vh;
+  }
+  &:nth-child(3) {
+    margin-right: 2vh;
+  }
+  &:nth-child(4) {
+    margin-left: 2vh;
+  }
 `;
 
 function RotatingImages({ imgArray, activeImage, position }) {
@@ -30,35 +43,14 @@ const AnimatedResponsiveImageWrapper = styled.img`
   top: 0;
   left: 0;
   opacity: 0;
-  height: 36vh;
-  width: 36vh;
   max-width: 100%;
   transition: opacity 500ms ease;
-  ${'' /* padding: ${props => props.padding}; */}
   &.active {
     opacity: 1;
   }
 `;
 
 function AnimatedResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClickProp, refProp, position }) {
-  let padding;
-  switch (position) {
-    case 0:
-      padding = '0 40px 40px 0';
-      break;
-    case 1:
-      padding = '0 0 40px 0';
-      break;
-    case 2:
-      padding = '40px 40px 0 0';
-      break;
-    case 3:
-      padding = '40px 0 0 0';
-      break;
-    default:
-      break;
-  }
-
   return (
     <AnimatedResponsiveImageWrapper
       src={`${srcPath}.jpg`}
@@ -68,7 +60,6 @@ function AnimatedResponsiveImage({ ariaHidden, srcPath, imgClass, imgAlt, onClic
       className={`animated-responsive-image ${imgClass}`}
       onClick={onClickProp}
       aria-hidden={ariaHidden === undefined ? false : ariaHidden}
-      padding={padding}
     />
   );
 }

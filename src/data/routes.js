@@ -1,10 +1,10 @@
-import { Index, Facts, Maps, Availability, Contact, Legal, Test } from '../components/pages/_module';
+import { Story, Facts, Maps, Availability, Contact, Legal } from '../components/pages/_module';
 
 const routes = [
   {
     title: 'Story',
     href: '/',
-    component: Index
+    component: Story
   },
   {
     title: 'Facts',
@@ -33,11 +33,6 @@ const secondaryRoutes = [
     title: 'Legal',
     href: '/legal',
     component: Legal
-  },
-  {
-    title: 'Test',
-    href: '/test',
-    component: Test
   }
 ];
 
