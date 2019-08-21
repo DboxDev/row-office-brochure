@@ -18,7 +18,7 @@ const SectionOne = ({ revealed }) => {
           <p>SCROLL</p>
         </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 1}>
+      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 0}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
@@ -30,7 +30,7 @@ const SectionOne = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 2}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 1}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_2" imgAlt="test" />
           <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />
@@ -44,7 +44,7 @@ const SectionOne = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 2}>
         <Row height="55%" />
         <Row height="45%">
           <MedText marginTop>
@@ -58,13 +58,13 @@ const SectionOne = ({ revealed }) => {
           </MedText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
-        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 4} />
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
+        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 3} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
         <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 6} paddingLeft="100px" paddingRight="100px">
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 5} paddingLeft="100px" paddingRight="100px">
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
         </PhotoRow>
@@ -80,7 +80,7 @@ const SectionOne = ({ revealed }) => {
           </MedText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="10%" revealed={revealed >= 7}>
+      <ScrollColumn className="swiper-slide" paddingRight="10%" revealed={revealed >= 6}>
         <ResponsiveImage srcPath="/images/home/section_1/row_9" imgAlt="test" />
       </ScrollColumn>
     </React.Fragment>

@@ -27,7 +27,7 @@ const generateBrandGrid = () => {
 const SectionTwo = ({ revealed }) => {
   return (
     <React.Fragment>
-      <BlackSlide className="swiper-slide" revealed={revealed >= 8}>
+      <BlackSlide className="swiper-slide" revealed={revealed >= 7}>
         <h1 className="quote">
           "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into an all-encompassing
           iconic destination. It is a growing collective of globally recognized shops, restaurants and innovative
@@ -35,7 +35,7 @@ const SectionTwo = ({ revealed }) => {
         </h1>
         <span className="credit">LA MAGAZINE</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 9}>
+      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 8}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_2/row_1" imgAlt="test" />
         </PhotoRow>
@@ -54,15 +54,15 @@ const SectionTwo = ({ revealed }) => {
         paddingRight="0"
         paddingTop="140px"
         paddingBottom="120px"
-        revealed={revealed >= 10}
+        revealed={revealed >= 9}
         spaceBetween
       >
         {generateBrandGrid()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 11}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 10}>
         <ResponsiveImage srcPath="/images/home/section_2/row_2" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 12}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 11}>
         <Row height="55%" />
         <Row height="45%">
           <BigText marginTop>
@@ -73,10 +73,10 @@ const SectionTwo = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 13}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 12}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 13} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 14}>
+      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 13}>
         <Row height="55%" />
         <Row height="45%">
           <MedText marginTop>

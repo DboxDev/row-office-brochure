@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
 
+import Context from 'config/Context';
 import { SectionOne, SectionTwo, SectionThree } from 'components/pages/story/components/_module';
 
 const HorizontalContainer = styled.div`
@@ -19,10 +20,12 @@ const HorizontalContainer = styled.div`
   }
 `;
 
-const Index = () => {
+const Story = () => {
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [revealed, setRevealed] = useState(0);
+
+  const context = useContext(Context);
 
   const swiperSettings = {
     freeMode: true,
@@ -33,9 +36,8 @@ const Index = () => {
   };
 
   const updateIndex = useCallback(() => {
-    console.log(swiper);
-    console.log(swiper.realIndex);
-    setSwiperIndex(swiper.realIndex + 1);
+    setSwiperIndex(swiper.realIndex);
+    context.updateStoryIndex(swiper.realIndex);
   }, [swiper]);
 
   useEffect(() => {
@@ -56,6 +58,10 @@ const Index = () => {
     }
   }, [swiperIndex]);
 
+  useEffect(() => {
+    context.updateStoryIndex(0);
+  }, []);
+
   return (
     <HorizontalContainer>
       <Swiper {...swiperSettings}>
@@ -67,4 +73,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Story;
