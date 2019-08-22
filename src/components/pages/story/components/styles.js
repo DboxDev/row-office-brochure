@@ -72,40 +72,6 @@ const BigText = styled.h2`
   }
 `;
 
-const MedText = styled.h3`
-  margin: 0;
-  font-size: 2vh;
-  color: ${props => (props.black ? '#000' : '#747474')};
-  line-height: 140%;
-`;
-
-const PhotoRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: ${props => props.height || '55%'};
-  width: 100%;
-  .responsive-image {
-    object-fit: cover;
-    &:nth-child(2) {
-      margin-left: 50px;
-    }
-  }
-`;
-
-const PhotoGridRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 50%;
-  img {
-    padding: 20px;
-  }
-`;
-
-const GridRow = styled.div`
-  width: 900px;
-  ${props => (props.grid ? 'padding: 5% 0' : '')};
-`;
-
 const BrandRow = styled.div`
   height: ${props => (props.quarter ? '10%' : '30%')};
   display: flex;
@@ -134,6 +100,12 @@ const BrandItem = styled.a`
     width: 100%;
     object-fit: contain;
   }
+`;
+
+const CaptionText = styled.p`
+  font-size: 1.2rem;
+  color: #7f7f7f;
+  letter-spacing: 1px;
 `;
 
 const FactRow = styled.div`
@@ -165,30 +137,70 @@ const Fact = styled.div`
   }
 `;
 
+const GridRow = styled.div`
+  width: 900px;
+  ${props => (props.grid ? 'padding: 5% 0' : '')};
+`;
+
+const MedText = styled.h3`
+  margin: 0;
+  font-size: 2vh;
+  color: ${props => (props.black ? '#000' : '#747474')};
+  line-height: 140%;
+`;
+
+const PhotoRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: ${props => props.height || '55%'};
+  width: 100%;
+  .responsive-image {
+    object-fit: cover;
+    &:nth-child(2) {
+      margin-left: 50px;
+    }
+  }
+`;
+
+const PhotoGridRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  img {
+    padding: 20px;
+  }
+`;
+
+const PlayerWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+  min-width: 130vh;
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
+
 const Row = styled.div`
   height: ${props => props.height || '50%'};
   width: 100%;
   padding-top: 4vh;
 `;
 
-const CaptionText = styled.p`
-  font-size: 1.2rem;
-  color: #7f7f7f;
-  letter-spacing: 1px;
-`;
-
 export {
-  ScrollColumn,
-  BlackSlide,
-  BigText,
-  MedText,
-  PhotoRow,
-  PhotoGridRow,
-  GridRow,
   BrandRow,
   BrandItem,
+  BlackSlide,
+  BigText,
+  CaptionText,
   FactRow,
   Fact,
-  CaptionText,
-  Row
+  GridRow,
+  PhotoRow,
+  PhotoGridRow,
+  PlayerWrapper,
+  MedText,
+  Row,
+  ScrollColumn
 };

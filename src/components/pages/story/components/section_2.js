@@ -3,15 +3,15 @@ import React from 'react';
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
 import {
-  ScrollColumn,
+  BrandItem,
+  BrandRow,
   BlackSlide,
   BigText,
+  CaptionText,
   MedText,
   PhotoRow,
-  BrandRow,
-  BrandItem,
-  CaptionText,
-  Row
+  Row,
+  ScrollColumn
 } from './styles';
 
 import { brandGrid } from 'data/home';

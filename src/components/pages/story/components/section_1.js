@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, Row } from './styles';
+import { BlackSlide, BigText, MedText, PhotoRow, PlayerWrapper, Row, ScrollColumn } from './styles';
 
 import { welcomeGrid } from 'data/rotatingImages';
 
@@ -63,14 +64,18 @@ const SectionOne = ({ revealed }) => {
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 3} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
-        <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
+        <PlayerWrapper>
+          <ReactPlayer
+            className="react-player"
+            width="100%"
+            height="100%"
+            url="https://vimeo.com/90509568"
+            playing
+            light
+          />
+        </PlayerWrapper>
       </ScrollColumn>
-      <ScrollColumn
-        className="swiper-slide"
-        revealed={revealed >= 5}
-        paddingLeft="100px"
-        paddingRight="100px"
-      >
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
         </PhotoRow>
