@@ -2,7 +2,17 @@ import React from 'react';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { ScrollColumn, BlackSlide, BigText, MedText, PhotoRow, BrandRow, BrandItem, CaptionText, Row } from './styles';
+import {
+  ScrollColumn,
+  BlackSlide,
+  BigText,
+  MedText,
+  PhotoRow,
+  BrandRow,
+  BrandItem,
+  CaptionText,
+  Row
+} from './styles';
 
 import { brandGrid } from 'data/home';
 import { welcomeGrid } from 'data/rotatingImages';
@@ -29,18 +39,19 @@ const SectionTwo = ({ revealed }) => {
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed={revealed >= 7}>
         <h1 className="quote">
-          "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into an all-encompassing
-          iconic destination. It is a growing collective of globally recognized shops, restaurants and innovative
-          offices that are spread over six buildings to create their own unique L.A. environment."
+          "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into
+          an all-encompassing iconic destination. It is a growing collective of globally recognized
+          shops, restaurants and innovative offices that are spread over six buildings to create
+          their own unique L.A. environment."
         </h1>
         <span className="credit">LA MAGAZINE</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 8}>
+      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 8}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_2/row_1" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
-          <BigText intro>
+          <BigText className="black-500">
             A vibrant district that
             <br /> pushes the boundaries
             <br /> between work, culture
@@ -59,13 +70,13 @@ const SectionTwo = ({ revealed }) => {
       >
         {generateBrandGrid()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 10}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 10}>
         <ResponsiveImage srcPath="/images/home/section_2/row_2" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 11}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 11}>
         <Row height="55%" />
         <Row height="45%">
-          <BigText marginTop>
+          <BigText className="grey-400">
             Easily elevate your routine
             <br /> essentials with gyms, salons,
             <br /> workplaces, and restaurants
@@ -73,13 +84,13 @@ const SectionTwo = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 12}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 12}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 13} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="100px" paddingRight="100px" revealed={revealed >= 13}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 13}>
         <Row height="55%" />
         <Row height="45%">
-          <MedText marginTop>
+          <MedText>
             ROW DTLA brings people
             <br /> together through
             <br /> workshops, activated
@@ -92,7 +103,7 @@ const SectionTwo = ({ revealed }) => {
           </MedText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="10%" revealed={revealed >= 14}>
+      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 14}>
         <ResponsiveImage srcPath="/images/home/section_2/row_7" imgAlt="test" height="95%" />
         <CaptionText>AN INTERCHANGEABLE WORK AND PLAY DYNAMIC </CaptionText>
       </ScrollColumn>

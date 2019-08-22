@@ -126,7 +126,7 @@ function Header(props) {
         {approvedRouteTitles.includes(route) && (
           <RouteTitle navActive={navActive} route={route} color={color} />
         )}
-        <MainLogo />
+        <MainLogo toggleActive={() => navActive && toggleActive(false)} />
         <Hamburger navActive={navActive} toggleActive={toggleActive} />
 
         <NavigationOverlay navActive={navActive}>

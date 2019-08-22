@@ -24,7 +24,7 @@ const SectionOne = ({ revealed }) => {
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
-          <BigText intro>
+          <BigText className="black-500">
             Welcome to
             <br />
             ROW DTLA
@@ -37,7 +37,7 @@ const SectionOne = ({ revealed }) => {
           <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
-          <BigText>
+          <BigText className="grey-400">
             100 years of history and a
             <br /> 32-acre district mark the
             <br /> beginning of LA’s future as a
@@ -86,7 +86,7 @@ const SectionOne = ({ revealed }) => {
           </MedText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="10%" revealed={revealed >= 6}>
+      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 6}>
         <ResponsiveImage srcPath="/images/home/section_1/row_9" imgAlt="test" />
       </ScrollColumn>
     </React.Fragment>

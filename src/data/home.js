@@ -67,79 +67,96 @@ const keyFacts = [
   'Dog-friendly district and buildings '
 ];
 
-const featuredIn = [
+const newsArray = [
   [
     {
       logo: '/images/logos/grey/goop.png',
-      alt: 'goop'
+      alt: 'goop',
+      href: 'https://goop.com/place/california/los-angeles/downtown-shops/row-dtla/'
     },
     {
       logo: '/images/logos/grey/la_times.png',
-      alt: 'la times'
+      alt: 'la times',
+      href: 'https://www.latimes.com/home/la-hm-four-hours-row-dtla-20190607-story.html'
     },
     {
       logo: '/images/logos/grey/los_angeles.png',
-      alt: 'LA'
+      alt: 'LA',
+      href: 'https://www.lamag.com/sponsored/experience-a-taste-of-everything-row-dtla/'
     },
     {
       logo: '/images/logos/grey/la_business_journal.png',
-      alt: 'la business journal'
+      alt: 'la business journal',
+      href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
     }
   ],
   [
     {
       logo: '/images/logos/grey/curbed.png',
-      alt: 'curbed'
+      alt: 'curbed',
+      href:
+        'https://la.curbed.com/2016/1/12/10847514/arts-districts-alameda-square-factories-to-be-reborn-as-massive-mixed'
     },
     {
       logo: '/images/logos/grey/monocle.png',
-      alt: 'monocle'
+      alt: 'monocle',
+      href: 'https://monocle.com/magazine/issues/123/top-of-the-shops/'
     },
     {
       logo: '/images/logos/grey/modern_luxury.png',
-      alt: 'modern_luxury'
+      alt: 'modern_luxury',
+      href: ''
     },
     {
       logo: '/images/logos/grey/urbanize.png',
-      alt: 'urbanize'
+      alt: 'urbanize',
+      href: 'https://rowdtla.com/this-weeks-leases-zappos-takes-space-at-row-dtla'
     }
   ],
   [
     {
       logo: '/images/logos/grey/food_wine.png',
-      alt: 'food_wine'
+      alt: 'food_wine',
+      href: 'https://www.foodandwine.com/news/row-dtla-opens-los-angeles'
     },
     {
       logo: '/images/logos/grey/traveler.png',
-      alt: 'traveler'
+      alt: 'traveler',
+      href: 'https://www.cntraveler.com/shops/los-angeles/row-dtla'
     },
     {
       logo: '/images/logos/grey/arch_digest.png',
-      alt: 'arch_digest'
+      alt: 'arch_digest',
+      href: 'https://google.com'
     },
     {
       logo: '/images/logos/grey/timeout.png',
-      alt: 'timeout'
+      alt: 'timeout',
+      href: 'https://google.com'
     }
   ],
   [
     {
       logo: '/images/logos/grey/uncover.png',
-      alt: 'uncover'
+      alt: 'uncover',
+      href: 'https://google.com'
     },
     {
       logo: '/images/logos/grey/mann.png',
-      alt: 'mann'
+      alt: 'mann',
+      href: 'https://google.com'
     },
     {
       logo: '/images/logos/grey/downtowner.png',
-      alt: 'downtowner'
+      alt: 'downtowner',
+      href: 'https://google.com'
     },
     {
       logo: '/images/logos/grey/bloomberg.png',
-      alt: 'bloomberg'
+      alt: 'bloomberg',
+      href: 'https://google.com'
     }
   ]
 ];
 
-export { brandGrid, keyFacts, featuredIn };
+export { brandGrid, keyFacts, newsArray };

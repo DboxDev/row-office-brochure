@@ -55,11 +55,21 @@ const BlackSlide = styled.div`
 `;
 
 const BigText = styled.h2`
-  color: ${props => (props.intro ? '#000' : '#8E8E8E')};
-  font-weight: ${props => (props.intro ? '500' : '400')};
   margin: 0;
   font-size: 6vh;
   line-height: 110%;
+  &.black-500 {
+    font-weight: 500;
+    color: #000;
+  }
+  &.grey-400 {
+    font-weight: 400;
+    color: #8e8e8e;
+  }
+  &.grey-500 {
+    font-weight: 500;
+    color: #8e8e8e;
+  }
 `;
 
 const MedText = styled.h3`
@@ -103,7 +113,7 @@ const BrandRow = styled.div`
   justify-content: space-between;
 `;
 
-const BrandItem = styled.div`
+const BrandItem = styled.a`
   position: relative;
   max-width: 350px;
   margin: 0 5vw;

@@ -15,9 +15,9 @@ const MainLogoWrapper = styled.svg`
   }
 `;
 
-function MainLogo() {
+function MainLogo({ toggleActive }) {
   return (
-    <Link to={'/'}>
+    <Link to={'/'} onClick={toggleActive}>
       <MainLogoWrapper xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 200 25">
         <title>Row Main Logo</title>
         <path
