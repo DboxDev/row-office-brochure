@@ -59,14 +59,14 @@ const BigText = styled.h2`
   font-weight: ${props => (props.intro ? '500' : '400')};
   margin: 0;
   font-size: 6vh;
-  line-height: 100%;
+  line-height: 110%;
 `;
 
 const MedText = styled.h3`
   margin: 0;
   font-size: 2vh;
   color: ${props => (props.black ? '#000' : '#747474')};
-  line-height: 3vh;
+  line-height: 140%;
 `;
 
 const PhotoRow = styled.div`
@@ -147,11 +147,11 @@ const Fact = styled.div`
     color: #000;
     font-family: 'Apercu', 'sans-serif';
     text-transform: uppercase;
-    font-size: 2vh;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     padding-top: 10px;
-    width: 300px;
-    letter-spacing: 3px;
+    width: 250px;
+    letter-spacing: 1px;
   }
 `;
 
@@ -162,7 +162,7 @@ const Row = styled.div`
 `;
 
 const CaptionText = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #7f7f7f;
   letter-spacing: 1px;
 `;

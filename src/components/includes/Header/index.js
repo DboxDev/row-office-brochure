@@ -107,9 +107,11 @@ function Header(props) {
   const [navActive, toggleActive] = useState(false);
 
   useEffect(() => {
-    darkSlideIndices.includes(storyIndex)
-      ? toggleDarkColorScheme(true)
-      : toggleDarkColorScheme(false);
+    if (darkSlideIndices.includes(storyIndex)) {
+      return toggleDarkColorScheme(true);
+    }
+
+    toggleDarkColorScheme(false);
   }, [storyIndex]);
 
   return (

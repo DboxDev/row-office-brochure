@@ -11,14 +11,15 @@ const SectionOne = ({ revealed }) => {
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed>
         <h1 className="quote">
-          ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace, that if you celebrate
-          innovation, collaboration and community, you get something very special, that just keeps getting better.
+          ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace,
+          that if you celebrate innovation, collaboration and community, you get something very
+          special, that just keeps getting better.
         </h1>
         <span className="scroll-reminder">
           <p>SCROLL</p>
         </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="10%" revealed={revealed >= 0}>
+      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 0}>
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
         </PhotoRow>
@@ -64,7 +65,12 @@ const SectionOne = ({ revealed }) => {
       <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
         <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 5} paddingLeft="100px" paddingRight="100px">
+      <ScrollColumn
+        className="swiper-slide"
+        revealed={revealed >= 5}
+        paddingLeft="100px"
+        paddingRight="100px"
+      >
         <PhotoRow>
           <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
         </PhotoRow>
