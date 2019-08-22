@@ -16,7 +16,6 @@ const AvailabilityContainer = styled.div`
 function Facts() {
   return (
     <AvailabilityContainer className="container">
-      <h1 className="page-title">The Available Spaces</h1>
       <table>
         <tbody>
           <tr>

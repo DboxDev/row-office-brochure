@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    transition: background-color 300ms ease-in-out;
   }
   #root {
     height: 100%;

@@ -3,11 +3,14 @@ import Context from 'config/Context';
 
 function ContextProvider({ children }) {
   const [windowDimensions, setWindowDimensions] = useState(null);
-  const [storyIndex, updateStoryIndex] = useState(null);
 
   const updateWindowDimensions = () => {
-    const width = window.innerWidth || Math.max(document.documentElement.clientWidth, document.body.clientWidth);
-    const height = window.innerHeight || Math.max(document.documentElement.clientHeight, document.body.clientHeight);
+    const width =
+      window.innerWidth ||
+      Math.max(document.documentElement.clientWidth, document.body.clientWidth);
+    const height =
+      window.innerHeight ||
+      Math.max(document.documentElement.clientHeight, document.body.clientHeight);
     const dimensions = { windowDimensions: { width, height } };
     setWindowDimensions(dimensions);
   };
@@ -24,8 +27,7 @@ function ContextProvider({ children }) {
   return (
     <Context.Provider
       value={{
-        state: { storyIndex, windowDimensions },
-        updateStoryIndex: idx => updateStoryIndex(idx)
+        state: { windowDimensions }
       }}
     >
       {children}

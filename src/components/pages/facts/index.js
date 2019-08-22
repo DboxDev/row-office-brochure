@@ -9,13 +9,18 @@ const FactContainer = styled.div`
   }
   ul {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding: 2em 0 2em 1em;
+    padding: 2em 0 2em 0.2em;
     margin: 0;
     li {
       margin: 2em 0;
-      list-style-type: circle;
+      list-style-type: none;
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-indent: -5px;
+      &:before {
+        content: '-';
+        text-indent: -5px;
+      }
     }
   }
 `;
@@ -66,7 +71,6 @@ const factsArray = [
 function Facts() {
   return (
     <FactContainer className="container">
-      <h1 className="page-title">The Facts</h1>
       {factsArray.map((factArray, arrayIdx) => {
         return (
           <ul key={`fact-section-${arrayIdx}`}>

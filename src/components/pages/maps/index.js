@@ -7,6 +7,8 @@ const MapContainer = styled.div`
   height: 100%;
   .left-column {
     width: 20%;
+    display: flex;
+    align-items: center;
     .button-container {
       button {
         display: block;
@@ -48,15 +50,20 @@ function Maps() {
   const [activeMap, toggleMap] = useState('row');
 
   return (
-    <div className="container">
+    <div className="full-height-container">
       <MapContainer>
         <div className="left-column">
-          <h1 className="page-title">Maps</h1>
           <div className="button-container">
-            <button className={activeMap === 'row' ? 'active' : null} onClick={() => toggleMap('row')}>
+            <button
+              className={activeMap === 'row' ? 'active' : null}
+              onClick={() => toggleMap('row')}
+            >
               ROW
             </button>
-            <button className={activeMap === 'dtla' ? 'active' : null} onClick={() => toggleMap('dtla')}>
+            <button
+              className={activeMap === 'dtla' ? 'active' : null}
+              onClick={() => toggleMap('dtla')}
+            >
               DTLA
             </button>
           </div>

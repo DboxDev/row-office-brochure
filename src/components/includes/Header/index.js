@@ -1,14 +1,24 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Context from 'config/Context';
 import { routes } from 'data/routes';
 
 import { mediaMin } from 'styles/mediaQueries';
 import { BackgroundStyles } from 'styles/global/_module';
-import MainLogo from './MainLogo.js';
-import Hamburger from './Hamburger.js';
+import MainLogo from './MainLogo';
+import Hamburger from './Hamburger';
+import RouteTitle from './RouteTitle';
+
+const NavigationBar = styled.div`
+  width: 100%;
+  height: 120px;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: ${props => props.background};
+`;
 
 const NavigationOverlay = styled.div`
   position: fixed;
@@ -76,59 +86,49 @@ const NavigationOverlay = styled.div`
   }
 `;
 
-const backgroundColorMap = {
+const colorMap = {
   home: {
-    backgroundColor: '#FFF'
+    background: '#FFF'
   },
   availability: {
-    backgroundColor: '#000'
+    background: '#000',
+    color: '#FFF'
   },
   facts: {
-    backgroundColor: '#000'
+    background: '#000',
+    color: '#FFF'
   },
   maps: {
-    backgroundColor: '#FFF'
+    background: '#FFF',
+    color: '#000'
   },
   test: {
-    backgroundColor: '#FFF'
+    background: '#FFF'
   }
 };
 
-const darkSlideIndices = [0, 8, 16];
+const approvedRouteTitles = ['facts', 'maps', 'availability'];
 
 function Header(props) {
-  const context = useContext(Context);
-  const { storyIndex } = context.state;
-
   let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
-  const { backgroundColor } = backgroundColorMap[route];
+  const { background, color } = colorMap[route];
 
-  const [darkColorScheme, toggleDarkColorScheme] = useState(false);
   const [navActive, toggleActive] = useState(false);
-
-  useEffect(() => {
-    if (darkSlideIndices.includes(storyIndex)) {
-      return toggleDarkColorScheme(true);
-    }
-
-    toggleDarkColorScheme(false);
-  }, [storyIndex]);
 
   return (
     <React.Fragment>
-      <BackgroundStyles backgroundColor={backgroundColor} />
+      <BackgroundStyles backgroundColor={background} />
       <header>
-        <MainLogo
-          backgroundColor={backgroundColor}
+        <NavigationBar
           navActive={navActive}
-          darkColorScheme={darkColorScheme}
+          background={approvedRouteTitles.includes(route) ? background : 'transparent'}
         />
-        <Hamburger
-          backgroundColor={backgroundColor}
-          navActive={navActive}
-          darkColorScheme={darkColorScheme}
-          toggleActive={toggleActive}
-        />
+        {approvedRouteTitles.includes(route) && (
+          <RouteTitle navActive={navActive} route={route} color={color} />
+        )}
+        <MainLogo />
+        <Hamburger navActive={navActive} toggleActive={toggleActive} />
+
         <NavigationOverlay navActive={navActive}>
           <ul>
             {routes.map(route => (
@@ -140,11 +140,6 @@ function Header(props) {
             ))}
           </ul>
           <footer>
-            <p className="underline legal-link">
-              <Link to="/legal" onClick={() => toggleActive(!navActive)}>
-                LEGAL
-              </Link>
-            </p>
             <p>WWW.ROWDTLA.COM</p>
             <p>&copy; ROW DTLA</p>
           </footer>

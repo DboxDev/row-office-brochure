@@ -24,11 +24,6 @@ const Typographystyles = createGlobalStyle`
       color: inherited;
     }
   }
-
-  .page-title {
-    font-size: 4rem;
-    font-weight: 500;
-  }
 `;
 
 export default Typographystyles;

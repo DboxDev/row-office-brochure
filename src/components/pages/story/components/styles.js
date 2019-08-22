@@ -33,7 +33,7 @@ const BlackSlide = styled.div`
   span.credit {
     font-size: 32px;
     color: #fff;
-    width: 50%;
+    width: 45%;
   }
   span.scroll-reminder {
     position: absolute;
@@ -140,8 +140,8 @@ const Fact = styled.div`
   .fact-index {
     color: #d8d8d8;
     font-family: 'SangBleu Kingdom', serif;
-    width: 60px;
-    font-size: 4vh;
+    width: 70px;
+    font-size: 3rem;
   }
   .fact-body {
     color: #000;
