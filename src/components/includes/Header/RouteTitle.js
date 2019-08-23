@@ -10,7 +10,7 @@ const RouteTitleContainer = styled.h3`
   transform: translateY(-50%);
   margin: 0;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: ${props => props.color};
   z-index: 1;
 `;

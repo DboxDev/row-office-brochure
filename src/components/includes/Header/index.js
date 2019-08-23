@@ -102,12 +102,12 @@ const colorMap = {
     background: '#FFF',
     color: '#000'
   },
-  test: {
-    background: '#FFF'
+  contact: {
+    background: '#000'
   }
 };
 
-const approvedRouteTitles = ['facts', 'maps', 'availability'];
+const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
 function Header(props) {
   let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
