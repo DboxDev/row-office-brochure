@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import { routes } from 'data/routes';
 
-import { mediaMin } from 'styles/mediaQueries';
 import { BackgroundStyles } from 'styles/global/_module';
 import MainLogo from './MainLogo';
 import Hamburger from './Hamburger';
@@ -41,15 +40,12 @@ const NavigationOverlay = styled.div`
     li {
       list-style-type: none;
       text-align: center;
-      font-size: 3rem;
+      font-size: 5vh;
       margin: 0.5em 0;
       font-family: 'SangBleu Kingdom', serif;
       font-weight: normal;
       font-style: normal;
       color: #fff;
-      ${mediaMin.desktop`
-        font-size: 4rem;
-      `}
       a {
         text-decoration: none;
         &:link,
