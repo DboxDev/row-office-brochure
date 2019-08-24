@@ -8,10 +8,9 @@ const ContainerStyles = createGlobalStyle`
     padding-bottom: 120px;
   }
   .contact-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 120px;
-    height: 100%;
   }
   .full-height-container {
     width: 90%;
