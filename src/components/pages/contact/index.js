@@ -8,6 +8,7 @@ const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    width: 100%;
   }
 `;
 

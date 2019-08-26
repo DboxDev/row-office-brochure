@@ -11,6 +11,9 @@ const ContainerStyles = createGlobalStyle`
     width: 90%;
     margin: 0 auto;
     padding-top: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   .full-height-container {
     width: 90%;
