@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
@@ -13,7 +14,8 @@ import {
   BrandItem,
   Fact,
   FactRow,
-  Row
+  Row,
+  PlayerWrapper
 } from './styles';
 
 import { keyFacts, newsArray } from 'data/home';
@@ -107,7 +109,16 @@ const SectionThree = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 20}>
-        <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
+        <PlayerWrapper previewImg="/images/video/rowdtla_video_thumbnail_general.png">
+          <ReactPlayer
+            className="react-player"
+            width="100%"
+            height="100%"
+            url="https://vimeo.com/355434466"
+            playing
+            light="/images/video/rowdtla_video_thumbnail_office.jpg"
+          />
+        </PlayerWrapper>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 21}>
         <Row height="55%" />

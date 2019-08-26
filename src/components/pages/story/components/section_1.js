@@ -69,9 +69,9 @@ const SectionOne = ({ revealed }) => {
             className="react-player"
             width="100%"
             height="100%"
-            url="https://vimeo.com/90509568"
+            url="https://vimeo.com/355557064"
             playing
-            light
+            light="/images/video/rowdtla_video_thumbnail_general.jpg"
           />
         </PlayerWrapper>
       </ScrollColumn>
