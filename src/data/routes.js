@@ -1,29 +1,23 @@
-import {
-  Index,
-  Facts,
-  Maps,
-  Availability,
-  Contact
-} from '../components/pages/_module';
+import { Story, Facts, Maps, Availability, Contact, Legal } from '../components/pages/_module';
 
-export const routes = [
+const routes = [
   {
-    title: 'The Pitch',
+    title: 'Story',
     href: '/',
-    component: Index
+    component: Story
   },
   {
-    title: 'The Facts',
+    title: 'Facts',
     href: '/facts',
     component: Facts
   },
   {
-    title: 'The Map',
+    title: 'Map',
     href: '/maps',
     component: Maps
   },
   {
-    title: 'The Available Spaces',
+    title: 'Availability',
     href: '/availability',
     component: Availability
   },
@@ -34,4 +28,12 @@ export const routes = [
   }
 ];
 
-export default routes;
+const secondaryRoutes = [
+  {
+    title: 'Legal',
+    href: '/legal',
+    component: Legal
+  }
+];
+
+export { routes, secondaryRoutes };
