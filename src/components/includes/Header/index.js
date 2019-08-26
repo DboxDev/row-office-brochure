@@ -46,6 +46,24 @@ const NavigationOverlay = styled.div`
       font-weight: normal;
       font-style: normal;
       color: #fff;
+      transition: ${props => (props.navActive ? 'all 500ms ease' : 'all 0ms ease')};
+      opacity: 0;
+      transform: ${props => (!props.navActive ? 'translateX(-50px)' : 'translateX(0)')};
+      opacity: ${props => (props.navActive ? 1 : 0)};
+      &:nth-child(1) {
+      }
+      &:nth-child(2) {
+        transition-delay: 100ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 200ms;
+      }
+      &:nth-child(4) {
+        transition-delay: 300ms;
+      }
+      &:nth-child(5) {
+        transition-delay: 400ms;
+      }
       a {
         text-decoration: none;
         &:link,
