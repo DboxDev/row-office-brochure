@@ -14,7 +14,7 @@ const SectionOne = ({ revealed }) => {
         <h1 className="quote">
           ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace,
           that if you celebrate innovation, collaboration and community, you get something very
-          special, that just keeps getting better."
+          special, that just keeps getting better.
         </h1>
         <span className="scroll-reminder">
           <p>SCROLL</p>
