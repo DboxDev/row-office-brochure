@@ -81,7 +81,7 @@ const BrandRow = styled.div`
 
 const BrandItem = styled.a`
   position: relative;
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 5vw;
   .logo {
     position: absolute;

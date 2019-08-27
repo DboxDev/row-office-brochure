@@ -19,7 +19,7 @@ import {
 } from './styles';
 
 import { keyFacts, newsArray } from 'data/home';
-import { welcomeGrid } from 'data/rotatingImages';
+import { workspacesGrid } from 'data/rotatingImages';
 
 const generateFacts = () => {
   const rows = [];
@@ -69,7 +69,7 @@ const SectionThree = ({ revealed }) => {
       </BlackSlide>
       <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 16}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_3/row_1" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_1" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
@@ -94,7 +94,7 @@ const SectionThree = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
-        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 18} />
+        <RotatingGrid imgGrid={workspacesGrid} carouselActive={revealed >= 18} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
         <Row height="55%" />
@@ -136,14 +136,14 @@ const SectionThree = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="200px" revealed={revealed >= 22}>
         <PhotoGridRow>
-          <ResponsiveImage srcPath="/images/home/section_3/row_6" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_7" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_8" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_2" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_3" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_4" imgAlt="test" />
         </PhotoGridRow>
         <PhotoGridRow>
-          <ResponsiveImage srcPath="/images/home/section_3/row_9" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_10" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_3/row_11" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_5" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_6" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_3/row_office_section3_7" imgAlt="test" />
         </PhotoGridRow>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 22}>

@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 import { brandGrid } from 'data/home';
-import { welcomeGrid } from 'data/rotatingImages';
+import { communityGrid } from 'data/rotatingImages';
 
 const generateBrandGrid = () => {
   return brandGrid.map((row, rowIdx) => {
@@ -48,7 +48,7 @@ const SectionTwo = ({ revealed }) => {
       </BlackSlide>
       <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 8}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_2/row_1" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_2/row_office_section2_1" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
@@ -71,21 +71,21 @@ const SectionTwo = ({ revealed }) => {
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 10}>
-        <ResponsiveImage srcPath="/images/home/section_2/row_2" imgAlt="test" />
+        <ResponsiveImage srcPath="/images/home/section_2/row_office_section2_2" imgAlt="test" />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 11}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-400">
-            Easily elevate your routine
-            <br /> essentials with gyms, salons,
-            <br /> workplaces, and restaurants
-            <br /> all within reach
+            Elevate your routine without
+            <br /> ever leaving. Workplaces,
+            <br /> restaurants, fitness options,
+            <br /> and salons are all within reach
           </BigText>
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 12}>
-        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 13} />
+        <RotatingGrid imgGrid={communityGrid} carouselActive={revealed >= 13} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 13}>
         <Row height="55%" />
@@ -104,7 +104,11 @@ const SectionTwo = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 14}>
-        <ResponsiveImage srcPath="/images/home/section_2/row_7" imgAlt="test" height="95%" />
+        <ResponsiveImage
+          srcPath="/images/home/section_2/row_office_section2_3"
+          imgAlt="test"
+          height="95%"
+        />
         <CaptionText>AN INTERCHANGEABLE WORK AND PLAY DYNAMIC </CaptionText>
       </ScrollColumn>
     </React.Fragment>
