@@ -117,14 +117,19 @@ const colorMap = {
     color: '#000'
   },
   contact: {
-    background: '#000'
+    background: '#000',
+    color: '#fff'
+  },
+  test: {
+    background: '#000',
+    color: '#fff'
   }
 };
 
 const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
-function Header(props) {
-  let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
+function Header({ restrictScreen, location }) {
+  let route = location.pathname.replace('/', '').toLowerCase() || 'home';
   const { background, color } = colorMap[route];
 
   const [navActive, toggleActive] = useState(false);
@@ -135,13 +140,15 @@ function Header(props) {
       <header>
         <NavigationBar
           navActive={navActive}
-          background={approvedRouteTitles.includes(route) ? background : 'transparent'}
+          background={
+            approvedRouteTitles.includes(route) && !restrictScreen ? background : 'transparent'
+          }
         />
-        {approvedRouteTitles.includes(route) && (
+        {approvedRouteTitles.includes(route) && !restrictScreen && (
           <RouteTitle navActive={navActive} route={route} color={color} />
         )}
         <MainLogo toggleActive={() => navActive && toggleActive(false)} />
-        <Hamburger navActive={navActive} toggleActive={toggleActive} />
+        {!restrictScreen && <Hamburger navActive={navActive} toggleActive={toggleActive} />}
 
         <NavigationOverlay navActive={navActive}>
           <ul>
