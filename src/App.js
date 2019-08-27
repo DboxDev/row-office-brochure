@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ContextProvider from 'provider/ContextProvider';
 
 import { routes, secondaryRoutes } from 'data/routes';
 
@@ -41,7 +40,7 @@ function App() {
   }, [updateWindowDimensions]);
 
   return (
-    <ContextProvider>
+    <React.Fragment>
       <ContainerStyles />
       <RootStyles />
       <TypographyStyles />
@@ -62,7 +61,7 @@ function App() {
           </Switch>
         )}
       </Router>
-    </ContextProvider>
+    </React.Fragment>
   );
 }
 
