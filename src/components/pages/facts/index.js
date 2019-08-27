@@ -18,7 +18,7 @@ const FactContainer = styled.div`
       letter-spacing: 1px;
       text-indent: -5px;
       &:before {
-        content: '-';
+        content: '- ';
         text-indent: -5px;
       }
     }
