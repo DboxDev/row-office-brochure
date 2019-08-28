@@ -9,6 +9,7 @@ const useContactForm = callback => {
     spaceAvailable: '',
     howHear: ''
   });
+  const [submitted, toggleFormSubmitted] = useState(false);
 
   const handleSubmit = event => {
     if (event) {
@@ -60,7 +61,9 @@ const useContactForm = callback => {
   return {
     handleSubmit,
     handleInputChange,
-    inputs
+    inputs,
+    submitted,
+    toggleFormSubmitted
   };
 };
 
