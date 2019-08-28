@@ -9,14 +9,12 @@ const Typographystyles = createGlobalStyle`
     font-family: 'SangBleu Kingdom', serif;
     font-weight: normal;
     font-style: normal;
-    letter-spacing: 1px;
   }
 
   li, p, button, th, tr, td, form {
     font-family: 'Apercu', 'sans-serif';
     font-weight: 300;
     font-style: normal;
-    letter-spacing: 1px;
   }
   
   .underline {
