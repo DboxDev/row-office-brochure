@@ -48,7 +48,10 @@ const SectionTwo = ({ revealed }) => {
       </BlackSlide>
       <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 8}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_2/row_office_section2_1" imgAlt="test" />
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_2/row_office_section2_1"
+            imgAlt="test"
+          />
         </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
@@ -71,7 +74,10 @@ const SectionTwo = ({ revealed }) => {
         {generateBrandGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 10}>
-        <ResponsiveImage srcPath="/images/home/section_2/row_office_section2_2" imgAlt="test" />
+        <ResponsiveImage
+          srcPath="/images/pages/home/section_2/row_office_section2_2"
+          imgAlt="test"
+        />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 11}>
         <Row height="55%" />
@@ -105,7 +111,7 @@ const SectionTwo = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 14}>
         <ResponsiveImage
-          srcPath="/images/home/section_2/row_office_section2_3"
+          srcPath="/images/pages/home/section_2/row_office_section2_3"
           imgAlt="test"
           height="95%"
         />

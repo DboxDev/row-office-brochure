@@ -2,51 +2,51 @@ const brandGrid = [
   [
     {
       logo: '/images/logos/adidas_logo.svg',
-      background: '/images/home/brands/adidas',
+      background: '/images/pages/home/brands/adidas',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/wca_logo.svg',
-      background: '/images/home/brands/wc+a',
+      background: '/images/pages/home/brands/wc+a',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/soho_house_logo.svg',
-      background: '/images/home/brands/sohohouse',
+      background: '/images/pages/home/brands/sohohouse',
       alt: 'adidas'
     }
   ],
   [
     {
       logo: '/images/logos/jbrand_logo.svg',
-      background: '/images/home/brands/j_brand',
+      background: '/images/pages/home/brands/j_brand',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/spotify_logo.svg',
-      background: '/images/home/brands/spotify',
+      background: '/images/pages/home/brands/spotify',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/zappos_logo.svg',
-      background: '/images/home/brands/zappos',
+      background: '/images/pages/home/brands/zappos',
       alt: 'adidas'
     }
   ],
   [
     {
       logo: '/images/logos/gt_logo.svg',
-      background: '/images/home/brands/GT',
+      background: '/images/pages/home/brands/GT',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/midfirst_logo.svg',
-      background: '/images/home/brands/Midfirst_bank',
+      background: '/images/pages/home/brands/midfirst_bank',
       alt: 'adidas'
     },
     {
       logo: '/images/logos/spaces_logo.svg',
-      background: '/images/home/brands/spaces',
+      background: '/images/pages/home/brands/spaces',
       alt: 'adidas'
     }
   ]

@@ -22,7 +22,10 @@ const SectionOne = ({ revealed }) => {
       </BlackSlide>
       <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 0}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_1" imgAlt="test" />
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_1/row_office_section1_1"
+            imgAlt="test"
+          />
         </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
@@ -34,8 +37,14 @@ const SectionOne = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 1}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_2" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_3" imgAlt="test" />
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_1/row_office_section1_2"
+            imgAlt="test"
+          />
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_1/row_office_section1_3"
+            imgAlt="test"
+          />
         </PhotoRow>
         <Row height="45%">
           <BigText className="grey-400">
@@ -77,7 +86,10 @@ const SectionOne = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_4" imgAlt="test" />
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_1/row_office_section1_4"
+            imgAlt="test"
+          />
         </PhotoRow>
         <Row height="45%">
           <MedText>
@@ -92,7 +104,10 @@ const SectionOne = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 6}>
-        <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_5" imgAlt="test" />
+        <ResponsiveImage
+          srcPath="/images/pages/home/section_1/row_office_section1_5"
+          imgAlt="test"
+        />
       </ScrollColumn>
     </React.Fragment>
   );
