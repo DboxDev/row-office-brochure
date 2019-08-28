@@ -40,7 +40,7 @@ const FormRow = styled.div`
       color: #fff;
       caret-color: #fff;
       border: none;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       border-bottom: 1px solid #fff;
       font-size: 2vh;
       padding-top: 1vh;
@@ -53,7 +53,7 @@ const FormRow = styled.div`
     border: 1px solid white;
     text-transform: uppercase;
     background: none;
-    font-size: 4vh;
+    font-size: 2.4vh;
     font-weight: 100;
     padding: 1vh 3vh;
     cursor: pointer;

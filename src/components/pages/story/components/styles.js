@@ -31,7 +31,7 @@ const BlackSlide = styled.div`
     font-size: 3.4vh;
   }
   span.credit {
-    font-size: 32px;
+    font-size: 2vh;
     color: #fff;
     width: 45%;
   }
@@ -105,7 +105,6 @@ const BrandItem = styled.a`
 const CaptionText = styled.p`
   font-size: 1.2rem;
   color: #7f7f7f;
-  letter-spacing: 1px;
 `;
 
 const FactRow = styled.div`
