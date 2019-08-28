@@ -15,7 +15,6 @@ const Typographystyles = createGlobalStyle`
     font-family: 'Apercu', 'sans-serif';
     font-weight: 300;
     font-style: normal;
-    letter-spacing: 1px;
   }
   
   .underline {

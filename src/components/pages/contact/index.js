@@ -12,6 +12,33 @@ const ContactContainer = styled.div`
   }
 `;
 
+const UpperContainer = styled.div`
+  height: 50vh;
+  position: relative;
+`;
+
+const UpperForm = styled.div`
+  position: absolute;
+  opacity: ${props => (props.active ? 1 : 0)};
+  visibility: ${props => (props.active ? 'visible' : 'hidden')};
+  transition: opacity 300ms ease;
+  width: 100%;
+`;
+
+const ThankYouMessage = styled.div`
+  opacity: ${props => (props.active ? 1 : 0)};
+  visibility: ${props => (props.active ? 'visible' : 'hidden')};
+  transition: opacity 300ms ease;
+  h1 {
+    font-size: 5vh;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.4);
+  }
+`;
+
 const FormRow = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +80,11 @@ const FormRow = styled.div`
     border: 1px solid white;
     text-transform: uppercase;
     background: none;
+<<<<<<< HEAD
     font-size: 2.4vh;
+=======
+    font-size: 2.5vh;
+>>>>>>> feature/thank-you
     font-weight: 100;
     padding: 1vh 3vh;
     cursor: pointer;
@@ -62,6 +93,11 @@ const FormRow = styled.div`
     &:hover {
       background: #fff;
       color: #000;
+    }
+    &.active {
+      transition: all 300ms ease;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 `;
@@ -79,85 +115,93 @@ const InfoContainer = styled.div`
 `;
 
 function Contact() {
-  const { inputs, handleInputChange, handleSubmit } = useContactForm();
+  const { inputs, handleInputChange, handleSubmit, submitted } = useContactForm();
 
   return (
     <ContactContainer className="contact-container">
       <form onSubmit={handleSubmit}>
-        <FormRow>
-          <label className="half">
-            <span>First Name</span>
-            <input
-              className="input"
-              type="text"
-              name="firstName"
-              onChange={handleInputChange}
-              value={inputs.firstName}
-              required
-            />
-          </label>
-          <label className="half">
-            <span>Last Name</span>
-            <input
-              className="input"
-              type="text"
-              name="lastName"
-              onChange={handleInputChange}
-              value={inputs.lastName}
-              required
-            />
-          </label>
-        </FormRow>
-        <FormRow>
-          <label className="half">
-            <span>* Email</span>
-            <input
-              className="input"
-              type="email"
-              name="email"
-              onChange={handleInputChange}
-              value={inputs.email}
-              required
-            />
-          </label>
-          <label className="half">
-            <span>Phone</span>
-            <input
-              className="input"
-              type="text"
-              name="phone"
-              onChange={handleInputChange}
-              value={inputs.phone}
-              required
-            />
-          </label>
-        </FormRow>
-        <FormRow>
-          <label className="full">
-            <span>How much space (SqFt) are you looking for?</span>
-            <input
-              className="input"
-              type="text"
-              name="spaceAvailable"
-              onChange={handleInputChange}
-              value={inputs.spaceAvailable}
-              required
-            />
-          </label>
-        </FormRow>
-        <FormRow>
-          <label className="full">
-            <span>How did you hear about ROW DTLA?</span>
-            <input
-              className="input"
-              type="text"
-              name="howHear"
-              onChange={handleInputChange}
-              value={inputs.howHear}
-              required
-            />
-          </label>
-        </FormRow>
+        <UpperContainer>
+          <UpperForm active={!submitted}>
+            <FormRow>
+              <label className="half">
+                <span>* First Name</span>
+                <input
+                  className="input"
+                  type="text"
+                  name="firstName"
+                  onChange={handleInputChange}
+                  value={inputs.firstName}
+                  required
+                />
+              </label>
+              <label className="half">
+                <span>* Last Name</span>
+                <input
+                  className="input"
+                  type="text"
+                  name="lastName"
+                  onChange={handleInputChange}
+                  value={inputs.lastName}
+                  required
+                />
+              </label>
+            </FormRow>
+            <FormRow>
+              <label className="half">
+                <span>* Email</span>
+                <input
+                  className="input"
+                  type="email"
+                  name="email"
+                  onChange={handleInputChange}
+                  value={inputs.email}
+                  required
+                />
+              </label>
+              <label className="half">
+                <span>Phone</span>
+                <input
+                  className="input"
+                  type="text"
+                  name="phone"
+                  onChange={handleInputChange}
+                  value={inputs.phone}
+                />
+              </label>
+            </FormRow>
+            <FormRow>
+              <label className="full">
+                <span>How much space (SqFt) are you looking for?</span>
+                <input
+                  className="input"
+                  type="text"
+                  name="spaceAvailable"
+                  onChange={handleInputChange}
+                  value={inputs.spaceAvailable}
+                />
+              </label>
+            </FormRow>
+            <FormRow>
+              <label className="full">
+                <span>How did you hear about ROW DTLA?</span>
+                <input
+                  className="input"
+                  type="text"
+                  name="howHear"
+                  onChange={handleInputChange}
+                  value={inputs.howHear}
+                />
+              </label>
+            </FormRow>
+          </UpperForm>
+          <ThankYouMessage active={submitted}>
+            <h1>
+              Thank you for your
+              <br /> interest in ROW DTLA.
+            </h1>
+            <h3>We will be in touch soon.</h3>
+          </ThankYouMessage>
+        </UpperContainer>
         <FormRow alignItems="flex-end" justifyContent="space-between">
           <InfoContainer>
             <h3>
@@ -169,7 +213,7 @@ function Contact() {
               <br /> @rowdtla
             </p>
           </InfoContainer>
-          <button type="submit" value="Submit">
+          <button type="submit" value="Submit" className={submitted && 'active'}>
             Submit
           </button>
         </FormRow>

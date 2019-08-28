@@ -9,6 +9,7 @@ const useContactForm = callback => {
     spaceAvailable: '',
     howHear: ''
   });
+  const [submitted, toggleFormSubmitted] = useState(false);
 
   const handleSubmit = event => {
     if (event) {
@@ -17,12 +18,12 @@ const useContactForm = callback => {
       const { email, firstName, lastName, phone, spaceAvailable, howHear } = inputs;
 
       const text = `Hi,\n\nA new registrant signed up:\n\n
-        \n\nName: ${firstName} ${lastName}
-        \n\nEmail: ${email}
-        \n\nPhone: ${phone}
-        \n\nSpace requested: ${spaceAvailable}
-        \n\nHow did you hear about us: ${howHear}
-      `;
+          \n\nName: ${firstName} ${lastName}
+          \n\nEmail: ${email}
+          \n\nPhone: ${phone}
+          \n\nSpace requested: ${spaceAvailable}
+          \n\nHow did you hear about us: ${howHear}
+        `;
 
       var emailData = {
         from: '"Row DTLA" <no_reply_row_dtla@dbox.com>',
@@ -31,7 +32,7 @@ const useContactForm = callback => {
         text: text
       };
 
-      fetch('http://localhost:3001/post-ses-email', {
+      fetch('https://form.api.dbxd.com/post-ses-email', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -43,6 +44,7 @@ const useContactForm = callback => {
         .then(response => response.json())
         .then(result => {
           console.log('email sending successful ', result);
+          toggleFormSubmitted(true);
         })
         .catch(error => {
           /* eslint-disable no-console */
@@ -60,7 +62,8 @@ const useContactForm = callback => {
   return {
     handleSubmit,
     handleInputChange,
-    inputs
+    inputs,
+    submitted
   };
 };
 
