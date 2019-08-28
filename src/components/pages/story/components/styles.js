@@ -179,6 +179,22 @@ const PlayerWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    .react-player__preview {
+      .react-player__shadow {
+        background: none !important;
+        border-radius: 0 !important;
+        height: 120px !important;
+        width: 120px !important;
+        .react-player__play-icon {
+          border-style: none !important;
+          border-width: 0 !important;
+          margin-left: 0 !important;
+          background-image: url('/images/video/videoplay_icon.svg');
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
   }
 `;
 

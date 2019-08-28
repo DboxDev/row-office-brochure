@@ -112,7 +112,7 @@ const SectionThree = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 20}>
-        <PlayerWrapper previewImg="/images/video/rowdtla_video_thumbnail_general.png">
+        <PlayerWrapper previewImg="/images/video/rowdtla_video_preview_general.png">
           <ReactPlayer
             className="react-player"
             width="100%"
