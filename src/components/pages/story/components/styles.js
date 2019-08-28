@@ -183,8 +183,8 @@ const PlayerWrapper = styled.div`
       .react-player__shadow {
         background: none !important;
         border-radius: 0 !important;
-        height: 120px !important;
-        width: 120px !important;
+        height: 200px !important;
+        width: 200px !important;
         .react-player__play-icon {
           border-style: none !important;
           border-width: 0 !important;
