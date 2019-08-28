@@ -80,11 +80,7 @@ const FormRow = styled.div`
     border: 1px solid white;
     text-transform: uppercase;
     background: none;
-<<<<<<< HEAD
     font-size: 2.4vh;
-=======
-    font-size: 2.5vh;
->>>>>>> feature/thank-you
     font-weight: 100;
     padding: 1vh 3vh;
     cursor: pointer;
