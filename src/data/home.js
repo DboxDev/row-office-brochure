@@ -7,7 +7,7 @@ const brandGrid = [
     },
     {
       logo: '/images/logos/wca_logo.svg',
-      background: '/images/pages/home/brands/wc+a',
+      background: '/images/pages/home/brands/wc_a',
       alt: 'adidas'
     },
     {
