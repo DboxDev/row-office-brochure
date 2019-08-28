@@ -70,91 +70,93 @@ const keyFacts = [
 const newsArray = [
   [
     {
-      logo: '/images/logos/grey/goop.png',
-      alt: 'goop',
+      logo: '/images/logos/black/bisnow.png',
+      alt: 'Goop',
       href: 'https://goop.com/place/california/los-angeles/downtown-shops/row-dtla/'
     },
     {
-      logo: '/images/logos/grey/la_times.png',
-      alt: 'la times',
+      logo: '/images/logos/black/blackbook.png',
+      alt: 'LA Times',
       href: 'https://www.latimes.com/home/la-hm-four-hours-row-dtla-20190607-story.html'
     },
     {
-      logo: '/images/logos/grey/los_angeles.png',
-      alt: 'LA',
-      href: 'https://www.lamag.com/sponsored/experience-a-taste-of-everything-row-dtla/'
+      logo: '/images/logos/black/bloomberg.png',
+      alt: 'Bloomberg',
+      href:
+        'https://www.bnnbloomberg.ca/shopify-to-open-first-bricks-and-mortar-location-in-l-a-1.1114516'
     },
     {
-      logo: '/images/logos/grey/la_business_journal.png',
-      alt: 'la business journal',
+      logo: '/images/logos/black/cn_traveler.png',
+      alt: 'LA Business Journal',
       href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
     }
   ],
   [
     {
-      logo: '/images/logos/grey/curbed.png',
-      alt: 'curbed',
+      logo: '/images/logos/black/curbed.png',
+      alt: 'Curbed',
       href:
         'https://la.curbed.com/2016/1/12/10847514/arts-districts-alameda-square-factories-to-be-reborn-as-massive-mixed'
     },
     {
-      logo: '/images/logos/grey/monocle.png',
-      alt: 'monocle',
+      logo: '/images/logos/black/eat_drink_la.png',
+      alt: 'Eat Drink LA',
       href: 'https://monocle.com/magazine/issues/123/top-of-the-shops/'
     },
     {
-      logo: '/images/logos/grey/modern_luxury.png',
-      alt: 'modern_luxury',
-      href: ''
-    },
-    {
-      logo: '/images/logos/grey/urbanize.png',
-      alt: 'urbanize',
-      href: 'https://rowdtla.com/this-weeks-leases-zappos-takes-space-at-row-dtla'
-    }
-  ],
-  [
-    {
-      logo: '/images/logos/grey/food_wine.png',
-      alt: 'food_wine',
+      logo: '/images/logos/black/food_and_wine.png',
+      alt: 'Food & Wine',
       href: 'https://www.foodandwine.com/news/row-dtla-opens-los-angeles'
     },
     {
-      logo: '/images/logos/grey/traveler.png',
-      alt: 'traveler',
-      href: 'https://www.cntraveler.com/shops/los-angeles/row-dtla'
-    },
-    {
-      logo: '/images/logos/grey/arch_digest.png',
-      alt: 'arch_digest',
-      href: 'https://google.com'
-    },
-    {
-      logo: '/images/logos/grey/timeout.png',
-      alt: 'timeout',
-      href: 'https://google.com'
+      logo: '/images/logos/black/goop.png',
+      alt: 'Goop',
+      href: 'https://goop.com/place/california/los-angeles/downtown-shops/row-dtla/'
     }
   ],
   [
     {
-      logo: '/images/logos/grey/uncover.png',
-      alt: 'uncover',
-      href: 'https://google.com'
+      logo: '/images/logos/black/jetsetter.png',
+      alt: 'Jet Setter',
+      href: 'https://www.jetsetter.com/magazine/youre-not-a-tourist-los-angeles/#row-dtla'
     },
     {
-      logo: '/images/logos/grey/mann.png',
-      alt: 'mann',
-      href: 'https://google.com'
+      logo: '/images/logos/black/la_business_journal.png',
+      alt: 'La Business Journal',
+      href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
     },
     {
-      logo: '/images/logos/grey/downtowner.png',
-      alt: 'downtowner',
-      href: 'https://google.com'
+      logo: '/images/logos/black/la_magazine.png',
+      alt: 'LA Magazine',
+      href: 'https://www.lamag.com/sponsored/experience-a-taste-of-everything-row-dtla/'
     },
     {
-      logo: '/images/logos/grey/bloomberg.png',
-      alt: 'bloomberg',
-      href: 'https://google.com'
+      logo: '/images/logos/black/la_times.png',
+      alt: 'LA Times',
+      href: 'https://www.latimes.com/home/la-hm-four-hours-row-dtla-20190607-story.html'
+    }
+  ],
+  [
+    {
+      logo: '/images/logos/black/mann_publications',
+      alt: 'Mann Publications',
+      href:
+        'http://www.mannpublications.com/mannreportresidential/2019/05/08/la-lifestyles-row-dtla/'
+    },
+    {
+      logo: '/images/logos/black/monocle.png',
+      alt: 'Monocle',
+      href: 'https://monocle.com/magazine/issues/123/top-of-the-shops/'
+    },
+    {
+      logo: '/images/logos/black/thrillist.png',
+      alt: 'Thrillist',
+      href: 'https://www.thrillist.com/travel/nation/best-attractions-usa-2019'
+    },
+    {
+      logo: '/images/logos/black/urbanize_la.png',
+      alt: 'Urbanize LA',
+      href: 'https://rowdtla.com/this-weeks-leases-zappos-takes-space-at-row-dtla'
     }
   ]
 ];
