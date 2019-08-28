@@ -119,7 +119,7 @@ const Fact = styled.div`
   flex-direction: row;
   margin: 0 50px;
   .fact-index {
-    color: #d8d8d8;
+    color: #8e8e8e;
     font-family: 'SangBleu Kingdom', serif;
     width: 70px;
     font-size: 3rem;
