@@ -18,7 +18,7 @@ const FactContainer = styled.div`
       letter-spacing: 1px;
       text-indent: -5px;
       &:before {
-        content: '-';
+        content: '- ';
         text-indent: -5px;
       }
     }
@@ -31,8 +31,7 @@ const factsArray = [
     '1920’s historic buildings',
     '32-acre intimate, walkable district',
     'Expansive windows, abundant natural light',
-    'Unparalleled views of DTLA skyline',
-    'Access highly educated DTLA workforce and more affordable housing options than West LA'
+    'Unparalleled views of DTLA skyline'
   ],
   [
     'Adjacent to future Arts District South Metro station',
@@ -53,18 +52,15 @@ const factsArray = [
     'Athletic Club with wellness programs and personal training'
   ],
   [
-    'X restaurants featuring the culinary anchors The Manufactory LA & Smorgasburg LA.',
-    'X retailers',
+    '7 restaurants featuring the culinary anchor, The Manufactory LA',
+    '33 retailers',
     'Art and Music activations',
     'Private Event spaces',
     'Team building opportunities',
     'Ceramic studio, Wine & spirits tasting, Artisan Workshops'
   ],
   [
-    'Around the Neighborhood:',
-    'Hauser & Wirth, Soho House, Firehouse Hotel, ArtShare, Dover Street Market.',
-    'Who’s here?',
-    'Adidas, Ghost Management, UbTech, Spaces, Warner Music, Spotify, Honey, WeWork, HyperloopOne'
+    'Around the Neighborhood: Hauser & Wirth, Soho House, Firehouse Hotel, Adidas, ArtShare, Dover Street Market, Ghost Management, UbTech, Spaces, Warner Music, Spotify, Honey, WeWork, HyperloopOne, Bestia, Rolling Greens'
   ]
 ];
 

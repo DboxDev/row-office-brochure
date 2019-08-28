@@ -71,12 +71,12 @@ function Maps() {
         <div className="right-column">
           <img
             className={activeMap === 'row' ? 'active' : null}
-            src="/images/pages/maps/row_map.jpg"
+            src="/images/pages/maps/row.png"
             alt="Row primary map"
           />
           <img
             className={activeMap === 'dtla' ? 'active' : null}
-            src="/images/pages/maps/row_map.jpg"
+            src="/images/pages/maps/dtla.jpg"
             alt="Row secondary map"
           />
         </div>

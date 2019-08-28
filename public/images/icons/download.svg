@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.86 38.13">
+  <title>Download Icon</title>
+    <g id="Download">
+      <polyline points="1 19.67 1 37.13 44.86 37.13 44.86 19.67" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+      <polyline points="15.57 19.82 22.82 27.29 30.45 19.66" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+      <line x1="22.82" y1="27.29" x2="22.82" y2="1" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+  </svg>

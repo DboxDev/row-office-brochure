@@ -46,6 +46,24 @@ const NavigationOverlay = styled.div`
       font-weight: normal;
       font-style: normal;
       color: #fff;
+      transition: ${props => (props.navActive ? 'all 500ms ease' : 'all 0ms ease')};
+      opacity: 0;
+      transform: ${props => (!props.navActive ? 'translateX(-120px)' : 'translateX(0)')};
+      opacity: ${props => (props.navActive ? 1 : 0)};
+      &:nth-child(1) {
+      }
+      &:nth-child(2) {
+        transition-delay: 50ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 100ms;
+      }
+      &:nth-child(4) {
+        transition-delay: 150ms;
+      }
+      &:nth-child(5) {
+        transition-delay: 200ms;
+      }
       a {
         text-decoration: none;
         &:link,
@@ -99,14 +117,19 @@ const colorMap = {
     color: '#000'
   },
   contact: {
-    background: '#000'
+    background: '#000',
+    color: '#fff'
+  },
+  test: {
+    background: '#000',
+    color: '#fff'
   }
 };
 
 const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
-function Header(props) {
-  let route = props.location.pathname.replace('/', '').toLowerCase() || 'home';
+function Header({ restrictScreen, location }) {
+  let route = location.pathname.replace('/', '').toLowerCase() || 'home';
   const { background, color } = colorMap[route];
 
   const [navActive, toggleActive] = useState(false);
@@ -117,13 +140,15 @@ function Header(props) {
       <header>
         <NavigationBar
           navActive={navActive}
-          background={approvedRouteTitles.includes(route) ? background : 'transparent'}
+          background={
+            approvedRouteTitles.includes(route) && !restrictScreen ? background : 'transparent'
+          }
         />
-        {approvedRouteTitles.includes(route) && (
+        {approvedRouteTitles.includes(route) && !restrictScreen && (
           <RouteTitle navActive={navActive} route={route} color={color} />
         )}
         <MainLogo toggleActive={() => navActive && toggleActive(false)} />
-        <Hamburger navActive={navActive} toggleActive={toggleActive} />
+        {!restrictScreen && <Hamburger navActive={navActive} toggleActive={toggleActive} />}
 
         <NavigationOverlay navActive={navActive}>
           <ul>

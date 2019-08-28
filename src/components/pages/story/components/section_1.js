@@ -14,7 +14,7 @@ const SectionOne = ({ revealed }) => {
         <h1 className="quote">
           ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace,
           that if you celebrate innovation, collaboration and community, you get something very
-          special, that just keeps getting better."
+          special, that just keeps getting better.
         </h1>
         <span className="scroll-reminder">
           <p>SCROLL</p>
@@ -22,7 +22,7 @@ const SectionOne = ({ revealed }) => {
       </BlackSlide>
       <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 0}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_1" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_1" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
@@ -34,13 +34,13 @@ const SectionOne = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 1}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_2" imgAlt="test" />
-          <ResponsiveImage srcPath="/images/home/section_1/row_3" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_2" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_3" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
           <BigText className="grey-400">
-            100 years of history and a
-            <br /> 32-acre district mark the
+            A 32-acre district with a 100
+            <br /> year old history marks the
             <br /> beginning of LA’s future as a
             <br /> new creative and cultural hub
           </BigText>
@@ -69,15 +69,15 @@ const SectionOne = ({ revealed }) => {
             className="react-player"
             width="100%"
             height="100%"
-            url="https://vimeo.com/90509568"
+            url="https://vimeo.com/355557064"
             playing
-            light
+            light="/images/video/rowdtla_video_thumbnail_general.jpg"
           />
         </PlayerWrapper>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
         <PhotoRow>
-          <ResponsiveImage srcPath="/images/home/section_1/row_8" imgAlt="test" />
+          <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_4" imgAlt="test" />
         </PhotoRow>
         <Row height="45%">
           <MedText>
@@ -92,7 +92,7 @@ const SectionOne = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 6}>
-        <ResponsiveImage srcPath="/images/home/section_1/row_9" imgAlt="test" />
+        <ResponsiveImage srcPath="/images/home/section_1/row_office_section1_5" imgAlt="test" />
       </ScrollColumn>
     </React.Fragment>
   );

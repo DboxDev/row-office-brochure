@@ -11,7 +11,8 @@ const Typographystyles = createGlobalStyle`
     font-style: normal;
     letter-spacing: 1px;
   }
-  li, p, button, tr, td, form {
+
+  li, p, button, th, tr, td, form {
     font-family: 'Apercu', 'sans-serif';
     font-weight: 300;
     font-style: normal;
@@ -27,7 +28,7 @@ const Typographystyles = createGlobalStyle`
     &:active,
     &:focus,
     &:visited {
-      color: inherited;
+      color: inherit;
     }
   }
 `;

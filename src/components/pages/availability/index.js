@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import availabilityData from 'data/availabilityData';
+
 const AvailabilityContainer = styled.div`
   color: #fff;
   table {
@@ -8,10 +10,65 @@ const AvailabilityContainer = styled.div`
     border-collapse: collapse;
     th,
     td {
-      border-bottom: 1px solid white;
+      padding: 6vh 0;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      font-size: 2vh;
+      &.sq-ft-cell {
+        font-family: 'SangBleu Kingdom', serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 3vh;
+      }
+      &.building {
+      }
+      &.offices {
+        a {
+          display: flex;
+          margin-bottom: 1em;
+          text-transform: uppercase;
+          align-items: center;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+          span {
+            width: 12vh;
+          }
+          img {
+            height: 1.4vh;
+            margin: 0 10px;
+          }
+        }
+      }
     }
   }
 `;
+
+function renderAvailabilityRows(data) {
+  return data.map(building => {
+    const { address, sqFt, floorplans } = building;
+
+    return (
+      <tr>
+        <td valign="top" class="sq-ft-cell">
+          {sqFt}
+        </td>
+        <td valign="top" class="building">
+          {address}
+        </td>
+        <td valign="top" className="offices">
+          {floorplans &&
+            floorplans.map(office => (
+              <a href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}>
+                <span>{`Suite ${office.number}`}</span>
+                <img src="/images/icons/download.svg" alt={`download suite ${office.number}`} />
+              </a>
+            ))}
+        </td>
+      </tr>
+    );
+  });
+}
 
 function Facts() {
   return (
@@ -23,16 +80,7 @@ function Facts() {
             <th align="left">BUILDING</th>
             <th align="left">FLOOR PLANS</th>
           </tr>
-          <tr>
-            <td valign="top">3,500-7,000</td>
-            <td valign="top">767 S. ALAMEDA </td>
-            <td valign="top">
-              <p>Suite 410</p>
-              <p>Suite 410</p>
-              <p>Suite 418</p>
-              <p>Suite 434</p>
-            </td>
-          </tr>
+          {renderAvailabilityRows(availabilityData)}
         </tbody>
       </table>
     </AvailabilityContainer>
