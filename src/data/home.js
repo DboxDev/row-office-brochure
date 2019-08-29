@@ -67,7 +67,7 @@ const keyFacts = [
   'Dog-friendly district and buildings '
 ];
 
-const newsArray = [
+const newsLogos = [
   [
     {
       logo: '/images/logos/black/bisnow.png',
@@ -138,7 +138,7 @@ const newsArray = [
   ],
   [
     {
-      logo: '/images/logos/black/mann_publications',
+      logo: '/images/logos/black/mann_publications.png',
       alt: 'Mann Publications',
       href:
         'http://www.mannpublications.com/mannreportresidential/2019/05/08/la-lifestyles-row-dtla/'
@@ -161,4 +161,4 @@ const newsArray = [
   ]
 ];
 
-export { brandGrid, keyFacts, newsArray };
+export { brandGrid, keyFacts, newsLogos };

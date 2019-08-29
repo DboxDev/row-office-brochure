@@ -13,8 +13,9 @@ const Typographystyles = createGlobalStyle`
 
   li, p, button, th, tr, td, form, span {
     font-family: 'Apercu', 'sans-serif';
-    font-weight: 300;
+    font-weight: normal;
     font-style: normal;
+    letter-spacing: 1px;
   }
   
   .underline {
