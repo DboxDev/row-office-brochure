@@ -73,10 +73,9 @@ const BigText = styled.h2`
 `;
 
 const BrandRow = styled.div`
-  height: ${props => (props.height ? '10%' : '30%')};
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const BrandItem = styled.a`
@@ -92,7 +91,6 @@ const BrandItem = styled.a`
     transform: translate(-65%, -50%);
   }
   .background {
-    height: 100%;
     z-index: -1;
   }
   .press-logo {
