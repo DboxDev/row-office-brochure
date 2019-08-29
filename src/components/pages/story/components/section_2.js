@@ -93,29 +93,18 @@ const SectionTwo = ({ revealed }) => {
       <ScrollColumn className="swiper-slide" revealed={revealed >= 12}>
         <RotatingGrid imgGrid={communityGrid} carouselActive={revealed >= 13} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 13}>
+      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 13}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
-            ROW DTLA brings people
-            <br /> together through
-            <br /> workshops, activated
-            <br /> events and social
-            <br /> gatherings that pave the
-            <br /> way for a community that
-            <br /> continues to grow and
-            <br /> adapt day by day in a truly
-            <br /> meaningful way
+            ROW DTLA brings people together
+            <br /> through workshops, activated
+            <br /> events and social gatherings that
+            <br /> pave the way for a community that
+            <br /> continues to grow and adapt day by
+            <br /> day in a truly meaningful way
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 14}>
-        <ResponsiveImage
-          srcPath="/images/pages/home/section_2/row_office_section2_3"
-          imgAlt="test"
-          height="95%"
-        />
-        <CaptionText>AN INTERCHANGEABLE WORK AND PLAY DYNAMIC </CaptionText>
       </ScrollColumn>
     </React.Fragment>
   );

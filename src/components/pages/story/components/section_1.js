@@ -56,6 +56,9 @@ const SectionOne = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 2}>
+        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 2} />
+      </ScrollColumn>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
         <Row height="55%" />
         <Row height="45%">
           <MedText marginTop>
@@ -68,9 +71,6 @@ const SectionOne = ({ revealed }) => {
             connoisseurs of Los Angeles
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 3}>
-        <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 3} />
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
         <PlayerWrapper>

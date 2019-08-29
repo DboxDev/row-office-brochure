@@ -58,7 +58,7 @@ const generatePressGrid = () => {
 const SectionThree = ({ revealed }) => {
   return (
     <React.Fragment>
-      <BlackSlide className="swiper-slide" revealed={revealed >= 15}>
+      <BlackSlide className="swiper-slide" revealed={revealed >= 14}>
         <h1 className="quote">
           "The thing that’s unique about the ROW is that it’s this incredible modern space, but it’s
           also really historied. The buildings are over 100 years old and so when you’re walking
@@ -67,7 +67,7 @@ const SectionThree = ({ revealed }) => {
         </h1>
         <span className="credit">RACHEL MADDEN, WC + A</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 16}>
+      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 15}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_1"
@@ -83,35 +83,25 @@ const SectionThree = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 16}>
+        <RotatingGrid imgGrid={workspacesGrid} carouselActive={revealed >= 16} />
+      </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 17}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
-            Work in creative offices that
-            <br /> foster growth and productivity
-            <br /> with added benefits of natural
-            <br /> light, lofted ceilings, an
-            <br /> exclusive athletic club, and
-            <br /> community events
+            Work in creative offices that foster
+            <br /> growth and productivity with added
+            <br /> benefits of natural light, lofted
+            <br /> ceilings, an exclusive athletic club,
+            <br /> and community events. ROW
+            <br /> accomodates and adapts to growth;
+            <br /> as your business evolves,
+            <br /> your workspace evolves with it.
           </MedText>
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
-        <RotatingGrid imgGrid={workspacesGrid} carouselActive={revealed >= 18} />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
-        <Row height="55%" />
-        <Row height="45%">
-          <MedText>
-            Never move again—ROW
-            <br /> accomodates and adapts to
-            <br /> growth. As your business
-            <br /> evolves, your workspace
-            <br /> evolves with it.
-          </MedText>
-        </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 20}>
         <PlayerWrapper>
           <ReactPlayer
             className="react-player"
@@ -123,21 +113,20 @@ const SectionThree = ({ revealed }) => {
           />
         </PlayerWrapper>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 21}>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
-            Where the workplace extends beyond
-            <br /> your own office. Indoor and outdoor
-            <br />
-            communal spaces, inviting lobbies,
-            <br /> roof decks and more provide for a<br />
-            more flexible and productive work
-            <br /> environment
+            Where the workplace extends
+            <br /> beyond your own office. Indoor
+            <br /> and outdoor communal spaces,
+            <br /> inviting lobbies, roof decks and
+            <br /> more provide for a flexible and
+            <br /> productive work environment
           </MedText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="200px" revealed={revealed >= 22}>
+      <ScrollColumn className="swiper-slide" paddingRight="200px" revealed={revealed >= 20}>
         <PhotoGridRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_2"
@@ -167,7 +156,7 @@ const SectionThree = ({ revealed }) => {
           />
         </PhotoGridRow>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 22}>
+      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 21}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-500">Key facts</BigText>
@@ -175,14 +164,14 @@ const SectionThree = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn
         className="swiper-slide"
-        revealed={revealed >= 23}
+        revealed={revealed >= 22}
         paddingTop="15vh"
         paddingBottom="15vh"
         spaceBetween
       >
         {generateFacts()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 24}>
+      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 23}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-500">In the news</BigText>
@@ -190,15 +179,20 @@ const SectionThree = ({ revealed }) => {
       </ScrollColumn>
       <ScrollColumn
         className="swiper-slide"
-        revealed={revealed >= 25}
+        revealed={revealed >= 24}
         paddingTop="15vh"
         paddingBottom="15vh"
         spaceBetween
       >
         {generatePressGrid()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 26}>
-        <Row height="55%" />
+      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 25}>
+        <PhotoRow>
+          <ResponsiveImage
+            srcPath="/images/pages/home/section_3/row_office_section3_8"
+            imgAlt="Birds eye view of building"
+          />
+        </PhotoRow>
         <Row height="45%">
           <BigText className="black-500">
             ROW DTLA.
