@@ -10,7 +10,8 @@ const VideoIntroContainer = styled.div`
   z-index: 11;
   opacity: ${props => (!props.isVideoActive ? 1 : 0)};
   visibility: ${props => (!props.isVideoActive ? 'visible' : 'hidden')};
-  transition: all 300ms ease;
+  transition: all 500ms ease;
+  cursor: pointer;
   video {
     width: 100%;
     object-fit: cover;
@@ -32,7 +33,7 @@ const VideoIntro = () => {
   }, []);
 
   return (
-    <VideoIntroContainer isVideoActive={isVideoActive}>
+    <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(true)}>
       <video muted autoPlay="autoplay" ref={introVideo}>
         <source src="/video/intro/rowdtla_intro.mp4" type="video/mp4" />
       </video>
