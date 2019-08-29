@@ -10,15 +10,15 @@ import {
   MedText,
   PhotoRow,
   PhotoGridRow,
-  BrandRow,
-  BrandItem,
+  PressRow,
+  PressItem,
   Fact,
   FactRow,
   Row,
   PlayerWrapper
 } from './styles';
 
-import { keyFacts, newsArray } from 'data/home';
+import { keyFacts, newsLogos } from 'data/home';
 import { workspacesGrid } from 'data/rotatingImages';
 
 const generateFacts = () => {
@@ -39,18 +39,18 @@ const generateFacts = () => {
   return rows;
 };
 
-const generateBrandGrid = () => {
-  return newsArray.map((row, rowIdx) => {
+const generatePressGrid = () => {
+  return newsLogos.map((row, rowIdx) => {
     return (
-      <BrandRow key={`row-${rowIdx}`} quarter>
+      <PressRow key={`row-${rowIdx}`}>
         {row.map((el, elIdx) => {
           return (
-            <BrandItem href={el.href} target="_blank" key={`row-${rowIdx}-el-${elIdx}`} quarter>
-              <img src={el.logo} alt={`${el.alt} logo`} className="grey-logo" />
-            </BrandItem>
+            <PressItem href={el.href} target="_blank" key={`row-${rowIdx}-el-${elIdx}`}>
+              <img src={el.logo} alt={`${el.alt} logo`} className="press-logo" />
+            </PressItem>
           );
         })}
-      </BrandRow>
+      </PressRow>
     );
   });
 };
@@ -183,7 +183,7 @@ const SectionThree = ({ revealed }) => {
         </Row>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 25} spaceBetween>
-        {generateBrandGrid()}
+        {generatePressGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 26}>
         <Row height="55%" />

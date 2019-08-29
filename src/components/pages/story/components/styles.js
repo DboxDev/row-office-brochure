@@ -73,7 +73,7 @@ const BigText = styled.h2`
 `;
 
 const BrandRow = styled.div`
-  height: ${props => (props.quarter ? '10%' : '30%')};
+  height: ${props => (props.height ? '10%' : '30%')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,10 +95,25 @@ const BrandItem = styled.a`
     height: 100%;
     z-index: -1;
   }
-  .grey-logo {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  .press-logo {
+    max-height: 100px;
+    max-width: 200px;
+  }
+`;
+
+const PressRow = styled.div`
+  height: 25%;
+  display: flex;
+  align-items: center;
+`;
+
+const PressItem = styled.a`
+  width: 30%;
+  max-height: 100%;
+  margin: 0 5vw;
+  .press-logo {
+    max-height: 100%;
+    max-width: 16vh;
   }
 `;
 
@@ -132,7 +147,6 @@ const Fact = styled.div`
     letter-spacing: 1px;
     padding-top: 10px;
     width: 250px;
-    letter-spacing: 1px;
   }
 `;
 
@@ -206,6 +220,8 @@ const Row = styled.div`
 export {
   BrandRow,
   BrandItem,
+  PressRow,
+  PressItem,
   BlackSlide,
   BigText,
   CaptionText,
