@@ -114,11 +114,6 @@ const PressItem = styled.a`
   }
 `;
 
-const CaptionText = styled.p`
-  font-size: 1.2rem;
-  color: #7f7f7f;
-`;
-
 const FactRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -221,7 +216,6 @@ export {
   PressItem,
   BlackSlide,
   BigText,
-  CaptionText,
   FactRow,
   Fact,
   GridRow,

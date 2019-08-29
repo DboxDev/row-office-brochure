@@ -7,7 +7,6 @@ import {
   BrandRow,
   BlackSlide,
   BigText,
-  CaptionText,
   MedText,
   PhotoRow,
   Row,
