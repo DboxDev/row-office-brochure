@@ -80,7 +80,7 @@ const SectionOne = ({ revealed }) => {
             height="100%"
             url="https://vimeo.com/355557064"
             playing
-            light="/images/video/rowdtla_video_preview_general.jpg"
+            light="/video/player/rowdtla_video_preview_general.jpg"
           />
         </PlayerWrapper>
       </ScrollColumn>

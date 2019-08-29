@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { routes, secondaryRoutes } from 'data/routes';
 
+import VideoIntro from 'components/includes/VideoIntro';
 import Header from 'components/includes/Header';
 import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
 
@@ -45,6 +46,7 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
+        <VideoIntro />
         <Header restrictScreen={restrictScreen} />
         {restrictScreen ? (
           <ScreenRestriction />

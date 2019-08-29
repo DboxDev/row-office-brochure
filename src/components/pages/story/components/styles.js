@@ -199,7 +199,7 @@ const PlayerWrapper = styled.div`
           border-style: none !important;
           border-width: 0 !important;
           margin-left: 0 !important;
-          background-image: url('/images/video/videoplay_icon.svg');
+          background-image: url('/video/player/videoplay_icon.svg');
           height: 100%;
           width: 100%;
         }
