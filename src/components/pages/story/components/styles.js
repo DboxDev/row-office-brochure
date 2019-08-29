@@ -102,7 +102,6 @@ const BrandItem = styled.a`
 `;
 
 const PressRow = styled.div`
-  height: 25%;
   display: flex;
   align-items: center;
 `;
@@ -125,7 +124,7 @@ const CaptionText = styled.p`
 const FactRow = styled.div`
   display: flex;
   flex-direction: row;
-  height: 25%;
+  height: 10%;
   justify-content: space-between;
 `;
 
@@ -134,12 +133,14 @@ const Fact = styled.div`
   flex-direction: row;
   margin: 0 50px;
   .fact-index {
+    margin: 0;
     color: #8e8e8e;
     font-family: 'SangBleu Kingdom', serif;
     width: 70px;
     font-size: 3rem;
   }
   .fact-body {
+    margin: 0;
     color: #000;
     font-family: 'Apercu', 'sans-serif';
     text-transform: uppercase;

@@ -27,8 +27,8 @@ const generateFacts = () => {
   keyFacts.forEach((el, idx) => {
     cols.push(
       <Fact key={`fact-${idx}`} index={idx + 1}>
-        <span className="fact-index">{idx + 1}</span>
-        <span className="fact-body">{el}</span>
+        <p className="fact-index">{idx + 1}</p>
+        <p className="fact-body">{el}</p>
       </Fact>
     );
     if ((idx + 1) % 3 === 0) {
@@ -173,7 +173,13 @@ const SectionThree = ({ revealed }) => {
           <BigText className="grey-500">Key facts</BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 23} spaceBetween>
+      <ScrollColumn
+        className="swiper-slide"
+        revealed={revealed >= 23}
+        paddingTop="15vh"
+        paddingBottom="15vh"
+        spaceBetween
+      >
         {generateFacts()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 24}>
@@ -182,7 +188,13 @@ const SectionThree = ({ revealed }) => {
           <BigText className="grey-500">In the news</BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 25} spaceBetween>
+      <ScrollColumn
+        className="swiper-slide"
+        revealed={revealed >= 25}
+        paddingTop="15vh"
+        paddingBottom="15vh"
+        spaceBetween
+      >
         {generatePressGrid()}
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 26}>
