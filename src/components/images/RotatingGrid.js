@@ -25,9 +25,14 @@ function RotatingGrid({ imgGrid }) {
       setActiveIndex(nextImage);
     }
 
+    let timeOut;
     if (carouselActive) {
-      setTimeout(() => changeImage(), 3000);
+      timeOut = setTimeout(() => changeImage(), 3000);
     }
+
+    return () => {
+      clearTimeout(timeOut);
+    };
   });
 
   function renderGrid(imgGrid) {
@@ -37,7 +42,12 @@ function RotatingGrid({ imgGrid }) {
 
     imgGrid.forEach((cellArray, idx) => {
       columns.push(
-        <RotatingImages key={`rotating-image-${idx}`} imgArray={cellArray} activeImage={activeIndex} position={idx} />
+        <RotatingImages
+          key={`rotating-image-${idx}`}
+          imgArray={cellArray}
+          activeImage={activeIndex}
+          position={idx}
+        />
       );
 
       if ((idx + 1) % 2 === 0) {
@@ -56,7 +66,11 @@ function RotatingGrid({ imgGrid }) {
     return rows;
   }
 
-  return <RotatingGridContainer className="image-grid-container">{renderGrid(imgGrid)}</RotatingGridContainer>;
+  return (
+    <RotatingGridContainer className="image-grid-container">
+      {renderGrid(imgGrid)}
+    </RotatingGridContainer>
+  );
 }
 
 export default RotatingGrid;

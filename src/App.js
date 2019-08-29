@@ -23,10 +23,10 @@ function App() {
       window.innerHeight ||
       Math.max(document.documentElement.clientHeight, document.body.clientHeight);
 
-    if (width / height > 1.2 || width > 1050) {
-      toggleRestrictScreen(false);
-    } else {
+    if (width / height < 1.2 || width < 1050) {
       toggleRestrictScreen(true);
+    } else {
+      toggleRestrictScreen(false);
     }
   }, []);
 

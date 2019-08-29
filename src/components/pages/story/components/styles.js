@@ -136,14 +136,14 @@ const Fact = styled.div`
     color: #8e8e8e;
     font-family: 'SangBleu Kingdom', serif;
     width: 70px;
-    font-size: 3rem;
+    font-size: 2.6vh;
   }
   .fact-body {
     margin: 0;
     color: #000;
     font-family: 'Apercu', 'sans-serif';
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.6vh;
     letter-spacing: 1px;
     width: 250px;
   }
