@@ -124,7 +124,6 @@ const CaptionText = styled.p`
 const FactRow = styled.div`
   display: flex;
   flex-direction: row;
-  height: 10%;
   justify-content: space-between;
 `;
 
@@ -146,7 +145,6 @@ const Fact = styled.div`
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    padding-top: 10px;
     width: 250px;
   }
 `;
