@@ -86,7 +86,7 @@ const SectionThree = ({ revealed }) => {
       <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 16}>
         <RotatingGrid imgGrid={workspacesGrid} carouselActive={revealed >= 16} />
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 17}>
+      <ScrollColumn className="swiper-slide" paddingRight="120px" revealed={revealed >= 17}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
