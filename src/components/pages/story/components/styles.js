@@ -84,6 +84,8 @@ const BrandItem = styled.a`
   max-width: 400px;
   margin: 0 5vw;
   height: 100%;
+  display: flex;
+  align-items: center;
   .logo {
     position: absolute;
     left: 0;

@@ -186,18 +186,18 @@ const SectionThree = ({ revealed }) => {
       >
         {generatePressGrid()}
       </ScrollColumn>
+      <ScrollColumn className="swiper-slide" revealed={revealed >= 24}>
+        <ResponsiveImage
+          srcPath="/images/pages/home/section_3/row_office_section3_8"
+          imgAlt="Birds eye view of building"
+        />
+      </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 25}>
-        <PhotoRow>
-          <ResponsiveImage
-            srcPath="/images/pages/home/section_3/row_office_section3_8"
-            imgAlt="Birds eye view of building"
-          />
-        </PhotoRow>
+        <Row height="55%" />
         <Row height="45%">
           <BigText className="black-500">
             ROW DTLA.
-            <br />
-            Work life has never
+            <br /> Work life has never
             <br /> looked better.
           </BigText>
         </Row>
