@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import ResponsiveImage from 'components/images/ResponsiveImage';
+
 const MapNavigation = styled.nav`
   width: 100%;
   button {
@@ -41,12 +43,11 @@ const MapContainer = styled.div`
     visibility: hidden;
     transition: all 300ms ease;
     flex-direction: column;
+    overflow: hidden;
     &.active {
       opacity: 1;
       visibility: visible;
-    }
-    img {
-      width: 100%;
+      overflow: initial;
     }
   }
 `;
@@ -98,10 +99,26 @@ function Maps() {
           </RightColumn>
         </div>
         <div className={`dtla-container ${activeMap === 'dtla' ? 'active' : null}`}>
-          <img className="center" src="/images/pages/maps/dtla_map1.jpg" alt="Row primary map" />
-          <img className="center" src="/images/pages/maps/dtla_map2.jpg" alt="Row primary map" />
-          <img className="center" src="/images/pages/maps/dtla_map3.jpg" alt="Row primary map" />
-          <img className="center" src="/images/pages/maps/dtla_map4.jpg" alt="Row primary map" />
+          <ResponsiveImage
+            srcPath="/images/pages/maps/dtla_map1"
+            imgAlt="DLTA map #1"
+            noMaxHeight
+          />
+          <ResponsiveImage
+            srcPath="/images/pages/maps/dtla_map1"
+            imgAlt="DLTA map #1"
+            noMaxHeight
+          />
+          <ResponsiveImage
+            srcPath="/images/pages/maps/dtla_map1"
+            imgAlt="DLTA map #1"
+            noMaxHeight
+          />
+          <ResponsiveImage
+            srcPath="/images/pages/maps/dtla_map1"
+            imgAlt="DLTA map #1"
+            noMaxHeight
+          />
         </div>
       </MapContainer>
     </div>
