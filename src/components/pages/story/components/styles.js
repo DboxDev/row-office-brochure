@@ -76,12 +76,14 @@ const BrandRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 30%;
 `;
 
 const BrandItem = styled.a`
   position: relative;
   max-width: 400px;
   margin: 0 5vw;
+  height: 100%;
   .logo {
     position: absolute;
     left: 0;
@@ -92,10 +94,6 @@ const BrandItem = styled.a`
   }
   .background {
     z-index: -1;
-  }
-  .press-logo {
-    max-height: 100px;
-    max-width: 200px;
   }
 `;
 
