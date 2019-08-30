@@ -1,84 +1,107 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const MapContainer = styled.div`
-  display: flex;
+const MapNavigation = styled.nav`
   width: 100%;
-  height: 100%;
-  .left-column {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    .button-container {
-      button {
-        display: block;
-        padding: 0.2em 0;
-        text-align: left;
-        font-size: 2em;
-        background: none;
-        border: none;
-        margin-bottom: 1em;
-        cursor: pointer;
-        border-bottom: 2px solid rgba(0, 0, 0, 0);
-        &.active {
-          border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-        }
-      }
+  button {
+    background: none;
+    border: 0;
+    padding: 0.5em 0;
+    margin-right: 1em;
+    cursor: pointer;
+    font-size: 2vh;
+    &.active {
+      border-bottom: 3px solid #000;
     }
   }
-  .right-column {
-    width: 80%;
+`;
+
+const MapContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .row-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
     height: 100%;
-    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .dtla-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 300ms ease;
+    flex-direction: column;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
     img {
-      position: absolute;
-      top: 0;
+      width: 100%;
+    }
+  }
+`;
+
+const LeftColumn = styled.div`
+  width: ${props => props.width};
+  display: flex;
+  flex-direction: column;
+`;
+
+const RightColumn = styled.div`
+  width: ${props => props.width};
+  height: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    &.center {
       left: 50%;
       transform: translateX(-50%);
-      display: block;
-      max-height: 100%;
-      opacity: 0;
-      transition: opacity 200ms ease;
-      &.active {
-        opacity: 1;
-      }
     }
   }
 `;
 
 function Maps() {
-  const [activeMap, toggleMap] = useState('row');
+  const [activeMap, toggleMap] = useState('dtla');
 
   return (
     <div className="full-height-container">
+      <MapNavigation>
+        <button className={activeMap === 'row' ? 'active' : null} onClick={() => toggleMap('row')}>
+          ROW
+        </button>
+        <button
+          className={activeMap === 'dtla' ? 'active' : null}
+          onClick={() => toggleMap('dtla')}
+        >
+          DTLA
+        </button>
+      </MapNavigation>
       <MapContainer>
-        <div className="left-column">
-          <div className="button-container">
-            <button
-              className={activeMap === 'row' ? 'active' : null}
-              onClick={() => toggleMap('row')}
-            >
-              ROW
-            </button>
-            <button
-              className={activeMap === 'dtla' ? 'active' : null}
-              onClick={() => toggleMap('dtla')}
-            >
-              DTLA
-            </button>
-          </div>
+        <div className={`row-container ${activeMap === 'row' ? 'active' : null}`}>
+          <LeftColumn width="20%" />
+          <RightColumn width="80%">
+            <img className="center" src="/images/pages/maps/row.png" alt="Row primary map" />
+          </RightColumn>
         </div>
-        <div className="right-column">
-          <img
-            className={activeMap === 'row' ? 'active' : null}
-            src="/images/pages/maps/row.png"
-            alt="Row primary map"
-          />
-          <img
-            className={activeMap === 'dtla' ? 'active' : null}
-            src="/images/pages/maps/dtla.jpg"
-            alt="Row secondary map"
-          />
+        <div className={`dtla-container ${activeMap === 'dtla' ? 'active' : null}`}>
+          <img className="center" src="/images/pages/maps/dtla_map1.jpg" alt="Row primary map" />
+          <img className="center" src="/images/pages/maps/dtla_map2.jpg" alt="Row primary map" />
+          <img className="center" src="/images/pages/maps/dtla_map3.jpg" alt="Row primary map" />
+          <img className="center" src="/images/pages/maps/dtla_map4.jpg" alt="Row primary map" />
         </div>
       </MapContainer>
     </div>

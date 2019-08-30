@@ -12,11 +12,11 @@ import RouteTitle from './RouteTitle';
 const NavigationBar = styled.div`
   width: 100%;
   height: 120px;
-  background: black;
   position: fixed;
   top: 0;
   left: 0;
   background: ${props => props.background};
+  z-index: 1;
 `;
 
 const NavigationOverlay = styled.div`
@@ -113,7 +113,7 @@ const colorMap = {
     color: '#FFF'
   },
   maps: {
-    background: '#FFF',
+    background: '#fff',
     color: '#000'
   },
   contact: {
@@ -130,8 +130,8 @@ const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
 function Header({ restrictScreen, location }) {
   let route = location.pathname.replace('/', '').toLowerCase() || 'home';
-  const { background, color } = colorMap[route];
 
+  const { background, color } = colorMap[route];
   const [navActive, toggleActive] = useState(false);
 
   return (

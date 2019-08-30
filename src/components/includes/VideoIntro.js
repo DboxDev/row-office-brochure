@@ -8,8 +8,8 @@ const VideoIntroContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 11;
-  opacity: ${props => (!props.isVideoActive ? 1 : 0)};
-  visibility: ${props => (!props.isVideoActive ? 'visible' : 'hidden')};
+  opacity: ${props => (props.isVideoActive ? 1 : 0)};
+  visibility: ${props => (props.isVideoActive ? 'visible' : 'hidden')};
   transition: all 500ms ease;
   cursor: pointer;
   video {
@@ -26,14 +26,14 @@ const VideoIntro = () => {
 
   useEffect(() => {
     const videoEndedCallback = () => {
-      toggleVideoActive(true);
+      toggleVideoActive(false);
     };
 
     introVideo.current.addEventListener('ended', videoEndedCallback);
   }, []);
 
   return (
-    <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(true)}>
+    <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(false)}>
       <video muted autoPlay="autoplay" ref={introVideo}>
         <source src="/video/intro/rowdtla_intro.mp4" type="video/mp4" />
       </video>
