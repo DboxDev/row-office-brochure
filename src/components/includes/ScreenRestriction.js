@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { mediaMin } from 'styles/mediaQueries';
+
 const ScreenRestrictionContainer = styled.div`
   color: #fff;
   background: #000;
@@ -16,8 +18,12 @@ const ScreenRestrictionContainer = styled.div`
     margin: 40px 0;
   }
   h1 {
-    width: 50%;
+    width: 80%;
     text-align: center;
+    font-size: 3vh;
+    ${mediaMin.tablet`
+      width: 50%;
+    `}
   }
 `;
 

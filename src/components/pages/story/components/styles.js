@@ -148,7 +148,7 @@ const GridRow = styled.div`
 const MedText = styled.h3`
   margin: 0;
   font-size: 2vh;
-  color: ${props => (props.black ? '#000' : '#747474')};
+  color: #000;
   line-height: 140%;
 `;
 

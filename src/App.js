@@ -46,7 +46,7 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
-        <VideoIntro />
+        {!restrictScreen && <VideoIntro />}
         <Header restrictScreen={restrictScreen} />
         {restrictScreen ? (
           <ScreenRestriction />
