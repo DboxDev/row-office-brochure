@@ -22,7 +22,7 @@ const VideoIntroContainer = styled.div`
 
 const VideoIntro = () => {
   const introVideo = useRef(null);
-  const [isVideoActive, toggleVideoActive] = useState(false);
+  const [isVideoActive, toggleVideoActive] = useState(true);
 
   useEffect(() => {
     const videoEndedCallback = () => {
