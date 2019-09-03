@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -110,6 +110,22 @@ function Header({ restrictScreen, location }) {
 
   const { background, color } = colorMap[route];
   const [navActive, toggleActive] = useState(false);
+
+  const closeMenu = e => {
+    if (e.keyCode === 27) {
+      toggleActive(false);
+    }
+  };
+
+  useEffect(() => {
+    if (navActive) {
+      window.addEventListener('keydown', closeMenu);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', closeMenu);
+    };
+  }, [navActive]);
 
   return (
     <React.Fragment>

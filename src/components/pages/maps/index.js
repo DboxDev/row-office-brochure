@@ -36,7 +36,7 @@ const MapContainer = styled.div`
       visibility: visible;
     }
     img {
-      width: 50%;
+      height: 100%;
       margin: 0 auto;
     }
   }
