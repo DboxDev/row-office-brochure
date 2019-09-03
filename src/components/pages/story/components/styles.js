@@ -14,6 +14,12 @@ const ScrollColumn = styled.div`
   ${props => props.spaceBetween && 'justify-content: space-between;'}
 `;
 
+const SectionCaption = styled.p`
+  font-size: 1.4vh;
+  text-transform: uppercase;
+  opacity: 0.6;
+`;
+
 const BlackSlide = styled.div`
   display: flex !important;
   flex-direction: column;
@@ -76,12 +82,12 @@ const BrandRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30%;
+  height: 33%;
 `;
 
 const BrandItem = styled.a`
   position: relative;
-  max-width: 400px;
+  max-width: 25vh;
   margin: 0 5vw;
   height: 100%;
   display: flex;
@@ -96,7 +102,7 @@ const BrandItem = styled.a`
   }
   .background {
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.7;
   }
 `;
 
@@ -108,7 +114,7 @@ const PressRow = styled.div`
 const PressItem = styled.a`
   width: 30%;
   max-height: 100%;
-  margin: 0 5vw;
+  margin-right: 10vw;
   .press-logo {
     max-height: 100%;
     max-width: 16vh;
@@ -129,7 +135,7 @@ const Fact = styled.div`
     margin: 0;
     color: #8e8e8e;
     font-family: 'SangBleu Kingdom', serif;
-    width: 70px;
+    width: 50px;
     font-size: 2.6vh;
   }
   .fact-body {
@@ -225,5 +231,6 @@ export {
   PlayerWrapper,
   MedText,
   Row,
-  ScrollColumn
+  ScrollColumn,
+  SectionCaption
 };

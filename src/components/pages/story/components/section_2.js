@@ -10,7 +10,8 @@ import {
   MedText,
   PhotoRow,
   Row,
-  ScrollColumn
+  ScrollColumn,
+  SectionCaption
 } from './styles';
 
 import { brandGrid } from 'data/home';
@@ -62,8 +63,15 @@ const SectionTwo = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 9} spaceBetween>
+      <ScrollColumn
+        className="swiper-slide"
+        paddingRight="0"
+        paddingBottom="120px"
+        revealed={revealed >= 9}
+        spaceBetween
+      >
         {generateBrandGrid()}
+        <SectionCaption style={{ marginLeft: '5vw' }}>Featured Tenants</SectionCaption>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" revealed={revealed >= 10}>
         <ResponsiveImage

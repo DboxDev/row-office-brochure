@@ -48,7 +48,7 @@ const NavigationOverlay = styled.div`
       color: #fff;
       transition: ${props => (props.navActive ? 'all 500ms ease' : 'all 0ms ease')};
       opacity: 0;
-      transform: ${props => (!props.navActive ? 'translateX(-120px)' : 'translateX(0)')};
+      transform: ${props => (!props.navActive ? 'translateX(-80px)' : 'translateX(0)')};
       opacity: ${props => (props.navActive ? 1 : 0)};
       &:nth-child(1) {
       }

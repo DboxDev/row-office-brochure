@@ -26,19 +26,25 @@ const MapContainer = styled.div`
     display: flex;
     position: absolute;
     width: 100%;
-    height: 100%;
+    margin: 0 auto;
     opacity: 0;
     visibility: hidden;
     transition: all 300ms ease;
+    height: 100%;
     &.active {
       opacity: 1;
       visibility: visible;
     }
+    img {
+      width: 50%;
+      margin: 0 auto;
+    }
   }
   .dtla-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin: 0 auto;
     opacity: 0;
     visibility: hidden;
     transition: all 300ms ease;
@@ -48,29 +54,6 @@ const MapContainer = styled.div`
       opacity: 1;
       visibility: visible;
       overflow: initial;
-    }
-  }
-`;
-
-const LeftColumn = styled.div`
-  width: ${props => props.width};
-  display: flex;
-  flex-direction: column;
-`;
-
-const RightColumn = styled.div`
-  width: ${props => props.width};
-  height: 100%;
-  position: relative;
-  img {
-    position: absolute;
-    top: 0;
-    display: block;
-    max-height: 100%;
-    max-width: 100%;
-    &.center {
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 `;
@@ -93,10 +76,7 @@ function Maps() {
       </MapNavigation>
       <MapContainer>
         <div className={`row-container ${activeMap === 'row' ? 'active' : null}`}>
-          <LeftColumn width="20%" />
-          <RightColumn width="80%">
-            <img className="center" src="/images/pages/maps/row.png" alt="Row primary map" />
-          </RightColumn>
+          <img className="center" src="/images/pages/maps/row.png" alt="Row primary map" />
         </div>
         <div className={`dtla-container ${activeMap === 'dtla' ? 'active' : null}`}>
           <ResponsiveImage

@@ -35,7 +35,7 @@ const VideoIntro = () => {
   return (
     <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(false)}>
       <video muted autoPlay="autoplay" ref={introVideo}>
-        <source src="/video/intro/row_dtla_intro1.mp4" type="video/mp4" />
+        <source src="/video/intro/row_dtla_intro2.mp4" type="video/mp4" />
       </video>
     </VideoIntroContainer>
   );

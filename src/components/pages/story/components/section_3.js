@@ -15,7 +15,8 @@ import {
   Fact,
   FactRow,
   Row,
-  PlayerWrapper
+  PlayerWrapper,
+  SectionCaption
 } from './styles';
 
 import { keyFacts, newsLogos } from 'data/home';
@@ -113,7 +114,7 @@ const SectionThree = ({ revealed }) => {
           />
         </PlayerWrapper>
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 19}>
+      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 19}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
@@ -171,7 +172,7 @@ const SectionThree = ({ revealed }) => {
       >
         {generateFacts()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 23}>
+      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 23}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-500">In the news</BigText>
@@ -185,6 +186,9 @@ const SectionThree = ({ revealed }) => {
         spaceBetween
       >
         {generatePressGrid()}
+        <SectionCaption style={{ position: 'absolute', bottom: '5vh' }}>
+          Click to View Articles
+        </SectionCaption>
       </ScrollColumn>
       <ScrollColumn className="swiper-slide" paddingBottom="20vh" revealed={revealed >= 24}>
         <ResponsiveImage
