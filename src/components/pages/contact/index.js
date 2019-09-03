@@ -75,6 +75,12 @@ const FormRow = styled.div`
       padding-left: 5px;
     }
   }
+  h3 {
+    font-size: 3vh;
+    line-height: 4vh;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+  }
   button[type='submit'] {
     color: #fff;
     border: 1px solid white;
@@ -98,17 +104,7 @@ const FormRow = styled.div`
   }
 `;
 
-const InfoContainer = styled.div`
-  color: rgba(255, 255, 255, 0.5);
-  h3 {
-    font-size: 3vh;
-    line-height: 4vh;
-  }
-  p {
-    font-size: 2vh;
-    text-transform: uppercase;
-  }
-`;
+const InfoContainer = styled.div``;
 
 function Contact() {
   const { inputs, handleInputChange, handleSubmit, submitted } = useContactForm();
@@ -200,14 +196,10 @@ function Contact() {
         </UpperContainer>
         <FormRow alignItems="flex-end" justifyContent="space-between">
           <InfoContainer>
-            <h3>
+            <h3 className="address">
               777 S. Alameda Street, <br />
               Los Angeles, CA 90021
             </h3>
-            <p>
-              www.ROWDTLA.com
-              <br /> @rowdtla
-            </p>
           </InfoContainer>
           <button type="submit" value="Submit" className={submitted && 'active'}>
             Submit

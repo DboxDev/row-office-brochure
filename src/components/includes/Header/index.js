@@ -40,8 +40,8 @@ const NavigationOverlay = styled.div`
     li {
       list-style-type: none;
       text-align: center;
-      font-size: 5vh;
-      margin: 0.5em 0;
+      font-size: 4vh;
+      margin: 0.8em 0;
       font-family: 'SangBleu Kingdom', serif;
       font-weight: normal;
       font-style: normal;
@@ -66,29 +66,6 @@ const NavigationOverlay = styled.div`
       }
       a {
         text-decoration: none;
-        &:link,
-        &:active,
-        &:focus,
-        &:visited {
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  footer {
-    bottom: 0;
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    color: #fff;
-    padding: 1em 0;
-    p {
-      margin: 0;
-      &.legal-link {
-        margin: 1em 0;
-      }
-      a {
         &:link,
         &:active,
         &:focus,
@@ -160,10 +137,6 @@ function Header({ restrictScreen, location }) {
               </li>
             ))}
           </ul>
-          <footer>
-            <p>WWW.ROWDTLA.COM</p>
-            <p>&copy; ROW DTLA</p>
-          </footer>
         </NavigationOverlay>
       </header>
     </React.Fragment>

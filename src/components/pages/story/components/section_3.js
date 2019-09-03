@@ -186,7 +186,7 @@ const SectionThree = ({ revealed }) => {
       >
         {generatePressGrid()}
       </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 24}>
+      <ScrollColumn className="swiper-slide" paddingBottom="20vh" revealed={revealed >= 24}>
         <ResponsiveImage
           srcPath="/images/pages/home/section_3/row_office_section3_8"
           imgAlt="Birds eye view of building"

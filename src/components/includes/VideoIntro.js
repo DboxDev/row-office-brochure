@@ -22,7 +22,7 @@ const VideoIntroContainer = styled.div`
 
 const VideoIntro = () => {
   const introVideo = useRef(null);
-  const [isVideoActive, toggleVideoActive] = useState(true);
+  const [isVideoActive, toggleVideoActive] = useState(false);
 
   useEffect(() => {
     const videoEndedCallback = () => {
@@ -35,7 +35,7 @@ const VideoIntro = () => {
   return (
     <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(false)}>
       <video muted autoPlay="autoplay" ref={introVideo}>
-        <source src="/video/intro/rowdtla_intro.mp4" type="video/mp4" />
+        <source src="/video/intro/row_dtla_intro1.mp4" type="video/mp4" />
       </video>
     </VideoIntroContainer>
   );

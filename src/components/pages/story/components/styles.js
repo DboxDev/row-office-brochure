@@ -7,7 +7,7 @@ const ScrollColumn = styled.div`
   width: fit-content;
   padding-top: ${props => props.paddingTop || '120px'};
   padding-right: ${props => props.paddingRight || '80px'};
-  padding-bottom: ${props => props.paddingTop || '80px'};
+  padding-bottom: ${props => props.paddingBottom || '80px'};
   padding-left: ${props => props.paddingLeft || '80px'};
   opacity: ${props => (props.revealed ? '1' : '0')};
   transition: opacity 0.5s ease-in-out;
@@ -96,6 +96,7 @@ const BrandItem = styled.a`
   }
   .background {
     z-index: -1;
+    opacity: 0.8;
   }
 `;
 
