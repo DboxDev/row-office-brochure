@@ -26,9 +26,9 @@ const useContactForm = callback => {
         `;
 
       var emailData = {
-        from: '"Row DTLA" <no_reply_row_dtla@dbox.com>',
-        to: `"${firstName} ${lastName}" <${email}>`,
-        subject: 'ROW DTLA - Thanks for your inquiry',
+        from: '"ROW DTLA" <no_reply_row_dtla@dbox.com>',
+        to: `"ROW DTLA" <rowdtlaoffice@atlas-cap.com>`,
+        subject: 'ROW DTLA - You have received an inquiry',
         text: text
       };
 
