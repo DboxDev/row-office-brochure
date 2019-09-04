@@ -122,7 +122,7 @@ const PressItem = styled.a`
   transition: background 300ms ease;
   border-radius: 5px;
   &:hover {
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(0, 0, 0, 0);
   }
   .press-logo {
     max-height: 100%;

@@ -181,7 +181,7 @@ const SectionThree = ({ revealed }) => {
       <ScrollColumn
         className="swiper-slide"
         revealed={revealed >= 24}
-        paddingTop="15vh"
+        paddingTop="10vh"
         paddingBottom="15vh"
         spaceBetween
       >
