@@ -1,52 +1,52 @@
 const brandGrid = [
   [
     {
-      logo: '/images/logos/adidas_logo.svg',
-      background: '/images/pages/home/brands/adidas',
+      logo: '/images/pages/home/brands/logos/adidas_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/adidas',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/wca_logo.svg',
-      background: '/images/pages/home/brands/wc_a',
+      logo: '/images/pages/home/brands/logos/wca_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/wc_a',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/soho_house_logo.svg',
-      background: '/images/pages/home/brands/sohohouse',
+      logo: '/images/pages/home/brands/logos/soho_house_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/sohohouse',
       alt: 'adidas'
     }
   ],
   [
     {
-      logo: '/images/logos/jbrand_logo.svg',
-      background: '/images/pages/home/brands/j_brand',
+      logo: '/images/pages/home/brands/logos/jbrand_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/j_brand',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/spotify_logo.svg',
-      background: '/images/pages/home/brands/spotify',
+      logo: '/images/pages/home/brands/logos/spotify_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/spotify',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/zappos_logo.svg',
-      background: '/images/pages/home/brands/zappos',
+      logo: '/images/pages/home/brands/logos/zappos_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/zappos',
       alt: 'adidas'
     }
   ],
   [
     {
-      logo: '/images/logos/gt_logo.svg',
-      background: '/images/pages/home/brands/GT',
+      logo: '/images/pages/home/brands/logos/gt_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/GT',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/midfirst_logo.svg',
-      background: '/images/pages/home/brands/midfirst_bank',
+      logo: '/images/pages/home/brands/logos/midfirst_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/midfirst_bank',
       alt: 'adidas'
     },
     {
-      logo: '/images/logos/spaces_logo.svg',
-      background: '/images/pages/home/brands/spaces',
+      logo: '/images/pages/home/brands/logos/spaces_logo.svg',
+      background: '/images/pages/home/brands/backgrounds/spaces',
       alt: 'adidas'
     }
   ]
