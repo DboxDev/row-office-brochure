@@ -17,13 +17,13 @@ const useContactForm = callback => {
 
       const { email, firstName, lastName, phone, spaceAvailable, howHear } = inputs;
 
-      const text = `Hi,\n\nA new registrant signed up:\n\n
-          \n\nName: ${firstName} ${lastName}
-          \n\nEmail: ${email}
-          \n\nPhone: ${phone}
-          \n\nSpace requested: ${spaceAvailable}
-          \n\nHow did you hear about us: ${howHear}
-        `;
+      const text = `Hi,\n\nRegistrant Details:\n\n
+        \n\nName: ${firstName} ${lastName}
+        \n\nEmail: ${email}
+        \n\nPhone: ${phone}
+        \n\nSpace requested: ${spaceAvailable}
+        \n\nHow did you hear about us: ${howHear}
+      `;
 
       var emailData = {
         from: '"ROW DTLA" <no_reply_row_dtla@dbox.com>',
