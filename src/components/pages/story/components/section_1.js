@@ -78,7 +78,7 @@ const SectionOne = ({ revealed }) => {
             className="react-player"
             width="100%"
             height="100%"
-            url="https://vimeo.com/355557064"
+            url="https://vimeo.com/357861717"
             playing
             light="/video/player/rowdtla_video_preview_general.jpg"
           />

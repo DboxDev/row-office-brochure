@@ -108,7 +108,7 @@ const SectionThree = ({ revealed }) => {
             className="react-player"
             width="100%"
             height="100%"
-            url="https://vimeo.com/355434466"
+            url="https://vimeo.com/357861501"
             playing
             light="/video/player/rowdtla_video_preview_office.jpg"
           />

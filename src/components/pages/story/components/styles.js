@@ -37,7 +37,7 @@ const BlackSlide = styled.div`
     font-size: 3.4vh;
   }
   span.credit {
-    font-size: 2vh;
+    font-size: 1.6vh;
     color: #fff;
     width: 45%;
   }
