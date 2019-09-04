@@ -12,7 +12,7 @@ const routes = [
     component: Facts
   },
   {
-    title: 'Map',
+    title: 'Maps',
     href: '/maps',
     component: Maps
   },
