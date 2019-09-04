@@ -112,12 +112,21 @@ const PressRow = styled.div`
 `;
 
 const PressItem = styled.a`
-  width: 30%;
   max-height: 100%;
-  margin-right: 10vw;
+  margin-right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  width: 20vh;
+  transition: background 300ms ease;
+  border-radius: 5px;
+  &:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
   .press-logo {
     max-height: 100%;
-    max-width: 16vh;
+    width: 15vh;
   }
 `;
 
