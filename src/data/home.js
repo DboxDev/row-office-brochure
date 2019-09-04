@@ -70,91 +70,91 @@ const keyFacts = [
 const newsLogos = [
   [
     {
-      logo: '/images/logos/black/bisnow.png',
+      logo: '/images/pages/home/press/bisnow.png',
       alt: 'Goop',
       href: 'https://goop.com/place/california/los-angeles/downtown-shops/row-dtla/'
     },
     {
-      logo: '/images/logos/black/blackbook.png',
+      logo: '/images/pages/home/press/blackbook.png',
       alt: 'LA Times',
       href: 'https://www.latimes.com/home/la-hm-four-hours-row-dtla-20190607-story.html'
     },
     {
-      logo: '/images/logos/black/bloomberg.png',
+      logo: '/images/pages/home/press/bloomberg.png',
       alt: 'Bloomberg',
       href:
         'https://www.bnnbloomberg.ca/shopify-to-open-first-bricks-and-mortar-location-in-l-a-1.1114516'
     },
     {
-      logo: '/images/logos/black/cn_traveler.png',
+      logo: '/images/pages/home/press/cn_traveler.png',
       alt: 'LA Business Journal',
       href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
     }
   ],
   [
     {
-      logo: '/images/logos/black/curbed.png',
+      logo: '/images/pages/home/press/curbed.png',
       alt: 'Curbed',
       href:
         'https://la.curbed.com/2016/1/12/10847514/arts-districts-alameda-square-factories-to-be-reborn-as-massive-mixed'
     },
     {
-      logo: '/images/logos/black/eat_drink_la.png',
+      logo: '/images/pages/home/press/eat_drink_la.png',
       alt: 'Eat Drink LA',
       href: 'https://monocle.com/magazine/issues/123/top-of-the-shops/'
     },
     {
-      logo: '/images/logos/black/food_and_wine.png',
+      logo: '/images/pages/home/press/food_and_wine.png',
       alt: 'Food & Wine',
       href: 'https://www.foodandwine.com/news/row-dtla-opens-los-angeles'
     },
     {
-      logo: '/images/logos/black/goop.png',
+      logo: '/images/pages/home/press/goop.png',
       alt: 'Goop',
       href: 'https://goop.com/place/california/los-angeles/downtown-shops/row-dtla/'
     }
   ],
   [
     {
-      logo: '/images/logos/black/jetsetter.png',
+      logo: '/images/pages/home/press/jetsetter.png',
       alt: 'Jet Setter',
       href: 'https://www.jetsetter.com/magazine/youre-not-a-tourist-los-angeles/#row-dtla'
     },
     {
-      logo: '/images/logos/black/la_business_journal.png',
+      logo: '/images/pages/home/press/la_business_journal.png',
       alt: 'La Business Journal',
       href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
     },
     {
-      logo: '/images/logos/black/la_magazine.png',
+      logo: '/images/pages/home/press/la_mag.png',
       alt: 'LA Magazine',
       href: 'https://www.lamag.com/sponsored/experience-a-taste-of-everything-row-dtla/'
     },
     {
-      logo: '/images/logos/black/la_times.png',
+      logo: '/images/pages/home/press/la_times.png',
       alt: 'LA Times',
       href: 'https://www.latimes.com/home/la-hm-four-hours-row-dtla-20190607-story.html'
     }
   ],
   [
     {
-      logo: '/images/logos/black/mann_publications.png',
+      logo: '/images/pages/home/press/mann_publications.png',
       alt: 'Mann Publications',
       href:
         'http://www.mannpublications.com/mannreportresidential/2019/05/08/la-lifestyles-row-dtla/'
     },
     {
-      logo: '/images/logos/black/monocle.png',
+      logo: '/images/pages/home/press/monocle.png',
       alt: 'Monocle',
       href: 'https://monocle.com/magazine/issues/123/top-of-the-shops/'
     },
     {
-      logo: '/images/logos/black/thrillist.png',
+      logo: '/images/pages/home/press/thrillist.png',
       alt: 'Thrillist',
       href: 'https://www.thrillist.com/travel/nation/best-attractions-usa-2019'
     },
     {
-      logo: '/images/logos/black/urbanize_la.png',
+      logo: '/images/pages/home/press/urbanize_la.png',
       alt: 'Urbanize LA',
       href: 'https://rowdtla.com/this-weeks-leases-zappos-takes-space-at-row-dtla'
     }
