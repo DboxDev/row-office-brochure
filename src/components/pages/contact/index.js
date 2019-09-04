@@ -154,7 +154,7 @@ function Contact() {
                 <span>* Phone</span>
                 <input
                   className="input"
-                  type="text"
+                  type="tel"
                   name="phone"
                   onChange={handleInputChange}
                   value={inputs.phone}
