@@ -151,13 +151,14 @@ function Contact() {
                 />
               </label>
               <label className="half">
-                <span>Phone</span>
+                <span>* Phone</span>
                 <input
                   className="input"
                   type="text"
                   name="phone"
                   onChange={handleInputChange}
                   value={inputs.phone}
+                  required
                 />
               </label>
             </FormRow>

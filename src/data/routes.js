@@ -2,7 +2,7 @@ import { Story, Facts, Maps, Availability, Contact, Legal } from '../components/
 
 const routes = [
   {
-    title: 'Story',
+    title: 'Our Story',
     href: '/',
     component: Story
   },
