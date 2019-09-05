@@ -17,6 +17,7 @@ const FactContainer = styled.div`
       text-transform: uppercase;
       letter-spacing: 1px;
       text-indent: -5px;
+      white-space: pre-line;
       &:before {
         content: '- ';
         text-indent: -5px;
@@ -35,8 +36,8 @@ const factsArray = [
   ],
   [
     'Adjacent to future Arts District South Metro station',
-    '4,000 stall Parking Structure.  4 per 1,000 SF parking',
-    'Continuous morning and evening shuttles to and from Union Station and 7th Street Metro stop',
+    '4 per 1,000 SF parking, 4,000 stall Parking Structure.',
+    'Continuous morning and evening shuttles to and from Union Station and 7th Street Metro Station',
     'Metro Bike and Indoor Bike room'
   ],
   [
@@ -49,18 +50,18 @@ const factsArray = [
   ],
   [
     'Communal tenant lounges, kitchens, roof decks and outdoor landscaped courtyards',
-    'Athletic Club with wellness programs and personal training'
+    'Exclusive Athletic Club with wellness programs and personal training'
   ],
   [
-    '7 restaurants featuring the culinary anchor, The Manufactory LA',
-    '33 retailers',
+    '8 restaurants featuring the culinary anchor, The Manufactory LA',
+    '35 retailers',
     'Art and Music activations',
     'Private Event spaces',
     'Team building opportunities',
     'Ceramic studio, Wine & spirits tasting, Artisan Workshops'
   ],
   [
-    'Around the Neighborhood: Hauser & Wirth, Soho House, Firehouse Hotel, Adidas, ArtShare, Dover Street Market, Ghost Management, UbTech, Spaces, Warner Music, Spotify, Honey, WeWork, HyperloopOne, Bestia, Rolling Greens'
+    'Around the Neighborhood: Hauser & Wirth, Soho House, Firehouse Hotel, Adidas, Art Share L.A.,\n Dover Street Market, Ghost Management, UbTech, Spaces, Warner Music Group, Spotify, Honey,\n WeWork, Hyperloop One, Bestia, Rolling Greens'
   ]
 ];
 

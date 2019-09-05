@@ -97,7 +97,7 @@ const SectionOne = ({ revealed }) => {
             <br /> district charged with innovation,
             <br /> collaboration and community.
             <br /> Curated down to every last detail,
-            <br /> ROW DTLA's ever- changing
+            <br /> ROW DTLA's ever-changing
             <br /> environment fosters creativity in
             <br /> every aspect
           </MedText>
