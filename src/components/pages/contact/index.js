@@ -164,7 +164,7 @@ function Contact() {
             </FormRow>
             <FormRow>
               <label className="full">
-                <span>How much space (SqFt) are you looking for?</span>
+                <span>How much space (Sq Ft) are you looking for?</span>
                 <input
                   className="input"
                   type="text"
