@@ -59,11 +59,16 @@ function renderAvailabilityRows(data) {
         <td valign="top" className="offices">
           {floorplans &&
             floorplans.map(office => (
-              <a href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}>
+              <a
+                href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>{`Suite ${office.number}`}</span>
                 <img src="/images/icons/download.svg" alt={`download suite ${office.number}`} />
               </a>
             ))}
+          {floorplans.length === 0 ? <span>COMING SOON</span> : ''}
         </td>
       </tr>
     );
