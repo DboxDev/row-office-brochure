@@ -53,9 +53,9 @@ const brandGrid = [
 ];
 
 const keyFacts = [
-  '3,600 – 400,000 SF of flexible floor plates  and 3,600 – 35,000 SF of pre-built spaces',
+  '3,600 – 400,000 SF of flexible floor plates  and 3,600 – 35,000 SF of prebuilt spaces',
   'HVAC serviced by Tenant Controlled VRF systems',
-  '4 stalls per 1,000 SF parking in a 4,000 stall Parking Structure',
+  '4 stalls per 1,000 SF parking, 4,000 stall Parking Structure',
   'Adjacent to future Arts District South Metro Station',
   'Shuttles to and from Union Station and 7th Street Metro Station',
   'Metro Bike and indoor bike room',
@@ -64,7 +64,7 @@ const keyFacts = [
   '8 restaurants and 35 retailers',
   'Private event spaces',
   'Beautiful lobbies as breakout rooms or meeting spaces',
-  'Dog-friendly district and buildings '
+  'Dog-friendly district and buildings'
 ];
 
 const newsLogos = [

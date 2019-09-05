@@ -29,20 +29,20 @@ const FactContainer = styled.div`
 const factsArray = [
   [
     'A creative district on the western edge of the Arts District',
-    '1920’s historic buildings',
+    '1920s historic buildings',
     '32-acre intimate, walkable district',
     'Expansive windows, abundant natural light',
     'Unparalleled views of DTLA skyline'
   ],
   [
     'Adjacent to future Arts District South Metro station',
-    '4 per 1,000 SF parking, 4,000 stall Parking Structure.',
+    '4 per 1,000 SF parking, 4,000 stall Parking Structure',
     'Continuous morning and evening shuttles to and from Union Station and 7th Street Metro Station',
     'Metro Bike and Indoor Bike room'
   ],
   [
     'Flexible floor plates 3,600 – 400,000 SF with the ability to grow',
-    'Prebuilt spaces from 3,600 – 35,00 SF, move right-in',
+    'Prebuilt spaces from 3,600 – 35,000 SF, move right in',
     'Oversized elevators',
     'HVAC serviced by Tenant Controlled VRF systems',
     'Fiber Capabilities',
@@ -53,11 +53,11 @@ const factsArray = [
     'Exclusive Athletic Club with wellness programs and personal training'
   ],
   [
-    '8 restaurants featuring the culinary anchor, The Manufactory LA',
+    '8 restaurants featuring the culinary anchor and The Manufactory LA',
     '35 retailers',
     'Art and Music activations',
     'Private Event spaces',
-    'Team building opportunities',
+    'Team-building opportunities',
     'Ceramic studio, Wine & spirits tasting, Artisan Workshops'
   ],
   [
