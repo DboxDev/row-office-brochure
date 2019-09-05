@@ -58,7 +58,7 @@ const keyFacts = [
   '4 stalls per 1,000 SF parking, 4,000 stall Parking Structure',
   'Adjacent to future Arts District South Metro Station',
   'Shuttles to and from Union Station and 7th Street Metro Station',
-  'Metro Bike and indoor bike room',
+  'Metro Bike Station and indoor bike room',
   '24 / 7 on-site security',
   'Exclusive Athletic Club with wellness programs and personal training',
   '8 restaurants and 35 retailers',
