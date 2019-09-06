@@ -85,17 +85,17 @@ function Maps() {
             noMaxHeight
           />
           <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map1"
+            srcPath="/images/pages/maps/dtla_map2"
             imgAlt="DLTA map #1"
             noMaxHeight
           />
           <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map1"
+            srcPath="/images/pages/maps/dtla_map3"
             imgAlt="DLTA map #1"
             noMaxHeight
           />
           <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map1"
+            srcPath="/images/pages/maps/dtla_map4"
             imgAlt="DLTA map #1"
             noMaxHeight
           />
