@@ -38,7 +38,7 @@ const factsArray = [
     'Adjacent to future Arts District South Metro station',
     '4 per 1,000 SF parking, 4,000 stall Parking Structure',
     'Continuous morning and evening shuttles to and from Union Station and 7th Street Metro Station',
-    'Metro Bike and Indoor Bike room'
+    'Metro Bike Station and Indoor Bike room'
   ],
   [
     'Flexible floor plates 3,600 – 400,000 SF with the ability to grow',
