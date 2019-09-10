@@ -167,7 +167,7 @@ const SectionThree = ({ revealed }) => {
         className="swiper-slide"
         revealed={revealed >= 22}
         paddingTop="20vh"
-        paddingBottom="15vh"
+        paddingBottom="20vh"
         spaceBetween
       >
         {generateFacts()}
