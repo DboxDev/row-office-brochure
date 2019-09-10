@@ -113,12 +113,10 @@ const PressRow = styled.div`
 
 const PressItem = styled.a`
   max-height: 100%;
-  margin-right: 5vw;
+  margin-right: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 15vh;
-  width: 20vh;
   transition: background 300ms ease;
   border-radius: 5px;
   &:hover {

@@ -166,7 +166,7 @@ const SectionThree = ({ revealed }) => {
       <ScrollColumn
         className="swiper-slide"
         revealed={revealed >= 22}
-        paddingTop="15vh"
+        paddingTop="20vh"
         paddingBottom="15vh"
         spaceBetween
       >
@@ -181,12 +181,12 @@ const SectionThree = ({ revealed }) => {
       <ScrollColumn
         className="swiper-slide"
         revealed={revealed >= 24}
-        paddingTop="10vh"
-        paddingBottom="15vh"
+        paddingTop="20vh"
+        paddingBottom="20vh"
         spaceBetween
       >
         {generatePressGrid()}
-        <SectionCaption style={{ position: 'absolute', bottom: '5vh' }}>
+        <SectionCaption style={{ position: 'absolute', bottom: '10vh' }}>
           Click to View Articles
         </SectionCaption>
       </ScrollColumn>
