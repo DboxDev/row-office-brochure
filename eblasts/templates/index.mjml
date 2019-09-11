@@ -1,0 +1,169 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-class name="mjclass" color="green" font-size="30px" />
+    </mj-attributes>
+    <mj-style>
+      @font-face {
+        font-family: 'SangBleu Kingdom';
+        src: url('../fonts/SangBleuKingdom-Regular.eot');
+        src: url('../fonts/SangBleuKingdom-Regular.eot?#iefix')
+            format('embedded-opentype'),
+          url('../fonts/SangBleuKingdom-Regular.woff2') format('woff2'),
+          url('../fonts/SangBleuKingdom-Regular.woff') format('woff'),
+          url('../fonts/SangBleuKingdom-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'SangBleu Kingdom';
+        src: url('../fonts/SangBleuKingdom-Medium.eot');
+        src: url('../fonts/SangBleuKingdom-Medium.eot?#iefix')
+            format('embedded-opentype'),
+          url('../fonts/SangBleuKingdom-Medium.woff2') format('woff2'),
+          url('../fonts/SangBleuKingdom-Medium.woff') format('woff'),
+          url('../fonts/SangBleuKingdom-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'SangBleu Kingdom';
+        src: url('../fonts/SangBleuKingdom-MediumItalic.eot');
+        src: url('../fonts/SangBleuKingdom-MediumItalic.eot?#iefix')
+            format('embedded-opentype'),
+          url('../fonts/SangBleuKingdom-MediumItalic.woff2') format('woff2'),
+          url('../fonts/SangBleuKingdom-MediumItalic.woff') format('woff'),
+          url('../fonts/SangBleuKingdom-MediumItalic.ttf') format('truetype');
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'SangBleu Kingdom';
+        src: url('../fonts/SangBleuKingdom-Bold.eot');
+        src: url('../fonts/SangBleuKingdom-Bold.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/SangBleuKingdom-Bold.woff2') format('woff2'),
+          url('../fonts/SangBleuKingdom-Bold.woff') format('woff'),
+          url('../fonts/SangBleuKingdom-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f0f0f0" width="650px">
+    <mj-section background-color="#ffffff">
+      <mj-column width="100%">
+        <mj-image width="300px" src="../images/main-logo.png" padding-top="50px" padding-bottom="50px" />
+        <mj-image src="../images/row-aerial.jpg" padding-left="0" padding-right="0" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff">
+      <mj-column width="90%">
+        <mj-image width="300px" src="../images/intro-quote-text.png" align="left"/>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff">
+      <mj-column width="90%">
+        <mj-text line-height="30px" font-size="16px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <p>
+            We recognize that first impressions are important.
+          </p>
+          <p>
+            This is why ROW DTLA is proud to provide you with our newly designed Creative Office Brochure. In it, you and your clients will discover every reason why ROW DTLA is quickly becoming the number one creative district in Los Angeles. From our inspiring office spaces and their proximity to a collective of buzzworthy retailers and award-winning eateries, to exclusive tenants-only amenities like our own Athletic Club, communal kitchens and lounges, and ample parking, ROW DTLA isn’t just a workplace. It’s a live/work destination for global brands like adidas, SoHo House, Shopify and many, many more. 
+          <p>
+            Better yet, we’d love to help you jumpstart your presentation of the new ROW DTLA Creative Brochure to clients with our Step-By-Step Guide below.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" padding-top="0">
+      <mj-column width="90%">
+        <mj-text line-height="30px" font-size="16px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <p style="font-size: 20px; text-align: center; margin-bottom: 40px; font-weight: 500;">Click, Tour, Lease:</br>A Step-By-Step Guide On Presenting ROW DTLA</p>
+          <p style="margin-bottom: 50px;">
+            <span style="font-weight: 500;">STEP ONE</span>: Send your client the link to our newly redesigned Creative Space brochure (below). Remind them it’s best viewed on their desktop or iPad, so they can best optimize everything within it.
+          </p>
+          <p style="margin-bottom: 50px;">
+            <span style="font-weight: 500;">STEP TWO</span>: Schedule a private tour with your client in order to grab a sneak peek of our available spaces before everyone else, and ROW DTLA will treat you both to some freshly baked goodies from Tartine.
+          </p>
+          <p style="margin-bottom: 50px;">
+            <span style="font-weight: 500;">STEP THREE</span>: Wow your client with everything ROW DTLA has to offer; everything they’ve been looking for is right here. Then congrats! Because it’s time to sign that lease.
+          </p>
+          <p>
+            <span style="font-weight: 500;">WHAT’S NEW</span>: ROW DTLA is launching its five (5) newly renovated creative office floors at 757 South Alameda (already home to Tartine Manufactory), with floor plan options ranging from 3,500 to 63,000, sq ft. Prospective tenants can also see eleven (11) turn-key suites ranging from 3,500 to 12,000 sq ft and available for immediate occupancy in January, making a move-in that much easier.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff">
+      <mj-column width="90%">
+        <mj-image src="../images/button.png" href="https://office-brochure.rowdtla.com" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" padding-top="40px" padding-bottom="80px">
+      <mj-column width="90%">
+        <mj-image src="../images/los-angeles-text.png" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000" padding-top="40px">
+      <mj-column width="100%">
+        <mj-image width="150px" src="../images/runyon-retail-leasing.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=runion_leasing" />
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text color="#fff" line-height="24px" font-size="13px" letter-spacing="1px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica" padding-top="0">
+          <p style="margin: 0;">
+            info@runyongroup.com</br>
+            310.275.0483</br>
+          </p>
+        </mj-text>
+    </mj-section>
+    <mj-section background-color="#000" padding-bottom="0">
+       <mj-column width="100%">
+        <mj-image width="200px" src="../images/cbre-creative-office.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=cbre_leasing"  padding-bottom="0"/>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000" padding-top="0">
+      <mj-column width="33%">
+        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" padding-right="10px" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <p>
+            Jeff Pion</br>
+            jeff.pion@cbre.com</br>
+            310.550.2537</br>
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="33%">
+        <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <p>
+            Michelle Esquivel</br>
+            michelle.esquivel@cbre.com</br>
+            310.550.2525</br>
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="33%">
+        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" padding-left="10px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <p>
+            Chris Penrose</br>
+            chris.penrose@cbre.com</br>
+            213.613.3108</br>
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%">
+        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+          <a href="https://rowdtla.com/?utm_source=email&utm_medium=broker_email&utm_campaign=row_dtla_home" style="color: white; text-decoration: none;">
+            <p style="margin-bottom: 0;">
+              777 S Alameda St, Los Angeles, CA
+            </p>
+          </a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="100%" padding-top="0">
+        <mj-image width="40px" src="../images/instagram.png" align="center" href="https://www.instagram.com/rowdtla/?utm_source=email&utm_medium=broker_email&utm_campaign=row_dtla_instagram" />
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
