@@ -6,62 +6,67 @@
     <mj-style>
       @font-face {
         font-family: 'SangBleu Kingdom';
-        src: url('../fonts/SangBleuKingdom-Regular.eot');
-        src: url('../fonts/SangBleuKingdom-Regular.eot?#iefix')
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Regular.eot');
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Regular.eot?#iefix')
             format('embedded-opentype'),
-          url('../fonts/SangBleuKingdom-Regular.woff2') format('woff2'),
-          url('../fonts/SangBleuKingdom-Regular.woff') format('woff'),
-          url('../fonts/SangBleuKingdom-Regular.ttf') format('truetype');
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Regular.woff2') format('woff2'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Regular.woff') format('woff'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
       }
 
       @font-face {
         font-family: 'SangBleu Kingdom';
-        src: url('../fonts/SangBleuKingdom-Medium.eot');
-        src: url('../fonts/SangBleuKingdom-Medium.eot?#iefix')
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Medium.eot');
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Medium.eot?#iefix')
             format('embedded-opentype'),
-          url('../fonts/SangBleuKingdom-Medium.woff2') format('woff2'),
-          url('../fonts/SangBleuKingdom-Medium.woff') format('woff'),
-          url('../fonts/SangBleuKingdom-Medium.ttf') format('truetype');
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Medium.woff2') format('woff2'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Medium.woff') format('woff'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Medium.ttf') format('truetype');
         font-weight: 500;
         font-style: normal;
       }
 
       @font-face {
         font-family: 'SangBleu Kingdom';
-        src: url('../fonts/SangBleuKingdom-MediumItalic.eot');
-        src: url('../fonts/SangBleuKingdom-MediumItalic.eot?#iefix')
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-MediumItalic.eot');
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-MediumItalic.eot?#iefix')
             format('embedded-opentype'),
-          url('../fonts/SangBleuKingdom-MediumItalic.woff2') format('woff2'),
-          url('../fonts/SangBleuKingdom-MediumItalic.woff') format('woff'),
-          url('../fonts/SangBleuKingdom-MediumItalic.ttf') format('truetype');
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-MediumItalic.woff2') format('woff2'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-MediumItalic.woff') format('woff'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-MediumItalic.ttf') format('truetype');
         font-weight: 500;
         font-style: italic;
       }
 
       @font-face {
         font-family: 'SangBleu Kingdom';
-        src: url('../fonts/SangBleuKingdom-Bold.eot');
-        src: url('../fonts/SangBleuKingdom-Bold.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/SangBleuKingdom-Bold.woff2') format('woff2'),
-          url('../fonts/SangBleuKingdom-Bold.woff') format('woff'),
-          url('../fonts/SangBleuKingdom-Bold.ttf') format('truetype');
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Bold.eot');
+        src: url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Bold.eot?#iefix') format('embedded-opentype'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Bold.woff2') format('woff2'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Bold.woff') format('woff'),
+          url('https://s3.amazonaws.com/row-office-brochure.com/eblasts/fonts/SangBleuKingdom-Bold.ttf') format('truetype');
         font-weight: bold;
         font-style: normal;
+      }
+
+      .contact a { 
+        color:#ffffff !important; 
+        text-decoration:underline !important;
       }
     </mj-style>
   </mj-head>
   <mj-body background-color="#f0f0f0" width="650px">
     <mj-section background-color="#ffffff">
       <mj-column width="100%">
-        <mj-image width="200px" src="../images/main-logo.png" padding-top="50px" padding-bottom="50px" />
-        <mj-image src="../images/row-aerial.jpg" padding-left="0" padding-right="0" />
+        <mj-image width="200px" src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/main-logo.png" padding-top="50px" padding-bottom="50px" />
+        <mj-image src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/row-aerial.jpg" padding-left="0" padding-right="0" />
       </mj-column>
     </mj-section>
     <mj-section background-color="#ffffff">
       <mj-column width="90%">
-        <mj-image width="300px" src="../images/intro-quote-text.png" align="left" />
+        <mj-image width="300px" src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/intro-quote-text.png" align="left" />
       </mj-column>
     </mj-section>
     <mj-section background-color="#ffffff">
@@ -106,52 +111,44 @@
     </mj-section>
     <mj-section background-color="#ffffff" padding-top="40px" padding-bottom="80px">
       <mj-column width="90%">
-        <mj-image src="../images/los-angeles-text.png" />
+        <mj-image src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/los-angeles-text.png" />
       </mj-column>
     </mj-section>
     <mj-section background-color="#000" padding-top="40px">
       <mj-column width="100%">
-        <mj-image width="150px" src="../images/runyon-retail-leasing.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=runion_leasing" />
+        <mj-image width="150px" src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/runyon-retail-leasing.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=runion_leasing" />
       </mj-column>
       <mj-column width="100%">
         <mj-text color="#fff" line-height="24px" font-size="13px" letter-spacing="1px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica" padding-top="0">
-          <p style="margin: 0;">
-            info@runyongroup.com</br>
-            310.275.0483</br>
-          </p>
+          <p style="margin: 0;"><span class="contact">info@runyongroup.com</span></p>
+          <p style="margin: 0;"><span class="contact">310.275.0483</span></p>
         </mj-text>
     </mj-section>
-    <mj-section background-color="#000" padding-bottom="0">
+    <mj-section background-color="#000" padding-bottom="20px">
        <mj-column width="100%">
-        <mj-image width="200px" src="../images/cbre-creative-office.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=cbre_leasing"  padding-bottom="0"/>
+        <mj-image width="200px" src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/cbre-creative-office.png" href="https://rowdtla.com/creative-office?utm_source=email&utm_medium=broker_email&utm_campaign=cbre_leasing"  padding-bottom="0"/>
       </mj-column>
     </mj-section>
     <mj-section background-color="#000" padding-top="0">
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
-          <p>
-            Jeff Pion</br>
-            jeff.pion@cbre.com</br>
-            310.550.2537</br>
-          </p>
+          <p style="margin: 0;"><span class="contact">Jeff Pion</span></p>
+          <p style="margin: 0;"><span class="contact">jeff.pion@cbre.com</span></p>
+          <p style="margin: 0;"><span class="contact">310.550.2537</span></p>
         </mj-text>
       </mj-column>
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
-          <p>
-            Michelle Esquivel</br>
-            michelle.esquivel@cbre.com</br>
-            310.550.2525</br>
-          </p>
+          <p style="margin: 0;"><span class="contact">Michelle Esquivel</span></p>
+          <p style="margin: 0;"><span class="contact">michelle.esquivel@cbre.com</span></p>
+          <p style="margin: 0;"><span class="contact">310.550.2525</span></p>
         </mj-text>
       </mj-column>
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
-          <p>
-            Chris Penrose</br>
-            chris.penrose@cbre.com</br>
-            213.613.3108</br>
-          </p>
+          <p style="margin: 0;"><span class="contact">Chris Penrose</span></p>
+          <p style="margin: 0;"><span class="contact">chris.penrose@cbre.com</span></p>
+          <p style="margin: 0;"><span class="contact">213.613.3108</span></p>
         </mj-text>
       </mj-column>
       <mj-column width="100%">
@@ -164,7 +161,7 @@
         </mj-text>
       </mj-column>
       <mj-column width="100%" padding-top="0">
-        <mj-image width="40px" src="../images/instagram.png" align="center" href="https://www.instagram.com/rowdtla/?utm_source=email&utm_medium=broker_email&utm_campaign=row_dtla_instagram" />
+        <mj-image width="40px" src="https://s3.amazonaws.com/row-office-brochure.com/eblasts/images/instagram.png" align="center" href="https://www.instagram.com/rowdtla/?utm_source=email&utm_medium=broker_email&utm_campaign=row_dtla_instagram" />
       </mj-column>
     </mj-section>
   </mj-body>
