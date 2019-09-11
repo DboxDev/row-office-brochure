@@ -55,13 +55,13 @@
   <mj-body background-color="#f0f0f0" width="650px">
     <mj-section background-color="#ffffff">
       <mj-column width="100%">
-        <mj-image width="300px" src="../images/main-logo.png" padding-top="50px" padding-bottom="50px" />
+        <mj-image width="200px" src="../images/main-logo.png" padding-top="50px" padding-bottom="50px" />
         <mj-image src="../images/row-aerial.jpg" padding-left="0" padding-right="0" />
       </mj-column>
     </mj-section>
     <mj-section background-color="#ffffff">
       <mj-column width="90%">
-        <mj-image width="300px" src="../images/intro-quote-text.png" align="left"/>
+        <mj-image width="300px" src="../images/intro-quote-text.png" align="left" />
       </mj-column>
     </mj-section>
     <mj-section background-color="#ffffff">
@@ -99,7 +99,9 @@
     </mj-section>
     <mj-section background-color="#ffffff">
       <mj-column width="90%">
-        <mj-image src="../images/button.png" href="https://office-brochure.rowdtla.com" />
+        <mj-button height="50px" width="100%" background-color="#000000" color="white" font-size="18px" font-family="'SangBleu Kingdom', Georgia, helvetica" href="https://office-brochure.rowdtla.com">
+          VIEW THE BROCHURE
+         </mj-button>
       </mj-column>
     </mj-section>
     <mj-section background-color="#ffffff" padding-top="40px" padding-bottom="80px">
@@ -126,7 +128,7 @@
     </mj-section>
     <mj-section background-color="#000" padding-top="0">
       <mj-column width="33%">
-        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" padding-right="10px" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+        <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p>
             Jeff Pion</br>
             jeff.pion@cbre.com</br>
@@ -135,7 +137,7 @@
         </mj-text>
       </mj-column>
       <mj-column width="33%">
-        <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+        <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p>
             Michelle Esquivel</br>
             michelle.esquivel@cbre.com</br>
@@ -144,7 +146,7 @@
         </mj-text>
       </mj-column>
       <mj-column width="33%">
-        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" padding-left="10px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+        <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p>
             Chris Penrose</br>
             chris.penrose@cbre.com</br>
@@ -153,10 +155,10 @@
         </mj-text>
       </mj-column>
       <mj-column width="100%">
-        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" letter-spacing="1px" font-family="'SangBleu Kingdom', Georgia, helvetica">
+        <mj-text color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <a href="https://rowdtla.com/?utm_source=email&utm_medium=broker_email&utm_campaign=row_dtla_home" style="color: white; text-decoration: none;">
             <p style="margin-bottom: 0;">
-              777 S Alameda St, Los Angeles, CA
+              777 S Alameda Street, Los Angeles, CA
             </p>
           </a>
         </mj-text>
