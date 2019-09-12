@@ -3,7 +3,15 @@ import ReactPlayer from 'react-player';
 
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
-import { BlackSlide, BigText, MedText, PhotoRow, PlayerWrapper, Row, ScrollColumn } from './styles';
+import {
+  BlackSlide,
+  BigText,
+  MedText,
+  PhotoRow,
+  PlayerWrapper,
+  Row,
+  ScrollSection
+} from '../styles';
 
 import { welcomeGrid } from 'data/rotatingImages';
 
@@ -20,7 +28,7 @@ const SectionOne = ({ revealed }) => {
           <p>SCROLL</p>
         </span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 0}>
+      <ScrollSection className="swiper-slide" paddingLeft="160px" revealed={revealed >= 0}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_1/row_office_section1_1"
@@ -34,8 +42,8 @@ const SectionOne = ({ revealed }) => {
             ROW DTLA
           </BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 1}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 1}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_1/row_office_section1_2"
@@ -54,11 +62,11 @@ const SectionOne = ({ revealed }) => {
             <br /> new creative and cultural hub
           </BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 2}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 2}>
         <RotatingGrid imgGrid={welcomeGrid} carouselActive={revealed >= 2} />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="120px" revealed={revealed >= 3}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="120px" revealed={revealed >= 3}>
         <Row height="55%" />
         <Row height="45%">
           <MedText marginTop>
@@ -71,8 +79,8 @@ const SectionOne = ({ revealed }) => {
             connoisseurs of Los Angeles
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 4}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 4}>
         <PlayerWrapper>
           <ReactPlayer
             className="react-player"
@@ -83,8 +91,8 @@ const SectionOne = ({ revealed }) => {
             light="/video/player/rowdtla_video_preview_general.jpg"
           />
         </PlayerWrapper>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 5}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 5}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_1/row_office_section1_4"
@@ -102,13 +110,13 @@ const SectionOne = ({ revealed }) => {
             <br /> every aspect
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 6}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="160px" revealed={revealed >= 6}>
         <ResponsiveImage
           srcPath="/images/pages/home/section_1/row_office_section1_5"
           imgAlt="test"
         />
-      </ScrollColumn>
+      </ScrollSection>
     </React.Fragment>
   );
 };

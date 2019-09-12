@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import RotatingGrid from 'components/images/RotatingGrid';
 import ResponsiveImage from 'components/images/ResponsiveImage';
 import {
-  ScrollColumn,
+  ScrollSection,
   BlackSlide,
   BigText,
   MedText,
@@ -17,7 +17,7 @@ import {
   Row,
   PlayerWrapper,
   SectionCaption
-} from './styles';
+} from '../styles';
 
 import { keyFacts, newsLogos } from 'data/home';
 import { workspacesGrid } from 'data/rotatingImages';
@@ -68,7 +68,7 @@ const SectionThree = ({ revealed }) => {
         </h1>
         <span className="credit">RACHEL MADDEN, WC + A</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 15}>
+      <ScrollSection className="swiper-slide" paddingLeft="160px" revealed={revealed >= 15}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_1"
@@ -83,11 +83,11 @@ const SectionThree = ({ revealed }) => {
             <br /> workplace
           </BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 16}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 16}>
         <RotatingGrid imgGrid={workspacesGrid} carouselActive={revealed >= 16} />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="120px" revealed={revealed >= 17}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="120px" revealed={revealed >= 17}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
@@ -101,8 +101,8 @@ const SectionThree = ({ revealed }) => {
             <br /> your workspace evolves with it.
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 18}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 18}>
         <PlayerWrapper>
           <ReactPlayer
             className="react-player"
@@ -113,8 +113,8 @@ const SectionThree = ({ revealed }) => {
             light="/video/player/rowdtla_video_preview_office.jpg"
           />
         </PlayerWrapper>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 19}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 19}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
@@ -126,8 +126,8 @@ const SectionThree = ({ revealed }) => {
             <br /> productive work environment
           </MedText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="200px" revealed={revealed >= 20}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="200px" revealed={revealed >= 20}>
         <PhotoGridRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_2"
@@ -156,14 +156,14 @@ const SectionThree = ({ revealed }) => {
             imgAlt="test"
           />
         </PhotoGridRow>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 21}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 21}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-500">Key facts</BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn
+      </ScrollSection>
+      <ScrollSection
         className="swiper-slide"
         revealed={revealed >= 22}
         paddingTop="20vh"
@@ -171,14 +171,14 @@ const SectionThree = ({ revealed }) => {
         spaceBetween
       >
         {generateFacts()}
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 23}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingLeft="160px" revealed={revealed >= 23}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-500">In the news</BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn
+      </ScrollSection>
+      <ScrollSection
         className="swiper-slide"
         revealed={revealed >= 24}
         paddingTop="20vh"
@@ -189,14 +189,14 @@ const SectionThree = ({ revealed }) => {
         <SectionCaption style={{ position: 'absolute', bottom: '10vh' }}>
           Click to View Articles
         </SectionCaption>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingBottom="20vh" revealed={revealed >= 24}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingBottom="20vh" revealed={revealed >= 24}>
         <ResponsiveImage
           srcPath="/images/pages/home/section_3/row_office_section3_8"
           imgAlt="Birds eye view of building"
         />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 25}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="160px" revealed={revealed >= 25}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="black-500">
@@ -205,7 +205,7 @@ const SectionThree = ({ revealed }) => {
             <br /> looked better.
           </BigText>
         </Row>
-      </ScrollColumn>
+      </ScrollSection>
     </React.Fragment>
   );
 };

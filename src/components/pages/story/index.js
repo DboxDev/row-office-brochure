@@ -19,7 +19,7 @@ const StoryContainer = styled.div`
 `;
 
 function Story({ displayMobile }) {
-  return <StoryContainer>{displayMobile ? <h1>Hello World</h1> : <StoryDesktop />}</StoryContainer>;
+  return <StoryContainer>{displayMobile ? <StoryMobile /> : <StoryDesktop />}</StoryContainer>;
 }
 
 export default Story;

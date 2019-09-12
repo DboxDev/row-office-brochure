@@ -46,7 +46,7 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
-        {<VideoIntro />}
+        {/* {<VideoIntro />} */}
         <Header />
         <Switch>
           {allRoutes.map(route => {

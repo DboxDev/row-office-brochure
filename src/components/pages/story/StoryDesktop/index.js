@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Swiper from 'react-id-swiper';
 
-import { SectionOne, SectionTwo, SectionThree } from 'components/pages/story/components/_module';
+import { SectionOneDesktop, SectionTwoDesktop, SectionThreeDesktop } from './sections/_module';
 
 function StoryDesktop() {
   const [swiper, setSwiper] = useState(null);
@@ -41,9 +41,9 @@ function StoryDesktop() {
 
   return (
     <Swiper {...swiperSettings}>
-      <SectionOne revealed={revealed} />
-      <SectionTwo revealed={revealed} />
-      <SectionThree revealed={revealed} />
+      <SectionOneDesktop revealed={revealed} />
+      <SectionTwoDesktop revealed={revealed} />
+      <SectionThreeDesktop revealed={revealed} />
     </Swiper>
   );
 }

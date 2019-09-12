@@ -10,9 +10,9 @@ import {
   MedText,
   PhotoRow,
   Row,
-  ScrollColumn,
+  ScrollSection,
   SectionCaption
-} from './styles';
+} from '../styles';
 
 import { brandGrid } from 'data/home';
 import { communityGrid } from 'data/rotatingImages';
@@ -46,7 +46,7 @@ const SectionTwo = ({ revealed }) => {
         </h1>
         <span className="credit">LA MAGAZINE</span>
       </BlackSlide>
-      <ScrollColumn className="swiper-slide" paddingLeft="160px" revealed={revealed >= 8}>
+      <ScrollSection className="swiper-slide" paddingLeft="160px" revealed={revealed >= 8}>
         <PhotoRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_2/row_office_section2_1"
@@ -62,8 +62,8 @@ const SectionTwo = ({ revealed }) => {
             and play
           </BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn
+      </ScrollSection>
+      <ScrollSection
         className="swiper-slide"
         paddingRight="0"
         paddingBottom="120px"
@@ -72,14 +72,14 @@ const SectionTwo = ({ revealed }) => {
       >
         {generateBrandGrid()}
         <SectionCaption style={{ marginLeft: '5vw' }}>Featured Tenants</SectionCaption>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 10}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 10}>
         <ResponsiveImage
           srcPath="/images/pages/home/section_2/row_office_section2_2"
           imgAlt="test"
         />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" revealed={revealed >= 11}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" revealed={revealed >= 11}>
         <Row height="55%" />
         <Row height="45%">
           <BigText className="grey-400">
@@ -89,11 +89,11 @@ const SectionTwo = ({ revealed }) => {
             <br /> and salons are all within reach
           </BigText>
         </Row>
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="0" revealed={revealed >= 12}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 12}>
         <RotatingGrid imgGrid={communityGrid} carouselActive={revealed >= 13} />
-      </ScrollColumn>
-      <ScrollColumn className="swiper-slide" paddingRight="160px" revealed={revealed >= 13}>
+      </ScrollSection>
+      <ScrollSection className="swiper-slide" paddingRight="160px" revealed={revealed >= 13}>
         <Row height="55%" />
         <Row height="45%">
           <MedText>
@@ -105,7 +105,7 @@ const SectionTwo = ({ revealed }) => {
             <br /> day in a truly meaningful way
           </MedText>
         </Row>
-      </ScrollColumn>
+      </ScrollSection>
     </React.Fragment>
   );
 };

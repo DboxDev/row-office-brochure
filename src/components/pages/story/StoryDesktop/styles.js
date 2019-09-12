@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ScrollColumn = styled.div`
+const ScrollSection = styled.div`
   display: flex !important;
   flex-direction: column;
   height: 100%;
@@ -238,6 +238,6 @@ export {
   PlayerWrapper,
   MedText,
   Row,
-  ScrollColumn,
+  ScrollSection,
   SectionCaption
 };
