@@ -5,7 +5,7 @@ import Swiper from 'react-id-swiper';
 
 import { SectionOne, SectionTwo, SectionThree } from 'components/pages/story/components/_module';
 
-const HorizontalContainer = styled.div`
+const StoryContainer = styled.div`
   height: 100%;
   .swiper-container {
     display: block;
@@ -19,7 +19,7 @@ const HorizontalContainer = styled.div`
   }
 `;
 
-const Story = () => {
+const Story = ({ displayMobile }) => {
   const [swiper, setSwiper] = useState(null);
   const [swiperIndex, setSwiperIndex] = useState(0);
   const [revealed, setRevealed] = useState(0);
@@ -55,14 +55,23 @@ const Story = () => {
     }
   }, [swiperIndex]);
 
+  useEffect(() => {
+    if (swiper !== null) {
+      const direction = displayMobile ? 'vertical' : 'horizontal';
+      swiper.changeDirection(direction);
+    }
+  }, [displayMobile]);
+
+  console.log(displayMobile);
+
   return (
-    <HorizontalContainer>
+    <StoryContainer>
       <Swiper {...swiperSettings}>
         <SectionOne revealed={revealed} />
         <SectionTwo revealed={revealed} />
         <SectionThree revealed={revealed} />
       </Swiper>
-    </HorizontalContainer>
+    </StoryContainer>
   );
 };
 

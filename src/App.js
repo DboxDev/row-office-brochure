@@ -5,16 +5,16 @@ import { routes, secondaryRoutes } from 'data/routes';
 
 import VideoIntro from 'components/includes/VideoIntro';
 import Header from 'components/includes/Header';
-import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
 
-import ScreenRestriction from 'components/includes/ScreenRestriction';
+import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
 
 import 'fonts.scss';
 
 const allRoutes = routes.concat(secondaryRoutes);
 
 function App() {
-  const [restrictScreen, toggleRestrictScreen] = useState(false);
+  const [displayMobile, toggleDisplayMobile] = useState(false);
+  // const [windowDimensions, updateWindowDimensionState] = useState({ width: '', height: '' });
 
   const updateWindowDimensions = useCallback(() => {
     const width =
@@ -23,11 +23,12 @@ function App() {
     const height =
       window.innerHeight ||
       Math.max(document.documentElement.clientHeight, document.body.clientHeight);
+    // updateWindowDimensionState({ width, height });
 
-    if (width / height < 1.2) {
-      toggleRestrictScreen(true);
+    if (width / height < 1.2 && width < 1050) {
+      toggleDisplayMobile(true);
     } else {
-      toggleRestrictScreen(false);
+      toggleDisplayMobile(false);
     }
   }, []);
 
@@ -46,22 +47,31 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
-        {!restrictScreen && <VideoIntro />}
-        <Header restrictScreen={restrictScreen} />
-        {restrictScreen ? (
-          <ScreenRestriction />
-        ) : (
-          <Switch>
-            {allRoutes.map(route => (
-              <Route
-                key={route.href.replace('/', '')}
-                exact
-                path={route.href}
-                component={route.component}
-              />
-            ))}
-          </Switch>
-        )}
+        {<VideoIntro />}
+        <Header />
+        <Switch>
+          {allRoutes.map(route => {
+            if (route.href === '/') {
+              return (
+                <Route
+                  key={route.href.replace('/', '')}
+                  exact
+                  path={route.href}
+                  render={() => <route.component displayMobile={displayMobile} />}
+                />
+              );
+            } else {
+              return (
+                <Route
+                  key={route.href.replace('/', '')}
+                  exact
+                  path={route.href}
+                  component={route.component}
+                />
+              );
+            }
+          })}
+        </Switch>
       </Router>
     </React.Fragment>
   );

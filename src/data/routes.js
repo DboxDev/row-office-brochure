@@ -1,4 +1,4 @@
-import { Story, Facts, Maps, Availability, Contact, Legal } from '../components/pages/_module';
+import { Story, Facts, Maps, Availability, Contact, Legal } from 'components/pages/_module';
 
 const routes = [
   {
