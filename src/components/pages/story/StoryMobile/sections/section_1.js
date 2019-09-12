@@ -1,7 +1,10 @@
 import React from 'react';
 import ResponsiveImageMobile from 'components/images/ResponsiveImage';
+import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
 
-import { BlackSlideMobile, SlideMobile } from '../styles';
+import { BlackSlideMobile, SlideMobile, BigText, Row } from '../styles';
+
+import { animatedSingleSquare1 } from 'data/rotatingImages';
 
 const SectionOneMobile = () => {
   return (
@@ -18,6 +21,30 @@ const SectionOneMobile = () => {
       </BlackSlideMobile>
       <SlideMobile>
         <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_1" />
+        <Row>
+          <BigText className="black-500">
+            Welcome to
+            <br />
+            ROW DTLA
+          </BigText>
+        </Row>
+      </SlideMobile>
+      <SlideMobile>
+        <Row>
+          <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_2" />
+        </Row>
+        <Row>
+          <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_3" />
+        </Row>
+        <Row>
+          <BigText className="grey-400">
+            A 32-acre district with a 100 year old history marks the beginning of LA’s future as a
+            new creative and cultural hub
+          </BigText>
+        </Row>
+      </SlideMobile>
+      <SlideMobile>
+        <AnimatedSingleSquare imgArray={animatedSingleSquare1} active />
       </SlideMobile>
     </React.Fragment>
   );

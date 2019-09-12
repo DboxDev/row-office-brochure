@@ -1,3 +1,5 @@
+// Desktop
+
 const welcomeCell1 = [
   '/images/pages/home/grids/welcome_grid/walking_over_text',
   '/images/pages/home/grids/welcome_grid/scrapbook_studio',
@@ -76,4 +78,12 @@ const workspacesCell4 = [
 
 const workspacesGrid = [workspacesCell1, workspacesCell2, workspacesCell3, workspacesCell4];
 
-export { welcomeGrid, communityGrid, workspacesGrid };
+// Mobile
+
+const animatedSingleSquare1 = [
+  '/images/pages/home/grids/welcome_grid/walking_over_text',
+  '/images/pages/home/grids/welcome_grid/scrapbook_studio',
+  '/images/pages/home/grids/welcome_grid/people_painting'
+];
+
+export { welcomeGrid, communityGrid, workspacesGrid, animatedSingleSquare1 };

@@ -1,7 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import RotatingImages from 'components/images/RotatingImages';
+import AnimatedResponsiveImage from './AnimatedResponsiveImage';
+
+const RotatingImagesContainer = styled.div`
+  position: relative;
+  height: 35vh;
+  width: 35vh;
+  &:nth-child(1) {
+    margin-right: 2vh;
+  }
+  &:nth-child(2) {
+    margin-left: 2vh;
+  }
+  &:nth-child(3) {
+    margin-right: 2vh;
+  }
+  &:nth-child(4) {
+    margin-left: 2vh;
+  }
+`;
+
+function RotatingImages({ imgArray, activeImage, position }) {
+  return (
+    <RotatingImagesContainer>
+      {imgArray.map((src, idx) => {
+        return (
+          <AnimatedResponsiveImage
+            key={`${idx}-animated-grid-image`}
+            srcPath={src}
+            imgClass={activeImage === idx ? 'active' : ''}
+            position={position}
+          />
+        );
+      })}
+    </RotatingImagesContainer>
+  );
+}
 
 const RotatingGridContainer = styled.div`
   height: 100%;
