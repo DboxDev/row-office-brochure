@@ -2,7 +2,7 @@ import React from 'react';
 import ResponsiveImageMobile from 'components/images/ResponsiveImage';
 import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
 
-import { BlackSlideMobile, SlideMobile, BigText, Row } from '../styles';
+import { BlackSlideMobile, SlideMobile, BigText, Row, MedText } from '../styles';
 
 import { animatedSingleSquare1 } from 'data/rotatingImages';
 
@@ -45,6 +45,17 @@ const SectionOneMobile = () => {
       </SlideMobile>
       <SlideMobile>
         <AnimatedSingleSquare imgArray={animatedSingleSquare1} active />
+        <Row>
+          <MedText marginTop>
+            Contemporary offices, bespoke
+            <br /> boutiques, and artisanal eateries
+            <br />
+            catered to the entrepreneurial
+            <br /> visionaries, style icons, and food
+            <br />
+            connoisseurs of Los Angeles
+          </MedText>
+        </Row>
       </SlideMobile>
     </React.Fragment>
   );

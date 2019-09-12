@@ -46,6 +46,13 @@ const BigText = styled.h2`
   }
 `;
 
+const MedText = styled.h3`
+  margin: 0;
+  font-size: 2vh;
+  color: #000;
+  line-height: 140%;
+`;
+
 const Row = styled.div`
   width: 100%;
   padding-top: 4vh;
@@ -78,4 +85,4 @@ const Row = styled.div`
 //   }
 // `;
 
-export { BlackSlideMobile, SlideMobile, BigText, Row };
+export { BlackSlideMobile, SlideMobile, BigText, MedText, Row };
