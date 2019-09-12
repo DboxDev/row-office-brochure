@@ -13,7 +13,7 @@ import 'fonts.scss';
 const allRoutes = routes.concat(secondaryRoutes);
 
 function App() {
-  const [displayMobile, toggleDisplayMobile] = useState(false);
+  const [displayMobile, toggleDisplayMobile] = useState(true);
   // const [windowDimensions, updateWindowDimensionState] = useState({ width: '', height: '' });
 
   const updateWindowDimensions = useCallback(() => {
@@ -24,11 +24,10 @@ function App() {
       window.innerHeight ||
       Math.max(document.documentElement.clientHeight, document.body.clientHeight);
     // updateWindowDimensionState({ width, height });
-
-    if (width / height < 1.2 && width < 1050) {
-      toggleDisplayMobile(true);
-    } else {
+    if (width / height > 1.2 && width > 1050) {
       toggleDisplayMobile(false);
+    } else {
+      toggleDisplayMobile(true);
     }
   }, []);
 
