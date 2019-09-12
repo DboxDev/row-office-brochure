@@ -133,6 +133,7 @@
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p style="margin: 0;"><span class="contact">Jeff Pion</span></p>
+          <p style="margin: 0;"><span class="contact">00840278</span></p>
           <p style="margin: 0;"><span class="contact">jeff.pion@cbre.com</span></p>
           <p style="margin: 0;"><span class="contact">310.550.2537</span></p>
         </mj-text>
@@ -140,6 +141,7 @@
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p style="margin: 0;"><span class="contact">Michelle Esquivel</span></p>
+          <p style="margin: 0;"><span class="contact">01290582</span></p>
           <p style="margin: 0;"><span class="contact">michelle.esquivel@cbre.com</span></p>
           <p style="margin: 0;"><span class="contact">310.550.2525</span></p>
         </mj-text>
@@ -147,6 +149,7 @@
       <mj-column width="33%">
         <mj-text padding-left="0" padding-right="0" color="#fff" line-height="24px" font-size="13px" align="center" font-family="'SangBleu Kingdom', Georgia, helvetica">
           <p style="margin: 0;"><span class="contact">Chris Penrose</span></p>
+          <p style="margin: 0;"><span class="contact">01840456</span></p>
           <p style="margin: 0;"><span class="contact">chris.penrose@cbre.com</span></p>
           <p style="margin: 0;"><span class="contact">213.613.3108</span></p>
         </mj-text>
