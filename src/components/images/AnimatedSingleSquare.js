@@ -27,9 +27,12 @@ function AnimatedSingleSquare({ imgArray, active }) {
   });
 
   function renderGrid(imgArray) {
-    console.log(imgArray[0]);
     return imgArray.map((src, index) => (
-      <AnimatedResponsiveImageMobile srcPath={src} imgClass={index === activeIndex && 'active'} />
+      <AnimatedResponsiveImageMobile
+        key={`animated-individual-image-${index}`}
+        srcPath={src}
+        imgClass={index === activeIndex && 'active'}
+      />
     ));
   }
 
