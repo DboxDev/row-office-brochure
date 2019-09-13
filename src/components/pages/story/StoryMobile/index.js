@@ -1,11 +1,13 @@
 import React from 'react';
 
-import SectionOneMobile from './sections/section_1';
+import { SectionOneMobile, SectionTwoMobile, SectionThreeMobile } from './sections/_module';
 
 function StoryMobile() {
   return (
     <React.Fragment>
       <SectionOneMobile />
+      <SectionTwoMobile />
+      <SectionThreeMobile />
     </React.Fragment>
   );
 }

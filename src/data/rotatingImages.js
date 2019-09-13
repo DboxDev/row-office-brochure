@@ -80,10 +80,29 @@ const workspacesGrid = [workspacesCell1, workspacesCell2, workspacesCell3, works
 
 // Mobile
 
-const animatedSingleSquare1 = [
+const welcomeRotatingImages = [
   '/images/pages/home/grids/welcome_grid/walking_over_text',
   '/images/pages/home/grids/welcome_grid/scrapbook_studio',
   '/images/pages/home/grids/welcome_grid/people_painting'
 ];
 
-export { welcomeGrid, communityGrid, workspacesGrid, animatedSingleSquare1 };
+const communityRotatingImages = [
+  '/images/pages/home/grids/workspaces_grid/casual_conference_room',
+  '/images/pages/home/grids/workspaces_grid/lounging_area',
+  '/images/pages/home/grids/workspaces_grid/work_cafe_chat'
+];
+
+const workspacesRotatingImages = [
+  '/images/pages/home/grids/workspaces_grid/casual_conference_room',
+  '/images/pages/home/grids/workspaces_grid/lounging_area',
+  '/images/pages/home/grids/workspaces_grid/work_cafe_chat'
+];
+
+export {
+  welcomeGrid,
+  communityGrid,
+  workspacesGrid,
+  welcomeRotatingImages,
+  communityRotatingImages,
+  workspacesRotatingImages
+};

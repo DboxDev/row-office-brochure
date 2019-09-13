@@ -17,7 +17,7 @@ const BlackSlideMobile = styled.div`
   span.credit {
     font-size: 1.6vh;
     color: #fff;
-    width: 45%;
+    width: 80%;
   }
 `;
 
@@ -55,34 +55,34 @@ const MedText = styled.h3`
 
 const Row = styled.div`
   width: 100%;
-  padding-top: 4vh;
+  padding-top: ${props => props.paddingTop || '4vh'};
+  padding-bottom: ${props => props.paddingBottom || '4vh'};
 `;
 
-// const PlayerWrapper = styled.div`
-//   position: relative;
-//   padding-top: 56.25%;
-//   min-width: 130vh;
-//   .react-player {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     .react-player__preview {
-//       .react-player__shadow {
-//         background: none !important;
-//         border-radius: 0 !important;
-//         height: 200px !important;
-//         width: 200px !important;
-//         .react-player__play-icon {
-//           border-style: none !important;
-//           border-width: 0 !important;
-//           margin-left: 0 !important;
-//           background-image: url('/video/player/videoplay_icon.svg');
-//           height: 100%;
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-// `;
+const PlayerWrapper = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .react-player__preview {
+      .react-player__shadow {
+        background: none !important;
+        border-radius: 0 !important;
+        height: 100px !important;
+        width: 100px !important;
+        .react-player__play-icon {
+          border-style: none !important;
+          border-width: 0 !important;
+          margin-left: 0 !important;
+          background-image: url('/video/player/videoplay_icon.svg');
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+`;
 
-export { BlackSlideMobile, SlideMobile, BigText, MedText, Row };
+export { BlackSlideMobile, SlideMobile, BigText, MedText, Row, PlayerWrapper };

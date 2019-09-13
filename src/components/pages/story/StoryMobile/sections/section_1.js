@@ -1,10 +1,11 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 import ResponsiveImageMobile from 'components/images/ResponsiveImage';
 import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
 
-import { BlackSlideMobile, SlideMobile, BigText, Row, MedText } from '../styles';
+import { BlackSlideMobile, SlideMobile, BigText, Row, MedText, PlayerWrapper } from '../styles';
 
-import { animatedSingleSquare1 } from 'data/rotatingImages';
+import { welcomeRotatingImages } from 'data/rotatingImages';
 
 const SectionOneMobile = () => {
   return (
@@ -21,7 +22,7 @@ const SectionOneMobile = () => {
       </BlackSlideMobile>
       <SlideMobile>
         <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_1" />
-        <Row>
+        <Row paddingBottom="0">
           <BigText className="black-500">
             Welcome to
             <br />
@@ -36,7 +37,7 @@ const SectionOneMobile = () => {
         <Row>
           <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_3" />
         </Row>
-        <Row>
+        <Row paddingBottom="0">
           <BigText className="grey-400">
             A 32-acre district with a 100 year old history marks the beginning of LA’s future as a
             new creative and cultural hub
@@ -44,17 +45,41 @@ const SectionOneMobile = () => {
         </Row>
       </SlideMobile>
       <SlideMobile>
-        <AnimatedSingleSquare imgArray={animatedSingleSquare1} active />
-        <Row>
+        <AnimatedSingleSquare imgArray={welcomeRotatingImages} active />
+        <Row paddingBottom="0">
           <MedText marginTop>
             Contemporary offices, bespoke
             <br /> boutiques, and artisanal eateries
-            <br />
-            catered to the entrepreneurial
+            <br /> catered to the entrepreneurial
             <br /> visionaries, style icons, and food
-            <br />
-            connoisseurs of Los Angeles
+            <br /> connoisseurs of Los Angeles
           </MedText>
+        </Row>
+      </SlideMobile>
+      <SlideMobile>
+        <PlayerWrapper>
+          <ReactPlayer
+            className="react-player"
+            width="100%"
+            height="100%"
+            url="https://vimeo.com/357861717"
+            playing
+            light="/video/player/rowdtla_video_preview_general.jpg"
+          />
+        </PlayerWrapper>
+      </SlideMobile>
+      <SlideMobile>
+        <MedText>
+          Authentic experiences in a
+          <br /> district charged with innovation,
+          <br /> collaboration and community.
+          <br /> Curated down to every last detail,
+          <br /> ROW DTLA's ever-changing
+          <br /> environment fosters creativity in
+          <br /> every aspect
+        </MedText>
+        <Row>
+          <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_5" />
         </Row>
       </SlideMobile>
     </React.Fragment>
