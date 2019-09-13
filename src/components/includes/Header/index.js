@@ -11,7 +11,7 @@ import RouteTitle from './RouteTitle';
 
 const NavigationBar = styled.div`
   width: 100%;
-  height: 120px;
+  height: ${props => (props.displayMobile ? '80px' : '120px')};
   position: fixed;
   top: 0;
   left: 0;
@@ -105,7 +105,7 @@ const colorMap = {
 
 const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
-function Header({ restrictScreen, location }) {
+function Header({ location, displayMobile }) {
   let route = location.pathname.replace('/', '').toLowerCase() || 'home';
 
   const { background, color } = colorMap[route];
@@ -133,16 +133,21 @@ function Header({ restrictScreen, location }) {
       <header>
         <NavigationBar
           navActive={navActive}
-          background={
-            approvedRouteTitles.includes(route) && !restrictScreen ? background : 'transparent'
-          }
+          background={approvedRouteTitles.includes(route) ? background : 'transparent'}
+          displayMobile={displayMobile}
         />
-        {approvedRouteTitles.includes(route) && !restrictScreen && (
+        {approvedRouteTitles.includes(route) && (
           <RouteTitle navActive={navActive} route={route} color={color} />
         )}
-        <MainLogo toggleActive={() => navActive && toggleActive(false)} />
-        {!restrictScreen && <Hamburger navActive={navActive} toggleActive={toggleActive} />}
-
+        <MainLogo
+          toggleActive={() => navActive && toggleActive(false)}
+          displayMobile={displayMobile}
+        />
+        <Hamburger
+          navActive={navActive}
+          toggleActive={toggleActive}
+          displayMobile={displayMobile}
+        />
         <NavigationOverlay navActive={navActive}>
           <ul>
             {routes.map(route => (

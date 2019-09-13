@@ -62,7 +62,7 @@ function App() {
       <TypographyStyles />
       <Router>
         {/* {<VideoIntro />} */}
-        <Header />
+        <Header displayMobile={displayMobile} />
         <Switch>
           {allRoutes.map(route => {
             if (route.href === '/') {

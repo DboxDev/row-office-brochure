@@ -6,7 +6,7 @@ const HamburgerContainer = styled.button`
   background: transparent;
   cursor: pointer;
   right: 5%;
-  top: 60px;
+  top: ${props => (props.displayMobile ? '40px' : '60px')};
   transform: translateY(-50%);
   height: 60px;
   width: 60px;
@@ -17,12 +17,18 @@ const HamburgerContainer = styled.button`
   z-index: 10;
 `;
 
-function toggleHamburger(navActive, toggleActive) {
+function toggleHamburger(navActive, toggleActive, displayMobile) {
+  console.log(displayMobile);
+
   if (navActive) {
     return (
-      <HamburgerContainer navActive={navActive} onClick={() => toggleActive(!navActive)}>
+      <HamburgerContainer
+        navActive={navActive}
+        onClick={() => toggleActive(!navActive)}
+        displayMobile={displayMobile}
+      >
         <svg
-          height="25"
+          height={displayMobile ? '20' : '25'}
           viewBox="0 0 18 18"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +47,14 @@ function toggleHamburger(navActive, toggleActive) {
     );
   } else {
     return (
-      <HamburgerContainer navActive={navActive} onClick={() => toggleActive(!navActive)}>
+      <HamburgerContainer
+        navActive={navActive}
+        onClick={() => toggleActive(!navActive)}
+        displayMobile={displayMobile}
+      >
         <svg
           id="hamburger"
-          height="25"
+          height={displayMobile ? '20' : '25'}
           viewBox="0 0 24 18"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -62,8 +72,8 @@ function toggleHamburger(navActive, toggleActive) {
   }
 }
 
-function Hamburger({ backgroundColor, navActive, toggleActive }) {
-  return <React.Fragment>{toggleHamburger(navActive, toggleActive)}</React.Fragment>;
+function Hamburger({ backgroundColor, navActive, toggleActive, displayMobile }) {
+  return <React.Fragment>{toggleHamburger(navActive, toggleActive, displayMobile)}</React.Fragment>;
 }
 
 export default Hamburger;
