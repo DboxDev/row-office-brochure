@@ -18,8 +18,6 @@ const HamburgerContainer = styled.button`
 `;
 
 function toggleHamburger(navActive, toggleActive, displayMobile) {
-  console.log(displayMobile);
-
   if (navActive) {
     return (
       <HamburgerContainer

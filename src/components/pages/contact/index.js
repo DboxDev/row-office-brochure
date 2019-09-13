@@ -202,7 +202,7 @@ function Contact() {
               Los Angeles, CA 90021
             </h3>
           </InfoContainer>
-          <button type="submit" value="Submit" className={submitted && 'active'}>
+          <button type="submit" value="Submit" className={submitted ? 'active' : ''}>
             Submit
           </button>
         </FormRow>
