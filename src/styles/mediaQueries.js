@@ -5,7 +5,7 @@ const sizes = {
   phoneLarge: 414,
   phoneXL: 550,
   tablet: 768,
-  tabletLandscape: 1025,
+  tabletLandscape: 1050,
   desktopSmall: 1250,
   desktop: 1440,
   desktopLarge: 1920,

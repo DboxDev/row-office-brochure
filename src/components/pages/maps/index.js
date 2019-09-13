@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import ResponsiveImage from 'components/images/ResponsiveImage';
 
+import { mediaMin } from 'styles/mediaQueries';
+
 const MapNavigation = styled.nav`
   width: 100%;
   button {
@@ -36,8 +38,14 @@ const MapContainer = styled.div`
       visibility: visible;
     }
     img {
-      height: 100%;
+      width: 100%;
       margin: 0 auto;
+      align-self: start;
+      padding-top: 50px;
+      ${mediaMin.tabletLandscape`
+        height: 100%;
+        width: initial;
+      `}
     }
   }
   .dtla-container {

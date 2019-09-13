@@ -137,7 +137,12 @@ function Header({ location, displayMobile }) {
           displayMobile={displayMobile}
         />
         {approvedRouteTitles.includes(route) && (
-          <RouteTitle navActive={navActive} route={route} color={color} />
+          <RouteTitle
+            navActive={navActive}
+            route={route}
+            color={color}
+            displayMobile={displayMobile}
+          />
         )}
         <MainLogo
           toggleActive={() => navActive && toggleActive(false)}
