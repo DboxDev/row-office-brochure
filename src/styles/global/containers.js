@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { mediaMin } from 'styles/mediaQueries';
 
 const ContainerStyles = createGlobalStyle`
   .container {
@@ -17,8 +18,10 @@ const ContainerStyles = createGlobalStyle`
     margin: 0 auto;
     padding-top: 120px;
     height: 100%;
-    display: flex;
     align-items: center;
+    ${mediaMin.tabletLandscape`
+      display: flex;
+    `}
   }
   .full-height-container {
     width: 90%;

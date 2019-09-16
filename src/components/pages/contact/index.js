@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import useContactForm from './useContactForm';
 
+import { mediaMax } from 'styles/mediaQueries';
+
 const ContactContainer = styled.div`
   color: #fff;
   form {
@@ -13,12 +15,12 @@ const ContactContainer = styled.div`
 `;
 
 const UpperContainer = styled.div`
-  height: 50vh;
+  height: ${props => (props.displayMobile ? 'auto' : '50vh')};
   position: relative;
 `;
 
 const UpperForm = styled.div`
-  position: absolute;
+  position: ${props => (props.displayMobile ? 'initial' : 'absolute')};
   opacity: ${props => (props.active ? 1 : 0)};
   visibility: ${props => (props.active ? 'visible' : 'hidden')};
   transition: opacity 300ms ease;
@@ -26,6 +28,7 @@ const UpperForm = styled.div`
 `;
 
 const ThankYouMessage = styled.div`
+  display: ${props => (props.active ? 'initial' : 'none')};
   opacity: ${props => (props.active ? 1 : 0)};
   visibility: ${props => (props.active ? 'visible' : 'hidden')};
   transition: opacity 300ms ease;
@@ -46,12 +49,18 @@ const FormRow = styled.div`
   ${props => props.alignItems && `align-items: ${props.alignItems}`}
   margin: 2vh 0;
   width: 100%;
+  &:nth-child(1) {
+    ${props => props.displayMobile && `margin: 0 0 2vh`};
+  }
   label {
     font-size: 2vh;
     &.half {
-      width: 50%;
+      width: ${props => (props.displayMobile ? '100%' : '50%')};
       &:nth-child(1) {
-        padding-right: 1em;
+        padding-right: ${props => (props.displayMobile ? '0' : '1em')};
+      }
+      &:nth-child(even) {
+        ${props => props.displayMobile && `margin-top: 2vh`};
       }
     }
     &.full {
@@ -102,19 +111,28 @@ const FormRow = styled.div`
       visibility: hidden;
     }
   }
+  &.lower-row {
+    ${mediaMax.tabletLandscape`
+      flex-direction: column;
+      align-items: center;
+      .info-container {
+        order: 1;
+      }
+    `}
+  }
 `;
 
 const InfoContainer = styled.div``;
 
-function Contact() {
+function Contact({ displayMobile }) {
   const { inputs, handleInputChange, handleSubmit, submitted } = useContactForm();
 
   return (
     <ContactContainer className="contact-container">
       <form onSubmit={handleSubmit}>
-        <UpperContainer>
-          <UpperForm active={!submitted}>
-            <FormRow>
+        <UpperContainer displayMobile={displayMobile}>
+          <UpperForm displayMobile={displayMobile} active={!submitted}>
+            <FormRow displayMobile={displayMobile}>
               <label className="half">
                 <span>* First Name</span>
                 <input
@@ -138,7 +156,7 @@ function Contact() {
                 />
               </label>
             </FormRow>
-            <FormRow>
+            <FormRow displayMobile={displayMobile}>
               <label className="half">
                 <span>* Email</span>
                 <input
@@ -162,7 +180,7 @@ function Contact() {
                 />
               </label>
             </FormRow>
-            <FormRow>
+            <FormRow displayMobile={displayMobile}>
               <label className="full">
                 <span>How much space (Sq Ft) are you looking for?</span>
                 <input
@@ -174,7 +192,7 @@ function Contact() {
                 />
               </label>
             </FormRow>
-            <FormRow>
+            <FormRow displayMobile={displayMobile}>
               <label className="full">
                 <span>How did you hear about ROW DTLA?</span>
                 <input
@@ -195,8 +213,8 @@ function Contact() {
             <h3>We will be in touch soon.</h3>
           </ThankYouMessage>
         </UpperContainer>
-        <FormRow alignItems="flex-end" justifyContent="space-between">
-          <InfoContainer>
+        <FormRow alignItems="flex-end" justifyContent="space-between" className="lower-row">
+          <InfoContainer className="info-container">
             <h3 className="address">
               777 S. Alameda Street, <br />
               Los Angeles, CA 90021
