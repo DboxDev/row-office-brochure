@@ -46,7 +46,7 @@ const AvailabilityContainer = styled.div`
 
 const AvailabilityCard = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.4);
-  margin: 4em 0;
+  margin: 2em 0;
   padding: 3em;
   &:nth-child(1) {
     margin-top: 0;

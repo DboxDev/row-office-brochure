@@ -8,6 +8,7 @@ const BlackSlideMobile = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   h1.quote {
     color: #fff;
     width: 80%;
@@ -24,8 +25,13 @@ const BlackSlideMobile = styled.div`
 const SlideMobile = styled.div`
   background-color: #fff;
   padding: 5em 10% 0;
+  padding-top: ${props => props.paddingTop || '5em'};
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: ${props => props.paddingBottom || 0};
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const BigText = styled.h2`
