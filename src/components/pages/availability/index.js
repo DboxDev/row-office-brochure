@@ -126,8 +126,9 @@ function renderAvailabilityCards(data) {
           <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>{address}</p>
         </div>
         <div className="availability-card-row">
-          {floorplans.length > 0 && <p>FLOOR PLANS</p>}
-          {floorplans &&
+          <p>FLOOR PLANS</p>
+          {floorplans.length === 0 && <p>Coming Soon</p>}
+          {floorplans.length > 0 &&
             floorplans.map((office, floorplanIdx) => (
               <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
                 <a

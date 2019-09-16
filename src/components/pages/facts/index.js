@@ -67,7 +67,7 @@ const factsArray = [
 
 function Facts() {
   return (
-    <FactContainer className="container">
+    <FactContainer className="facts-container">
       {factsArray.map((factArray, arrayIdx) => {
         return (
           <ul key={`fact-section-${arrayIdx}`}>

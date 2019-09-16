@@ -84,12 +84,7 @@ const FormRow = styled.div`
       padding-left: 5px;
     }
   }
-  h3 {
-    font-size: 3vh;
-    line-height: 4vh;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 0;
-  }
+
   button[type='submit'] {
     color: #fff;
     border: 1px solid white;
@@ -122,7 +117,28 @@ const FormRow = styled.div`
   }
 `;
 
-const InfoContainer = styled.div``;
+const InfoContainer = styled.div`
+  h3 {
+    font-size: 3vh;
+    line-height: 4vh;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+    ${mediaMax.tabletLandscape`
+      text-align: center;
+    `}
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
 
 function Contact({ displayMobile }) {
   const { inputs, handleInputChange, handleSubmit, submitted } = useContactForm();
@@ -219,6 +235,9 @@ function Contact({ displayMobile }) {
               777 S. Alameda Street, <br />
               Los Angeles, CA 90021
             </h3>
+            <a href="https://www.instagram.com/rowdtla/" target="_blank">
+              <p>@ROWDTLA</p>
+            </a>
           </InfoContainer>
           <button type="submit" value="Submit" className={submitted ? 'active' : ''}>
             Submit
