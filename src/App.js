@@ -64,27 +64,14 @@ function App() {
         {/* {<VideoIntro />} */}
         <Header displayMobile={displayMobile} />
         <Switch>
-          {allRoutes.map(route => {
-            if (route.href === '/') {
-              return (
-                <Route
-                  key={route.href.replace('/', '')}
-                  exact
-                  path={route.href}
-                  render={() => <route.component displayMobile={displayMobile} />}
-                />
-              );
-            } else {
-              return (
-                <Route
-                  key={route.href.replace('/', '')}
-                  exact
-                  path={route.href}
-                  component={route.component}
-                />
-              );
-            }
-          })}
+          {allRoutes.map(route => (
+            <Route
+              key={route.href.replace('/', '')}
+              exact
+              path={route.href}
+              render={() => <route.component displayMobile={displayMobile} />}
+            />
+          ))}
         </Switch>
       </Router>
     </React.Fragment>

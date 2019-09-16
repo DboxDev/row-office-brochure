@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { mediaMax } from 'styles/mediaQueries';
 import { uppercaseFirstLetter } from 'helpers/strings';
 
 const RouteTitleContainer = styled.h3`
@@ -13,6 +14,9 @@ const RouteTitleContainer = styled.h3`
   font-size: ${props => (props.displayMobile ? '1.4rem' : '2rem')};
   color: ${props => props.color};
   z-index: 1;
+  ${mediaMax.phoneXL`
+    display: none;
+  `}
 `;
 
 function RouteTitle({ route, color, displayMobile }) {
