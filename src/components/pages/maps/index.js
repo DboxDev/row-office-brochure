@@ -82,7 +82,7 @@ const MapContainer = styled.div`
 `;
 
 function Maps({ displayMobile }) {
-  const [activeMap, toggleMap] = useState('dtla');
+  const [activeMap, toggleMap] = useState('row');
 
   return (
     <div className="full-height-container">

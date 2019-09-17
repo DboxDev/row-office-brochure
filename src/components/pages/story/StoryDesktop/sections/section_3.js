@@ -50,7 +50,7 @@ const generatePressGrid = () => {
         <img src={el.logo} alt={`${el.alt} logo`} className="press-logo" />
       </PressItem>
     );
-    console.log(idx % 4);
+
     if ((idx + 1) % 4 === 0) {
       rows.push(<PressRow key={`fact-${idx}`}>{cols}</PressRow>);
       cols = [];

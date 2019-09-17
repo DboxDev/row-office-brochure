@@ -56,7 +56,7 @@ const FormRow = styled.div`
     ${props => props.displayMobile && `margin: 0 0 4vh`};
   }
   label {
-    font-size: 2vh;
+    font-size: 1.4vh;
     &.half {
       width: ${props => (props.displayMobile ? '100%' : '50%')};
       &:nth-child(1) {

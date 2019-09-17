@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaMin } from 'styles/mediaQueries';
 
 const BlackSlideMobile = styled.div`
   background-color: #000;
@@ -14,6 +15,9 @@ const BlackSlideMobile = styled.div`
     width: 80%;
     font-style: italic;
     font-size: 6vw;
+    ${mediaMin.tablet`
+      font-size: 4vw;
+    `}
   }
   span.credit {
     font-size: 1.6vh;
