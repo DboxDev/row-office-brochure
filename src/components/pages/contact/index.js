@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useContactForm from './useContactForm';
 
-import { mediaMax } from 'styles/mediaQueries';
+import { mediaMax, mediaMin } from 'styles/mediaQueries';
 
 const ContactContainer = styled.div`
   color: #fff;
@@ -47,10 +47,13 @@ const FormRow = styled.div`
   flex-wrap: wrap;
   ${props => props.justifyContent && `justify-content: ${props.justifyContent}`}
   ${props => props.alignItems && `align-items: ${props.alignItems}`}
-  margin: 2vh 0;
+  margin: 4vh 0;
   width: 100%;
+  ${mediaMin.tabletLandscape`
+    margin: 2vh 0;
+  `}
   &:nth-child(1) {
-    ${props => props.displayMobile && `margin: 0 0 2vh`};
+    ${props => props.displayMobile && `margin: 0 0 4vh`};
   }
   label {
     font-size: 2vh;
@@ -60,7 +63,7 @@ const FormRow = styled.div`
         padding-right: ${props => (props.displayMobile ? '0' : '1em')};
       }
       &:nth-child(even) {
-        ${props => props.displayMobile && `margin-top: 2vh`};
+        ${props => props.displayMobile && `margin-top: 4vh`};
       }
     }
     &.full {
@@ -77,7 +80,7 @@ const FormRow = styled.div`
       caret-color: #fff;
       border: none;
       background: rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
       font-size: 2vh;
       padding-top: 1vh;
       padding-bottom: 5px;
@@ -96,6 +99,9 @@ const FormRow = styled.div`
     cursor: pointer;
     transition: all 300ms ease;
     letter-spacing: 2px;
+    ${mediaMax.tabletLandscape`
+      margin-bottom: 4vh;
+    `}
     &:hover {
       background: #fff;
       color: #000;
@@ -235,7 +241,7 @@ function Contact({ displayMobile }) {
               777 S. Alameda Street, <br />
               Los Angeles, CA 90021
             </h3>
-            <a href="https://www.instagram.com/rowdtla/" target="_blank">
+            <a href="https://www.instagram.com/rowdtla/" target="_blank" rel="noopener noreferrer">
               <p>@ROWDTLA</p>
             </a>
           </InfoContainer>

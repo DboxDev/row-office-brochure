@@ -3,9 +3,33 @@ import ResponsiveImageMobile from 'components/images/ResponsiveImage';
 import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
 import Fade from 'react-reveal/Fade';
 
-import { BlackSlideMobile, SlideMobile, BigText, Row, MedText } from '../styles';
+import {
+  BlackSlideMobile,
+  SlideMobile,
+  BigText,
+  Row,
+  MedText
+  // BrandRow,
+  // BrandItem
+} from '../styles';
 
+// import { brandArray } from 'data/home';
 import { communityRotatingImages } from 'data/rotatingImages';
+
+// const generateBrandRow = () => {
+//   return brandArray.map((brand, idx) => {
+//     return (
+//       <BrandItem key={`brand-row-${idx}-item-${idx}`}>
+//         <img src={brand.logo} alt={`${brand.alt} logo`} className="logo" />
+//         <ResponsiveImageMobile
+//           srcPath={brand.background}
+//           imgAlt={brand.alt}
+//           imgClass="background"
+//         />
+//       </BrandItem>
+//     );
+//   });
+// };
 
 const SectionOneMobile = () => {
   return (
@@ -31,6 +55,9 @@ const SectionOneMobile = () => {
           </Row>
         </SlideMobile>
       </Fade>
+      {/* <SlideMobile paddingLeft="0" paddingRight="0">
+        <BrandRow>{generateBrandRow()}</BrandRow>
+      </SlideMobile> */}
       <SlideMobile>
         <Fade>
           <ResponsiveImageMobile srcPath="/images/pages/home/section_2/row_office_section2_2" />

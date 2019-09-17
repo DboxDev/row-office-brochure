@@ -4,9 +4,59 @@ import ResponsiveImageMobile from 'components/images/ResponsiveImage';
 import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
 import Fade from 'react-reveal/Fade';
 
-import { BlackSlideMobile, SlideMobile, BigText, Row, MedText, PlayerWrapper } from '../styles';
+import {
+  BlackSlideMobile,
+  SlideMobile,
+  BigText,
+  Row,
+  MedText,
+  PlayerWrapper,
+  FactRow,
+  Fact,
+  PressRow,
+  PressItem
+} from '../styles';
 
+import { keyFacts, pressLogos } from 'data/home';
 import { workspacesRotatingImages } from 'data/rotatingImages';
+
+const generatePressGrid = () => {
+  const rows = [];
+  let cols = [];
+
+  pressLogos.forEach((el, idx) => {
+    cols.push(
+      <PressItem href={el.href} target="_blank" key={`row-${idx}-el-${idx}`}>
+        <img src={el.logo} alt={`${el.alt} logo`} className="press-logo" />
+      </PressItem>
+    );
+    console.log(idx % 4);
+    if ((idx + 1) % 3 === 0) {
+      rows.push(<PressRow key={`fact-${idx}`}>{cols}</PressRow>);
+      cols = [];
+    }
+  });
+
+  return rows;
+};
+
+const generateFacts = () => {
+  const rows = [];
+  let cols = [];
+  keyFacts.forEach((el, idx) => {
+    cols.push(
+      <Fact key={`fact-${idx}`} index={idx + 1}>
+        <p className="fact-index">{idx + 1}</p>
+        <p className="fact-body">{el}</p>
+      </Fact>
+    );
+    if ((idx + 1) % 2 === 0) {
+      rows.push(<FactRow key={`fact-${idx}`}>{cols}</FactRow>);
+      cols = [];
+    }
+  });
+  return rows;
+};
 
 const SectionThreeMobile = () => {
   return (
@@ -76,6 +126,18 @@ const SectionThreeMobile = () => {
             <ResponsiveImageMobile srcPath="/images/pages/home/section_3/row_office_section3_5" />
           </Row>
         </Fade>
+      </SlideMobile>
+      <SlideMobile>
+        <BigText className="black-500" style={{ margin: '1em 0' }}>
+          Key facts
+        </BigText>
+        {generateFacts()}
+      </SlideMobile>
+      <SlideMobile>
+        <BigText className="black-500" style={{ margin: '1em 0' }}>
+          In the press
+        </BigText>
+        {generatePressGrid()}
       </SlideMobile>
       <SlideMobile>
         <Fade>

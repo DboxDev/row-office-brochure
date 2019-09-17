@@ -19,7 +19,7 @@ import {
   SectionCaption
 } from '../styles';
 
-import { keyFacts, newsLogos } from 'data/home';
+import { keyFacts, pressLogos } from 'data/home';
 import { workspacesGrid } from 'data/rotatingImages';
 
 const generateFacts = () => {
@@ -32,7 +32,7 @@ const generateFacts = () => {
         <p className="fact-body">{el}</p>
       </Fact>
     );
-    if ((idx + 1) % 3 === 0) {
+    if ((idx + 1) % 4 === 0) {
       rows.push(<FactRow key={`fact-${idx}`}>{cols}</FactRow>);
       cols = [];
     }
@@ -41,19 +41,23 @@ const generateFacts = () => {
 };
 
 const generatePressGrid = () => {
-  return newsLogos.map((row, rowIdx) => {
-    return (
-      <PressRow key={`row-${rowIdx}`}>
-        {row.map((el, elIdx) => {
-          return (
-            <PressItem href={el.href} target="_blank" key={`row-${rowIdx}-el-${elIdx}`}>
-              <img src={el.logo} alt={`${el.alt} logo`} className="press-logo" />
-            </PressItem>
-          );
-        })}
-      </PressRow>
+  const rows = [];
+  let cols = [];
+
+  pressLogos.forEach((el, idx) => {
+    cols.push(
+      <PressItem href={el.href} target="_blank" key={`row-${idx}-el-${idx}`}>
+        <img src={el.logo} alt={`${el.alt} logo`} className="press-logo" />
+      </PressItem>
     );
+    console.log(idx % 4);
+    if ((idx + 1) % 4 === 0) {
+      rows.push(<PressRow key={`fact-${idx}`}>{cols}</PressRow>);
+      cols = [];
+    }
   });
+
+  return rows;
 };
 
 const SectionThree = ({ revealed }) => {

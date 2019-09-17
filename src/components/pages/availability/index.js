@@ -72,6 +72,7 @@ const AvailabilityCard = styled.div`
       margin-bottom: 1em;
       font-family: 'Apercu Mono', serif;
       display: inline-block;
+      text-transform: uppercase;
     }
     .no-margin-bottom {
       margin-bottom: 0;
@@ -127,7 +128,7 @@ function renderAvailabilityCards(data) {
         </div>
         <div className="availability-card-row">
           <p>FLOOR PLANS</p>
-          {floorplans.length === 0 && <p>Coming Soon</p>}
+          {floorplans.length === 0 && <p>COMING SOON</p>}
           {floorplans.length > 0 &&
             floorplans.map((office, floorplanIdx) => (
               <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
