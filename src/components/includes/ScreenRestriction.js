@@ -20,7 +20,7 @@ const ScreenRestrictionContainer = styled.div`
   h1 {
     width: 80%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 20px;
     ${mediaMin.tablet`
       width: 50%;
     `}
