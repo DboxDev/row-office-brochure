@@ -10,20 +10,22 @@ const HamburgerContainer = styled.button`
   transform: translateY(-50%);
   height: 60px;
   width: 60px;
-  display: flex;
+  display: ${props => (props.displayScreenRestrictor ? 'none' : 'flex')};
   align-items: center;
   justify-content: center;
   border: 0;
   z-index: 10;
 `;
 
-function toggleHamburger(navActive, toggleActive, displayMobile) {
+function toggleHamburger(navActive, toggleActive, displayMobile, displayScreenRestrictor) {
+  console.log(displayScreenRestrictor);
   if (navActive) {
     return (
       <HamburgerContainer
         navActive={navActive}
         onClick={() => toggleActive(!navActive)}
         displayMobile={displayMobile}
+        displayScreenRestrictor={displayScreenRestrictor}
       >
         <svg
           height={displayMobile ? '20' : '25'}
@@ -49,6 +51,7 @@ function toggleHamburger(navActive, toggleActive, displayMobile) {
         navActive={navActive}
         onClick={() => toggleActive(!navActive)}
         displayMobile={displayMobile}
+        displayScreenRestrictor={displayScreenRestrictor}
       >
         <svg
           id="hamburger"
@@ -70,8 +73,18 @@ function toggleHamburger(navActive, toggleActive, displayMobile) {
   }
 }
 
-function Hamburger({ backgroundColor, navActive, toggleActive, displayMobile }) {
-  return <React.Fragment>{toggleHamburger(navActive, toggleActive, displayMobile)}</React.Fragment>;
+function Hamburger({
+  backgroundColor,
+  navActive,
+  toggleActive,
+  displayMobile,
+  displayScreenRestrictor
+}) {
+  return (
+    <React.Fragment>
+      {toggleHamburger(navActive, toggleActive, displayMobile, displayScreenRestrictor)}
+    </React.Fragment>
+  );
 }
 
 export default Hamburger;

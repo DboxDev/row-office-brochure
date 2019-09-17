@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import availabilityData from 'data/availabilityData';
+import Fade from 'react-reveal/Fade';
 
 const AvailabilityContainer = styled.div`
   color: #fff;
@@ -117,34 +118,36 @@ function renderAvailabilityCards(data) {
     const { address, sqFt, floorplans } = building;
 
     return (
-      <AvailabilityCard key={`availability-card-${cardIdx}`}>
-        <div className="availability-card-row">
-          <p className="sq-ft-title">SQ FT</p>
-          <p className="sq-ft">{sqFt}</p>
-        </div>
-        <div className="availability-card-row">
-          <p>BUILDING</p>
-          <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>{address}</p>
-        </div>
-        <div className="availability-card-row">
-          <p>FLOOR PLANS</p>
-          {floorplans.length === 0 && <p>COMING SOON</p>}
-          {floorplans.length > 0 &&
-            floorplans.map((office, floorplanIdx) => (
-              <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
-                <a
-                  className="floorplan-mobile-link"
-                  href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>{`Suite ${office.number}`}</span>
-                </a>
-                {floorplanIdx % 2 === 1 ? <br /> : undefined}
-              </React.Fragment>
-            ))}
-        </div>
-      </AvailabilityCard>
+      <Fade>
+        <AvailabilityCard key={`availability-card-${cardIdx}`}>
+          <div className="availability-card-row">
+            <p className="sq-ft-title">SQ FT</p>
+            <p className="sq-ft">{sqFt}</p>
+          </div>
+          <div className="availability-card-row">
+            <p>BUILDING</p>
+            <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>{address}</p>
+          </div>
+          <div className="availability-card-row">
+            <p>FLOOR PLANS</p>
+            {floorplans.length === 0 && <p>COMING SOON</p>}
+            {floorplans.length > 0 &&
+              floorplans.map((office, floorplanIdx) => (
+                <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
+                  <a
+                    className="floorplan-mobile-link"
+                    href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>{`Suite ${office.number}`}</span>
+                  </a>
+                  {floorplanIdx % 2 === 1 ? <br /> : undefined}
+                </React.Fragment>
+              ))}
+          </div>
+        </AvailabilityCard>
+      </Fade>
     );
   });
 }

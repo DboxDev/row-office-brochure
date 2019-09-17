@@ -79,7 +79,7 @@ function App() {
       <TypographyStyles />
       <Router>
         {!displayMobile && <VideoIntro />}
-        <Header displayMobile={displayMobile} />
+        <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
         {!displayScreenRestrictor ? (
           <Switch>
             {allRoutes.map(route => (

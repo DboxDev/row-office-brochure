@@ -16,7 +16,7 @@ const NavigationBar = styled.div`
   top: 0;
   left: 0;
   background: ${props => props.background};
-  z-index: 1;
+  z-index: ${props => (props.displayScreenRestrictor ? '-1' : '1')};
 `;
 
 const NavigationOverlay = styled.div`
@@ -105,7 +105,7 @@ const colorMap = {
 
 const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
 
-function Header({ location, displayMobile }) {
+function Header({ location, displayMobile, displayScreenRestrictor }) {
   let route = location.pathname.replace('/', '').toLowerCase() || 'home';
 
   const { background, color } = colorMap[route];
@@ -135,6 +135,7 @@ function Header({ location, displayMobile }) {
           navActive={navActive}
           background={approvedRouteTitles.includes(route) ? background : 'transparent'}
           displayMobile={displayMobile}
+          displayScreenRestrictor={displayScreenRestrictor}
         />
         {approvedRouteTitles.includes(route) && (
           <RouteTitle
@@ -142,6 +143,7 @@ function Header({ location, displayMobile }) {
             route={route}
             color={color}
             displayMobile={displayMobile}
+            displayScreenRestrictor={displayScreenRestrictor}
           />
         )}
         <MainLogo
@@ -152,6 +154,7 @@ function Header({ location, displayMobile }) {
           navActive={navActive}
           toggleActive={toggleActive}
           displayMobile={displayMobile}
+          displayScreenRestrictor={displayScreenRestrictor}
         />
         <NavigationOverlay navActive={navActive}>
           <ul>

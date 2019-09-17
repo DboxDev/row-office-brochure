@@ -14,14 +14,19 @@ const RouteTitleContainer = styled.h3`
   font-size: ${props => (props.displayMobile ? '1.4rem' : '2rem')};
   color: ${props => props.color};
   z-index: 1;
+  display: ${props => (props.displayScreenRestrictor ? 'none' : 'initial')};
   ${mediaMax.phoneXL`
     display: none;
   `}
 `;
 
-function RouteTitle({ route, color, displayMobile }) {
+function RouteTitle({ route, color, displayMobile, displayScreenRestrictor }) {
   return (
-    <RouteTitleContainer color={color} displayMobile={displayMobile}>
+    <RouteTitleContainer
+      color={color}
+      displayMobile={displayMobile}
+      displayScreenRestrictor={displayScreenRestrictor}
+    >
       {uppercaseFirstLetter(route)}
     </RouteTitleContainer>
   );
