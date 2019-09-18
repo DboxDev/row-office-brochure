@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import ResponsiveImage from 'components/images/ResponsiveImage';
 
+import { mediaMin } from 'styles/mediaQueries';
+
 const MapNavigation = styled.nav`
   width: 100%;
   button {
@@ -12,6 +14,7 @@ const MapNavigation = styled.nav`
     margin-right: 1em;
     cursor: pointer;
     font-size: 2vh;
+    outline: none;
     &.active {
       border-bottom: 3px solid #000;
     }
@@ -36,13 +39,19 @@ const MapContainer = styled.div`
       visibility: visible;
     }
     img {
-      height: 100%;
+      width: 100%;
       margin: 0 auto;
+      align-self: start;
+      padding-top: 50px;
+      ${mediaMin.tabletLandscape`
+        height: 100%;
+        width: initial;
+      `}
     }
   }
   .dtla-container {
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     opacity: 0;
@@ -55,10 +64,25 @@ const MapContainer = styled.div`
       visibility: visible;
       overflow: initial;
     }
+    img {
+      align-self: center;
+      margin-top: 2em;
+      max-height: 90%;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: 2vh;
+    }
   }
 `;
 
-function Maps() {
+function Maps({ displayMobile }) {
   const [activeMap, toggleMap] = useState('row');
 
   return (
@@ -74,31 +98,19 @@ function Maps() {
           DTLA
         </button>
       </MapNavigation>
-      <MapContainer>
+      <MapContainer displayMobile={displayMobile}>
         <div className={`row-container ${activeMap === 'row' ? 'active' : null}`}>
           <img className="center" src="/images/pages/maps/row.png" alt="Row primary map" />
         </div>
         <div className={`dtla-container ${activeMap === 'dtla' ? 'active' : null}`}>
           <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map1"
+            srcPath="/images/pages/maps/dtla_map_blank"
             imgAlt="DLTA map #1"
             noMaxHeight
           />
-          <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map2"
-            imgAlt="DLTA map #2"
-            noMaxHeight
-          />
-          <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map3"
-            imgAlt="DLTA map #2"
-            noMaxHeight
-          />
-          <ResponsiveImage
-            srcPath="/images/pages/maps/dtla_map4"
-            imgAlt="DLTA map #2"
-            noMaxHeight
-          />
+          <a href="/pdf/ROWDTLA_Maps.pdf" target="_blank">
+            <p>CLICK TO DOWNLOAD PDF</p>
+          </a>
         </div>
       </MapContainer>
     </div>

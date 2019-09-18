@@ -18,7 +18,7 @@ const availabilityData = [
     floorplans: [{ number: 300 }]
   },
   {
-    address: '767 S. ALAMEDA',
+    address: '757 S. ALAMEDA',
     building: 3,
     sqFt: '35,000-200,000',
     floorplans: []

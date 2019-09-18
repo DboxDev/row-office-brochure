@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 const MainLogoWrapper = styled.svg`
   position: fixed;
-  top: 60px;
+  top: ${props => (props.displayMobile ? '40px' : '60px')};
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  width: ${props => (props.displayMobile ? '150px' : '200px')};
   g,
   path,
   polygon {
@@ -15,10 +16,15 @@ const MainLogoWrapper = styled.svg`
   }
 `;
 
-function MainLogo({ toggleActive }) {
+function MainLogo({ toggleActive, displayMobile }) {
   return (
     <Link to={'/'} onClick={toggleActive}>
-      <MainLogoWrapper xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 200 25">
+      <MainLogoWrapper
+        displayMobile={displayMobile}
+        xmlns="http://www.w3.org/2000/svg"
+        height="25"
+        viewBox="0 0 200 25"
+      >
         <title>Row Main Logo</title>
         <path
           id="A"

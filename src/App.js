@@ -4,19 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { routes, secondaryRoutes } from 'data/routes';
 
 import VideoIntro from 'components/includes/VideoIntro';
-import Header from 'components/includes/Header';
-import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
-
 import ScreenRestriction from 'components/includes/ScreenRestriction';
+import Header from 'components/includes/Header';
+
+import { ContainerStyles, RootStyles, TypographyStyles } from 'styles/global/_module';
 
 import 'fonts.scss';
 
 const allRoutes = routes.concat(secondaryRoutes);
 
 function App() {
-  const [restrictScreen, toggleRestrictScreen] = useState(false);
-
-  const updateWindowDimensions = useCallback(() => {
+  // Runs before component mounts
+  const initialScreenSetup = () => {
     const width =
       window.innerWidth ||
       Math.max(document.documentElement.clientWidth, document.body.clientWidth);
@@ -24,21 +23,54 @@ function App() {
       window.innerHeight ||
       Math.max(document.documentElement.clientHeight, document.body.clientHeight);
 
-    if (width / height < 1.2) {
-      toggleRestrictScreen(true);
+    const initialObj = {};
+
+    if (width / height > 1.2 && width > 1050) {
+      initialObj.isMobile = false;
+      initialObj.screenRestrictor = false;
+    } else if (width / height > 1 && width < 1050) {
+      initialObj.isMobile = true;
+      initialObj.screenRestrictor = true;
     } else {
-      toggleRestrictScreen(false);
+      initialObj.isMobile = true;
+      initialObj.screenRestrictor = false;
     }
-  }, []);
+
+    return initialObj;
+  };
+
+  const [displayMobile, toggleDisplayMobile] = useState(initialScreenSetup().isMobile);
+  const [displayScreenRestrictor, toggleScreenRestrictor] = useState(
+    initialScreenSetup().screenRestrictor
+  );
+
+  // Runs when screen dimensions change
+  const updateMobileScreen = useCallback(() => {
+    const width =
+      window.innerWidth ||
+      Math.max(document.documentElement.clientWidth, document.body.clientWidth);
+    const height =
+      window.innerHeight ||
+      Math.max(document.documentElement.clientHeight, document.body.clientHeight);
+
+    if (width / height > 1 && width > 1050) {
+      toggleDisplayMobile(false);
+      displayScreenRestrictor && toggleScreenRestrictor(false);
+    } else if (width / height > 1 && width < 1050) {
+      toggleScreenRestrictor(true);
+    } else {
+      toggleDisplayMobile(true);
+      displayScreenRestrictor && toggleScreenRestrictor(false);
+    }
+  }, [displayScreenRestrictor]);
 
   useEffect(() => {
-    updateWindowDimensions();
-    window.addEventListener('resize', updateWindowDimensions);
+    window.addEventListener('resize', updateMobileScreen);
 
     return () => {
-      window.removeEventListener('resize', updateWindowDimensions);
+      window.removeEventListener('resize', updateMobileScreen);
     };
-  }, [updateWindowDimensions]);
+  }, [updateMobileScreen]);
 
   return (
     <React.Fragment>
@@ -46,21 +78,21 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
-        {!restrictScreen && <VideoIntro />}
-        <Header restrictScreen={restrictScreen} />
-        {restrictScreen ? (
-          <ScreenRestriction />
-        ) : (
+        {!displayMobile && <VideoIntro />}
+        <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
+        {!displayScreenRestrictor ? (
           <Switch>
             {allRoutes.map(route => (
               <Route
                 key={route.href.replace('/', '')}
                 exact
                 path={route.href}
-                component={route.component}
+                render={() => <route.component displayMobile={displayMobile} />}
               />
             ))}
           </Switch>
+        ) : (
+          <ScreenRestriction />
         )}
       </Router>
     </React.Fragment>
