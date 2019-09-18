@@ -77,6 +77,7 @@ const MapContainer = styled.div`
     }
     p {
       text-align: center;
+      font-size: 2vh;
     }
   }
 `;
