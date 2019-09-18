@@ -43,10 +43,10 @@ const SectionTwo = ({ revealed }) => {
     <React.Fragment>
       <BlackSlide className="swiper-slide" revealed={revealed >= 7}>
         <h1 className="quote">
-          "In Downtown Los Angbrandes, ROW DTLA has continued to take shape, transforming 32 acres
-          into an all-encompassing iconic destination. It is a growing collective of globally
-          recognized shops, restaurants and innovative offices that are spread over six buildings to
-          create their own unique L.A. environment."
+          "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres into
+          an all-encompassing iconic destination. It is a growing collective of globally recognized
+          shops, restaurants and innovative offices that are spread over six buildings to create
+          their own unique L.A. environment."
         </h1>
         <span className="credit">LA MAGAZINE</span>
       </BlackSlide>
