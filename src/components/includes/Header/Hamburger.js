@@ -18,7 +18,6 @@ const HamburgerContainer = styled.button`
 `;
 
 function toggleHamburger(navActive, toggleActive, displayMobile, displayScreenRestrictor) {
-  console.log(displayScreenRestrictor);
   if (navActive) {
     return (
       <HamburgerContainer
