@@ -17,7 +17,7 @@ import {
 import { brandArray } from 'data/home';
 import { communityGrid } from 'data/rotatingImages';
 
-const generatebrandArray = () => {
+const generateBrandArray = () => {
   const rows = [];
   let cols = [];
 
@@ -75,7 +75,7 @@ const SectionTwo = ({ revealed }) => {
         revealed={revealed >= 9}
         spaceBetween
       >
-        {generatebrandArray()}
+        {generateBrandArray()}
         <SectionCaption style={{ marginLeft: '5vw' }}>Featured Tenants</SectionCaption>
       </ScrollSection>
       <ScrollSection className="swiper-slide" revealed={revealed >= 10}>
@@ -96,7 +96,7 @@ const SectionTwo = ({ revealed }) => {
         </Row>
       </ScrollSection>
       <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 12}>
-        <RotatingGrid imgGrid={communityGrid} carousbrandActive={revealed >= 13} />
+        <RotatingGrid imgGrid={communityGrid} />
       </ScrollSection>
       <ScrollSection className="swiper-slide" paddingRight="160px" revealed={revealed >= 13}>
         <Row height="55%" />
