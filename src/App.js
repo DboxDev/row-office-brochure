@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { routes, secondaryRoutes } from 'data/routes';
 
+import ScrollToTop from 'components/utils/ScrollToTop';
 import VideoIntro from 'components/includes/VideoIntro';
 import ScreenRestriction from 'components/includes/ScreenRestriction';
 import Header from 'components/includes/Header';
@@ -78,22 +79,24 @@ function App() {
       <RootStyles />
       <TypographyStyles />
       <Router>
-        {!displayMobile && <VideoIntro />}
-        <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
-        {!displayScreenRestrictor ? (
-          <Switch>
-            {allRoutes.map(route => (
-              <Route
-                key={route.href.replace('/', '')}
-                exact
-                path={route.href}
-                render={() => <route.component displayMobile={displayMobile} />}
-              />
-            ))}
-          </Switch>
-        ) : (
-          <ScreenRestriction />
-        )}
+        <ScrollToTop>
+          {!displayMobile && <VideoIntro />}
+          <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
+          {!displayScreenRestrictor ? (
+            <Switch>
+              {allRoutes.map(route => (
+                <Route
+                  key={route.href.replace('/', '')}
+                  exact
+                  path={route.href}
+                  render={() => <route.component displayMobile={displayMobile} />}
+                />
+              ))}
+            </Switch>
+          ) : (
+            <ScreenRestriction />
+          )}
+        </ScrollToTop>
       </Router>
     </React.Fragment>
   );

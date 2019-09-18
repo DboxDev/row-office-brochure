@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const FactContainer = styled.div`
   color: #fff;
@@ -72,7 +73,9 @@ function Facts() {
         return (
           <ul key={`fact-section-${arrayIdx}`}>
             {factArray.map((fact, factIdx) => (
-              <li key={`array-${arrayIdx}-fact-${factIdx}`}>{fact}</li>
+              <Fade>
+                <li key={`array-${arrayIdx}-fact-${factIdx}`}>{fact}</li>
+              </Fade>
             ))}
           </ul>
         );
