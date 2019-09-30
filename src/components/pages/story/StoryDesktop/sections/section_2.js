@@ -67,7 +67,6 @@ const SectionTwo = ({ revealed }) => {
           </BigText>
         </Row>
       </ScrollSection>
-
       <ScrollSection
         className="swiper-slide"
         paddingRight="0"

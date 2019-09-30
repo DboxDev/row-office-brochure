@@ -63,13 +63,15 @@ const SectionThreeMobile = () => {
     <React.Fragment>
       <BlackSlideMobile>
         <Fade right>
-          <h1 className="quote">
-            "The thing that’s unique about the ROW is that it’s this incredible modern space, but
-            it’s also really historied. The buildings are over 100 years old and so when you’re
-            walking through campus, there’s not really many places in LA where you can really feel
-            like you’re a part of LA’s history."
-          </h1>
-          <span className="credit">RACHEL MADDEN, WC+A</span>
+          <div className="flex-column-center">
+            <h1 className="quote">
+              "The thing that’s unique about the ROW is that it’s this incredible modern space, but
+              it’s also really historied. The buildings are over 100 years old and so when you’re
+              walking through campus, there’s not really many places in LA where you can really feel
+              like you’re a part of LA’s history."
+            </h1>
+            <span className="credit">RACHEL MADDEN, WC+A</span>
+          </div>
         </Fade>
       </BlackSlideMobile>
       <Fade>

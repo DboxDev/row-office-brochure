@@ -6,6 +6,13 @@ import StoryMobile from './StoryMobile';
 
 const StoryContainer = styled.div`
   height: 100%;
+  overflow-x: hidden;
+  .flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .swiper-container {
     display: block;
     height: 100%;
