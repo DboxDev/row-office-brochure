@@ -56,7 +56,10 @@ const FormRow = styled.div`
     ${props => props.displayMobile && `margin: 0 0 4vh`};
   }
   label {
-    font-size: 1.4vh;
+    font-size: 12px;
+    ${mediaMin.tabletLandscape`
+      font-size: 1.4vh;
+    `}
     &.half {
       width: ${props => (props.displayMobile ? '100%' : '50%')};
       &:nth-child(1) {
@@ -81,10 +84,16 @@ const FormRow = styled.div`
       border: none;
       background: rgba(255, 255, 255, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-      font-size: 2vh;
-      padding-top: 1vh;
       padding-bottom: 5px;
       padding-left: 5px;
+      height: 50px;
+      font-size: 20px;
+      padding-top: 0;
+      ${mediaMin.tabletLandscape`
+        height: initial;
+        font-size: 2vh;
+        padding-top: 1vh;
+      `}
     }
   }
 
@@ -102,7 +111,7 @@ const FormRow = styled.div`
     ${mediaMax.tabletLandscape`
       margin-bottom: 4vh;
     `}
-    &:hover {
+    &:hover, &:focus {
       background: #fff;
       color: #000;
     }

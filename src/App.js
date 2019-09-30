@@ -82,20 +82,37 @@ function App() {
         <ScrollToTop>
           {!displayMobile && <VideoIntro />}
           <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
-          {!displayScreenRestrictor ? (
-            <Switch>
-              {allRoutes.map(route => (
-                <Route
-                  key={route.href.replace('/', '')}
-                  exact
-                  path={route.href}
-                  render={() => <route.component displayMobile={displayMobile} />}
-                />
-              ))}
-            </Switch>
-          ) : (
-            <ScreenRestriction />
-          )}
+          <Switch>
+            {allRoutes.map(route => {
+              const routePath = route.href.replace('/', '');
+
+              if (routePath === 'contact') {
+                return (
+                  <Route
+                    key={routePath}
+                    exact
+                    path={route.href}
+                    render={() => <route.component displayMobile={displayMobile} />}
+                  />
+                );
+              } else {
+                return (
+                  <Route
+                    key={routePath}
+                    exact
+                    path={route.href}
+                    render={() =>
+                      !displayScreenRestrictor ? (
+                        <route.component displayMobile={displayMobile} />
+                      ) : (
+                        <ScreenRestriction />
+                      )
+                    }
+                  />
+                );
+              }
+            })}
+          </Switch>
         </ScrollToTop>
       </Router>
     </React.Fragment>
