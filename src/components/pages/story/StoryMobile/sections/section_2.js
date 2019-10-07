@@ -1,6 +1,7 @@
 import React from 'react';
 import ResponsiveImageMobile from 'components/images/ResponsiveImage';
 import AnimatedSingleSquare from 'components/images/AnimatedSingleSquare';
+import { brandArray } from 'data/home';
 import Fade from 'react-reveal/Fade';
 
 import {
@@ -8,56 +9,56 @@ import {
   SlideMobile,
   BigText,
   Row,
-  MedText
-  // BrandRow,
-  // BrandItem
+  MedText,
+  BrandRow,
+  BrandItem
 } from '../styles';
 
 // import { brandArray } from 'data/home';
 import { communityRotatingImages } from 'data/rotatingImages';
 
-// const generateBrandRow = () => {
-//   return brandArray.map((brand, idx) => {
-//     return (
-//       <BrandItem key={`brand-row-${idx}-item-${idx}`}>
-//         <img src={brand.logo} alt={`${brand.alt} logo`} className="logo" />
-//         <ResponsiveImageMobile
-//           srcPath={brand.background}
-//           imgAlt={brand.alt}
-//           imgClass="background"
-//         />
-//       </BrandItem>
-//     );
-//   });
-// };
+const generateBrandRow = () => {
+  return brandArray.map((brand, idx) => {
+    return (
+      <BrandItem key={`brand-row-${idx}-item-${idx}`}>
+        <img src={brand.logo} alt={`${brand.alt} logo`} className="logo" />
+        <ResponsiveImageMobile
+          srcPath={brand.background}
+          imgAlt={brand.alt}
+          imgClass="background"
+        />
+      </BrandItem>
+    );
+  });
+};
 
 const SectionOneMobile = () => {
   return (
     <React.Fragment>
       <BlackSlideMobile>
         <Fade right>
-          <h1 className="quote">
-            "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres
-            into an all-encompassing iconic destination. It is a growing collective of globally
-            recognized shops, restaurants and innovative offices that are spread over six buildings
-            to create their own unique L.A. environment."
-          </h1>
-          <span className="credit">LA MAGAZINE</span>
+          <div className="flex-column-center">
+            <h1 className="quote">
+              "In Downtown Los Angeles, ROW DTLA has continued to take shape, transforming 32 acres
+              into an all-encompassing iconic destination. It is a growing collective of globally
+              recognized shops, restaurants and innovative offices that are spread over six
+              buildings to create their own unique L.A. environment."
+            </h1>
+            <span className="credit">LA MAGAZINE</span>
+          </div>
         </Fade>
       </BlackSlideMobile>
       <Fade>
-        <SlideMobile>
+        <SlideMobile paddingBottom="5em">
           <ResponsiveImageMobile srcPath="/images/pages/home/section_2/row_office_section2_1" />
-          <Row paddingBottom="0">
+          <Row>
             <BigText className="black-500">
               A vibrant district that pushes the boundaries between work, culture and play
             </BigText>
           </Row>
         </SlideMobile>
       </Fade>
-      {/* <SlideMobile paddingLeft="0" paddingRight="0">
-        <BrandRow>{generateBrandRow()}</BrandRow>
-      </SlideMobile> */}
+      <BrandRow>{generateBrandRow()}</BrandRow>
       <SlideMobile>
         <Fade>
           <ResponsiveImageMobile srcPath="/images/pages/home/section_2/row_office_section2_2" />

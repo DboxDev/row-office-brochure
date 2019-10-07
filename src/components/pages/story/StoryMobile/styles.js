@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { mediaMin } from 'styles/mediaQueries';
 
 const BlackSlideMobile = styled.div`
@@ -146,25 +146,37 @@ const PressItem = styled.a`
   }
 `;
 
+const marqueeAnimation = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-650%);
+  }
+`;
+
 const BrandRow = styled.div`
-  display: flex;
+  padding-bottom: 3em;
+  width: 100%;
+  white-space: nowrap;
+  animation: ${marqueeAnimation} 30s linear infinite;
 `;
 
 const BrandItem = styled.a`
   position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  width: 50%;
+  margin: 0 50px;
   .logo {
     position: absolute;
     left: 0;
-    height: 40%;
+    height: 50px;
     width: 50%;
     top: 50%;
     transform: translate(-65%, -50%);
   }
   .background {
-    z-index: -1;
     opacity: 0.5;
   }
 `;

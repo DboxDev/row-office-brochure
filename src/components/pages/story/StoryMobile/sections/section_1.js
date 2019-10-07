@@ -12,14 +12,18 @@ const SectionOneMobile = () => {
   return (
     <React.Fragment>
       <BlackSlideMobile>
-        <h1 className="quote">
-          ROW DTLA has shown Los Angeles what happens when you redefine the concept of workplace,
-          that if you celebrate innovation, collaboration and community, you get something very
-          special, that just keeps getting better.
-        </h1>
-        <span className="scroll-reminder">
-          <p>SCROLL</p>
-        </span>
+        <Fade right>
+          <div className="flex-column-center">
+            <h1 className="quote">
+              ROW DTLA has shown Los Angeles what happens when you redefine the concept of
+              workplace, that if you celebrate innovation, collaboration and community, you get
+              something very special, that just keeps getting better.
+            </h1>
+            <span className="scroll-reminder">
+              <p>SCROLL</p>
+            </span>
+          </div>
+        </Fade>
       </BlackSlideMobile>
       <Fade>
         <SlideMobile>
@@ -94,7 +98,7 @@ const SectionOneMobile = () => {
           </MedText>
         </Fade>
         <Fade>
-          <Row>
+          <Row paddingBottom="5em">
             <ResponsiveImageMobile srcPath="/images/pages/home/section_1/row_office_section1_5" />
           </Row>
         </Fade>
