@@ -25,8 +25,6 @@ const AvailabilityContainer = styled.div`
         font-style: normal;
         font-size: 3vh;
       }
-      &.building {
-      }
       &.offices {
         a {
           display: flex;
@@ -119,7 +117,9 @@ function renderAvailabilityRows(data) {
 
       return (
         <tr className={isLastRow ? 'lower' : undefined}>
-          <td valign="top">{!isLastRow ? sqFt : ''}</td>
+          <td valign="top" className={!isLastRow ? 'sq-ft-cell' : undefined}>
+            {!isLastRow ? sqFt : ''}
+          </td>
           <td valign="top">{title}</td>
           <td valign="top" className="offices">
             {floorplans && renderFloorplans(floorplans)}
@@ -179,28 +179,6 @@ function renderAvailabilityCards(data) {
               </>
             );
           })}
-          {/* <div className="availability-card-row">
-            <p>BUILDING</p>
-            <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>{address}</p>
-          </div>
-          <div className="availability-card-row">
-            <p>FLOOR PLANS</p>
-            {floorplans.length === 0 && <p>COMING SOON</p>}
-            {floorplans.length > 0 &&
-              floorplans.map((office, floorplanIdx) => (
-                <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
-                  <a
-                    className="floorplan-mobile-link"
-                    href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>{`Suite ${office.number}`}</span>
-                  </a>
-                  {floorplanIdx % 2 === 1 ? <br /> : undefined}
-                </React.Fragment>
-              ))}
-          </div> */}
         </AvailabilityCard>
       </Fade>
     );
