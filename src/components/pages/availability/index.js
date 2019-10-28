@@ -98,7 +98,7 @@ function renderAvailabilityRows(data) {
             floorplans.map((office, floorplanIdx) => (
               <a
                 key={`availability-row-link-${floorplanIdx}`}
-                href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
+                href={`/floorplans/ROWDTLA_fp_suite_${office.number}_${office.address}.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
