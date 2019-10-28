@@ -1,6 +1,6 @@
 const availabilityData = [
   {
-    sqFt: '3,500-7,000',
+    sqFt: '3,000-7,000',
     addresses: [
       {
         title: '757 S. ALAMEDA',
