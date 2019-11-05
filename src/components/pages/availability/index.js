@@ -123,7 +123,7 @@ function renderAvailabilityRows(data) {
           <td valign="top">{title}</td>
           <td valign="top" className="offices">
             {floorplans && renderFloorplans(floorplans)}
-            {floorplans.length === 0 ? <span>COMING SOON</span> : ''}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
           </td>
         </tr>
       );
@@ -157,7 +157,7 @@ function renderAvailabilityCards(data) {
                 </div>
                 <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
                   <p>FLOOR PLANS</p>
-                  {floorplans.length === 0 && <p>COMING SOON</p>}
+                  {floorplans.length === 0 && <p>AVAILABLE</p>}
                   {floorplans.length > 0 &&
                     floorplans.map((office, floorplanIdx) => {
                       const { address, number } = office;
