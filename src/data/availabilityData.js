@@ -32,7 +32,10 @@ const availabilityData = [
     addresses: [
       {
         title: '757 S. ALAMEDA',
-        floorplans: [{ number: 300, address: 757 }, { number: 340, address: 757 }]
+        floorplans: [
+          { number: 300, address: 757 },
+          { number: 340, address: 757 }
+        ]
       },
       {
         title: '767 S. ALAMEDA',
@@ -46,10 +49,6 @@ const availabilityData = [
       {
         title: '757 S. ALAMEDA',
         floorplans: []
-      },
-      {
-        title: '767 S. ALAMEDA',
-        floorplans: []
       }
     ]
   },
@@ -58,11 +57,11 @@ const availabilityData = [
     addresses: [
       {
         title: '757 S. ALAMEDA',
-        floorplans: []
-      },
-      {
-        title: '767 S. ALAMEDA',
-        floorplans: []
+        floorplans: [
+          { number: 450, address: 757 },
+          { number: 550, address: 757 },
+          { number: 650, address: 757 }
+        ]
       }
     ]
   }

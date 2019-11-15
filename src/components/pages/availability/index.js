@@ -113,12 +113,12 @@ function renderAvailabilityRows(data) {
 
     return addresses.map((address, addressIdx) => {
       const { title, floorplans } = address;
-      const isLastRow = addressIdx === maxAddressIndex;
+      const isLastRow = addressIdx === maxAddressIndex || maxAddressIndex === 0;
 
       return (
         <tr className={isLastRow ? 'lower' : undefined}>
-          <td valign="top" className={!isLastRow ? 'sq-ft-cell' : undefined}>
-            {!isLastRow ? sqFt : ''}
+          <td valign="top" className={addressIdx === 0 ? 'sq-ft-cell' : ''}>
+            {addressIdx === 0 ? sqFt : ''}
           </td>
           <td valign="top">{title}</td>
           <td valign="top" className="offices">
@@ -145,7 +145,7 @@ function renderAvailabilityCards(data) {
           </div>
           {addresses.map((address, idx) => {
             const { floorplans, title } = address;
-            const isLastRow = maxAddressIndex === idx;
+            const isLastRow = maxAddressIndex === idx || addresses.length === 1;
 
             return (
               <>
@@ -155,7 +155,7 @@ function renderAvailabilityCards(data) {
                     {title}
                   </p>
                 </div>
-                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                <div className={`availability-card-row ${isLastRow ? 'separator' : undefined}`}>
                   <p>FLOOR PLANS</p>
                   {floorplans.length === 0 && <p>AVAILABLE</p>}
                   {floorplans.length > 0 &&
