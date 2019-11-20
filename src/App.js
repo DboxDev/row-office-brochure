@@ -46,7 +46,7 @@ function App() {
   );
 
   // Runs when screen dimensions change
-  const updateMobileScreen = useCallback(() => {
+  const updateScreenDimensions = useCallback(() => {
     const width =
       window.innerWidth ||
       Math.max(document.documentElement.clientWidth, document.body.clientWidth);
@@ -66,12 +66,12 @@ function App() {
   }, [displayScreenRestrictor]);
 
   useEffect(() => {
-    window.addEventListener('resize', updateMobileScreen);
+    window.addEventListener('resize', updateScreenDimensions);
 
     return () => {
-      window.removeEventListener('resize', updateMobileScreen);
+      window.removeEventListener('resize', updateScreenDimensions);
     };
-  }, [updateMobileScreen]);
+  }, [updateScreenDimensions]);
 
   return (
     <React.Fragment>
