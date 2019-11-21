@@ -35,9 +35,6 @@ const AvailabilityContainer = styled.div`
           &:hover {
             text-decoration: underline;
           }
-          span {
-            width: 12vh;
-          }
           img {
             height: 1.4vh;
             margin: 0 10px;
@@ -90,16 +87,16 @@ const AvailabilityCard = styled.div`
 
 function renderFloorplans(floorplans) {
   return floorplans.map((floorplan, idx) => {
-    const { address, number } = floorplan;
+    const { address, number, alternateName } = floorplan;
 
     return (
       <a
-        key={`availability-row-link-${idx}`}
+        key={`availability-row-floorplan-link-${idx}`}
         href={`/floorplans/ROWDTLA_suite_${number}_${address}.pdf`}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>{`Suite ${number}`}</span>
+        <span>{alternateName || `Suite ${number}`}</span>
         <img src="/images/icons/download.svg" alt={`download suite ${number}`} />
       </a>
     );
@@ -116,7 +113,7 @@ function renderAvailabilityRows(data) {
       const isLastRow = addressIdx === maxAddressIndex || maxAddressIndex === 0;
 
       return (
-        <tr className={isLastRow ? 'lower' : undefined}>
+        <tr key={`availability-row-${addressIdx}`} className={isLastRow ? 'lower' : undefined}>
           <td valign="top" className={addressIdx === 0 ? 'sq-ft-cell' : ''}>
             {addressIdx === 0 ? sqFt : ''}
           </td>
@@ -155,12 +152,13 @@ function renderAvailabilityCards(data) {
                     {title}
                   </p>
                 </div>
-                <div className={`availability-card-row ${isLastRow ? 'separator' : undefined}`}>
+                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
                   <p>FLOOR PLANS</p>
                   {floorplans.length === 0 && <p>AVAILABLE</p>}
                   {floorplans.length > 0 &&
                     floorplans.map((office, floorplanIdx) => {
-                      const { address, number } = office;
+                      const { address, alternateName, number } = office;
+
                       return (
                         <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
                           <a
@@ -169,7 +167,7 @@ function renderAvailabilityCards(data) {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <span>{`Suite ${number}`}</span>
+                            <span>{alternateName || `Suite ${number}`}</span>
                           </a>
                           {floorplanIdx % 2 === 1 ? <br /> : undefined}
                         </React.Fragment>

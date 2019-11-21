@@ -58,9 +58,9 @@ const availabilityData = [
       {
         title: '757 S. ALAMEDA',
         floorplans: [
-          { number: 'Fourth Floor', address: 757 },
-          { number: 'Fifth Floor', address: 757 },
-          { number: 'Sixth Floor', address: 757 }
+          { alternateName: 'Fourth Floor', number: 450, address: 757 },
+          { alternateName: 'Fifth Floor', number: 550, address: 757 },
+          { alternateName: 'Sixth Floor', number: 650, address: 757 }
         ]
       }
     ]

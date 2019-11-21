@@ -73,8 +73,8 @@ function Facts() {
         return (
           <ul key={`fact-section-${arrayIdx}`}>
             {factArray.map((fact, factIdx) => (
-              <Fade>
-                <li key={`array-${arrayIdx}-fact-${factIdx}`}>{fact}</li>
+              <Fade key={`array-${arrayIdx}-fact-${factIdx}`}>
+                <li>{fact}</li>
               </Fade>
             ))}
           </ul>

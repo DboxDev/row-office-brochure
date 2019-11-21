@@ -73,7 +73,6 @@ const VideoIntroContainer = styled.div`
 const VideoIntro = () => {
   const introVideo = useRef(null);
   const [isLoading, toggleLoading] = useState(true);
-  console.log(isLoading);
   const [isVideoActive, toggleVideoActive] = useState(true);
 
   useEffect(() => {
@@ -92,9 +91,9 @@ const VideoIntro = () => {
   return (
     <>
       <LoadingDiv isLoading={isLoading}>
-        <div class="loader">
-          <div class="cube1"></div>
-          <div class="cube2"></div>
+        <div className="loader">
+          <div className="cube1"></div>
+          <div className="cube2"></div>
         </div>
       </LoadingDiv>
       <VideoIntroContainer isVideoActive={isVideoActive} onClick={() => toggleVideoActive(false)}>
