@@ -15,12 +15,17 @@ const ContactContainer = styled.div`
 `;
 
 const UpperContainer = styled.div`
-  height: ${props => (props.displayMobile ? 'auto' : '50vh')};
+  ${mediaMin.tabletLandscape`
+    height: ${props => (props.displayMobile ? 'auto' : '50vh')};
+  `}
+
   position: relative;
 `;
 
 const UpperForm = styled.div`
-  position: ${props => (props.displayMobile ? 'initial' : 'absolute')};
+  ${mediaMin.tabletLandscape`
+    position: ${props => (props.displayMobile ? 'initial' : 'absolute')};
+  `}
   opacity: ${props => (props.active ? 1 : 0)};
   visibility: ${props => (props.active ? 'visible' : 'hidden')};
   transition: opacity 300ms ease;

@@ -76,7 +76,10 @@ const VideoIntro = () => {
   const [isVideoActive, toggleVideoActive] = useState(true);
 
   useEffect(() => {
+    console.log(introVideo);
+
     const videoStartedCallback = () => {
+      console.log('started');
       toggleLoading(false);
     };
 
@@ -84,8 +87,14 @@ const VideoIntro = () => {
       toggleVideoActive(false);
     };
 
-    introVideo.current.addEventListener('play', videoStartedCallback);
-    introVideo.current.addEventListener('ended', videoEndedCallback);
+    let videoEl = introVideo.current;
+    videoEl.addEventListener('play', videoStartedCallback);
+    videoEl.addEventListener('ended', videoEndedCallback);
+
+    return () => {
+      videoEl.removeEventListener('play', videoStartedCallback);
+      videoEl.removeEventListener('ended', videoEndedCallback);
+    };
   }, []);
 
   return (
