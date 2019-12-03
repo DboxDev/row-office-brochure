@@ -48,7 +48,11 @@ const availabilityData = [
     addresses: [
       {
         title: '757 S. ALAMEDA',
-        floorplans: []
+        floorplans: [
+          { alternateName: 'Fourth Floor', number: 450, address: 757 },
+          { alternateName: 'Fifth Floor', number: 550, address: 757 },
+          { alternateName: 'Sixth Floor', number: 650, address: 757 }
+        ]
       }
     ]
   },
