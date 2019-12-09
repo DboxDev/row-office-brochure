@@ -9,18 +9,21 @@ const AvailabilityContainer = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
+    tr {
+      &.lower {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      }
+    }
     th,
     td {
       padding: 6vh 0;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
       font-size: 2vh;
+
       &.sq-ft-cell {
         font-family: 'SangBleu Kingdom', serif;
         font-weight: normal;
         font-style: normal;
         font-size: 3vh;
-      }
-      &.building {
       }
       &.offices {
         a {
@@ -31,9 +34,6 @@ const AvailabilityContainer = styled.div`
           text-decoration: none;
           &:hover {
             text-decoration: underline;
-          }
-          span {
-            width: 12vh;
           }
           img {
             height: 1.4vh;
@@ -54,6 +54,10 @@ const AvailabilityCard = styled.div`
   }
   .availability-card-row {
     margin: 2em 0;
+    &.separator {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      padding-bottom: 20px;
+    }
     &:nth-child(1) {
       margin-top: 0;
     }
@@ -81,41 +85,53 @@ const AvailabilityCard = styled.div`
   }
 `;
 
-function renderAvailabilityRows(data) {
-  return data.map((building, rowIdx) => {
-    const { address, sqFt, floorplans } = building;
+function renderFloorplans(floorplans) {
+  return floorplans.map((floorplan, idx) => {
+    const { address, number, alternateName } = floorplan;
 
     return (
-      <tr key={`availability-row-${rowIdx}`}>
-        <td valign="top" className="sq-ft-cell">
-          {sqFt}
-        </td>
-        <td valign="top" className="building">
-          {address}
-        </td>
-        <td valign="top" className="offices">
-          {floorplans &&
-            floorplans.map((office, floorplanIdx) => (
-              <a
-                key={`availability-row-link-${floorplanIdx}`}
-                href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>{`Suite ${office.number}`}</span>
-                <img src="/images/icons/download.svg" alt={`download suite ${office.number}`} />
-              </a>
-            ))}
-          {floorplans.length === 0 ? <span>COMING SOON</span> : ''}
-        </td>
-      </tr>
+      <a
+        key={`availability-row-floorplan-link-${idx}`}
+        href={`/floorplans/ROWDTLA_suite_${number}_${address}.pdf`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>{alternateName || `Suite ${number}`}</span>
+        <img src="/images/icons/download.svg" alt={`download suite ${number}`} />
+      </a>
     );
   });
 }
 
+function renderAvailabilityRows(data) {
+  return data.map(size => {
+    const { sqFt, addresses } = size;
+    const maxAddressIndex = addresses.length - 1;
+
+    return addresses.map((address, addressIdx) => {
+      const { title, floorplans } = address;
+      const isLastRow = addressIdx === maxAddressIndex || maxAddressIndex === 0;
+
+      return (
+        <tr key={`availability-row-${addressIdx}`} className={isLastRow ? 'lower' : undefined}>
+          <td valign="top" className={addressIdx === 0 ? 'sq-ft-cell' : ''}>
+            {addressIdx === 0 ? sqFt : ''}
+          </td>
+          <td valign="top">{title}</td>
+          <td valign="top" className="offices">
+            {floorplans && renderFloorplans(floorplans)}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
+          </td>
+        </tr>
+      );
+    });
+  });
+}
+
 function renderAvailabilityCards(data) {
-  return data.map((building, cardIdx) => {
-    const { address, sqFt, floorplans } = building;
+  return data.map((size, cardIdx) => {
+    const { sqFt, addresses } = size;
+    const maxAddressIndex = addresses.length - 1;
 
     return (
       <Fade>
@@ -124,28 +140,43 @@ function renderAvailabilityCards(data) {
             <p className="sq-ft-title">SQ FT</p>
             <p className="sq-ft">{sqFt}</p>
           </div>
-          <div className="availability-card-row">
-            <p>BUILDING</p>
-            <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>{address}</p>
-          </div>
-          <div className="availability-card-row">
-            <p>FLOOR PLANS</p>
-            {floorplans.length === 0 && <p>COMING SOON</p>}
-            {floorplans.length > 0 &&
-              floorplans.map((office, floorplanIdx) => (
-                <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
-                  <a
-                    className="floorplan-mobile-link"
-                    href={`/floorplans/ROWDTLA_fp_suite_${office.number}.pdf`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>{`Suite ${office.number}`}</span>
-                  </a>
-                  {floorplanIdx % 2 === 1 ? <br /> : undefined}
-                </React.Fragment>
-              ))}
-          </div>
+          {addresses.map((address, idx) => {
+            const { floorplans, title } = address;
+            const isLastRow = maxAddressIndex === idx || addresses.length === 1;
+
+            return (
+              <>
+                <div className="availability-card-row">
+                  <p>BUILDING</p>
+                  <p className={floorplans.length === 0 ? 'no-margin-bottom' : undefined}>
+                    {title}
+                  </p>
+                </div>
+                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                  <p>FLOOR PLANS</p>
+                  {floorplans.length === 0 && <p>AVAILABLE</p>}
+                  {floorplans.length > 0 &&
+                    floorplans.map((office, floorplanIdx) => {
+                      const { address, alternateName, number } = office;
+
+                      return (
+                        <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
+                          <a
+                            className="floorplan-mobile-link"
+                            href={`/floorplans/ROWDTLA_suite_${number}_${address}.pdf`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span>{alternateName || `Suite ${number}`}</span>
+                          </a>
+                          {floorplanIdx % 2 === 1 ? <br /> : undefined}
+                        </React.Fragment>
+                      );
+                    })}
+                </div>
+              </>
+            );
+          })}
         </AvailabilityCard>
       </Fade>
     );
@@ -160,7 +191,7 @@ function Facts({ displayMobile }) {
       ) : (
         <table>
           <tbody>
-            <tr>
+            <tr className="lower">
               <th align="left">SQ. FT</th>
               <th align="left">BUILDING</th>
               <th align="left">FLOOR PLANS</th>
