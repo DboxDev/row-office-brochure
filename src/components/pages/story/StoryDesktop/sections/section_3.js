@@ -15,6 +15,7 @@ import {
   Fact,
   FactRow,
   Row,
+  Spacer,
   PlayerWrapper,
   SectionCaption
 } from '../styles';
@@ -131,34 +132,45 @@ const SectionThree = ({ revealed }) => {
           </MedText>
         </Row>
       </ScrollSection>
-      <ScrollSection className="swiper-slide" paddingRight="200px" revealed={revealed >= 20}>
+      <ScrollSection
+        className="swiper-slide"
+        paddingRight="200px"
+        revealed={revealed >= 20}
+        spaceBetween
+      >
         <PhotoGridRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_2"
             imgAlt="test"
           />
+          <Spacer />
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_3"
             imgAlt="test"
           />
+          <Spacer />
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_4"
             imgAlt="test"
           />
+          <Spacer />
         </PhotoGridRow>
         <PhotoGridRow>
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_5"
             imgAlt="test"
           />
+          <Spacer />
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_6"
             imgAlt="test"
           />
+          <Spacer />
           <ResponsiveImage
             srcPath="/images/pages/home/section_3/row_office_section3_7"
             imgAlt="test"
           />
+          <Spacer />
         </PhotoGridRow>
       </ScrollSection>
       <ScrollSection className="swiper-slide" paddingRight="0" revealed={revealed >= 21}>

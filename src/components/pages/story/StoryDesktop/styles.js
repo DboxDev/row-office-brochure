@@ -184,10 +184,7 @@ const PhotoRow = styled.div`
 const PhotoGridRow = styled.div`
   display: flex;
   flex-direction: row;
-  height: 50%;
-  img {
-    padding: 20px;
-  }
+  height: calc(50% - 10px);
 `;
 
 const PlayerWrapper = styled.div`
@@ -223,6 +220,10 @@ const Row = styled.div`
   padding-top: 4vh;
 `;
 
+const Spacer = styled.div`
+  width: 20px;
+`;
+
 export {
   BrandRow,
   BrandItem,
@@ -239,5 +240,6 @@ export {
   MedText,
   Row,
   ScrollSection,
-  SectionCaption
+  SectionCaption,
+  Spacer
 };
