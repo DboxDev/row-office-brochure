@@ -41,8 +41,10 @@ function AnimatedSingleSquare({ imgArray, active }) {
 
   useEffect(() => {
     const updateHeight = () => {
-      const refHeight = ref.current.clientHeight;
-      setDivHeight(refHeight);
+      if (ref.current !== null) {
+        const refHeight = ref.current.clientHeight;
+        setDivHeight(refHeight);
+      }
     };
 
     window.addEventListener('resize', updateHeight);
