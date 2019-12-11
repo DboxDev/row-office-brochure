@@ -115,6 +115,7 @@ const SectionThree = ({ revealed }) => {
             height="100%"
             url="https://vimeo.com/357861501"
             playing
+            controls
             light="/video/player/rowdtla_video_preview_office.jpg"
           />
         </PlayerWrapper>
