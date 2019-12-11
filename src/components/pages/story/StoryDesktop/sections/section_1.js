@@ -88,6 +88,7 @@ const SectionOne = ({ revealed }) => {
             height="100%"
             url="https://vimeo.com/357861717"
             playing
+            controls
             light="/video/player/rowdtla_video_preview_general.jpg"
           />
         </PlayerWrapper>
