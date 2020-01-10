@@ -6,11 +6,59 @@ import { mediaMax, mediaMin } from 'styles/mediaQueries';
 
 const ContactContainer = styled.div`
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  ${mediaMin.tabletLandscape`
+    flex-direction: row;
+    align-items: flex-start !important;
+  `}
   form {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    width: 100%;
+    ${mediaMin.tabletLandscape`
+      width: 70%;
+    `}
+  }
+`;
+
+const ContactInfoCol = styled.div`
+  flex-direction: column;
+  height: 100%;
+  ${mediaMin.tabletLandscape`
+  width: 30%;
+  padding-top: calc(18px + 1em + 2vh);
+  padding-left: 5vw;
+  `}
+  h4 {
+    margin: 0 0 16px 0;
+    font-size: 1.5em;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+    span {
+      line-height: 1.5em;
+    }
+  }
+  &.desktop {
+    display: none;
+    ${mediaMin.tabletLandscape`
+    display: flex;
+  `}
+  }
+  &.mobile {
+    display: flex;
+    ${mediaMin.tabletLandscape`
+    display: none;
+  `}
   }
 `;
 
@@ -127,22 +175,24 @@ const FormRow = styled.div`
     }
   }
   &.lower-row {
+    align-items: flex-start;
     ${mediaMax.tabletLandscape`
-      flex-direction: column;
+    flex-direction: column-reverse;
       align-items: center;
-      .info-container {
-        order: 1;
-      }
     `}
   }
 `;
 
 const InfoContainer = styled.div`
+  margin-top: 3vh;
+  ${mediaMin.tabletLandscape`
+    margin-top: 0;
+  `}
   h3 {
     font-size: 3vh;
     line-height: 4vh;
     color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 0;
+    margin: 0;
   }
   p {
     font-size: 2vh;
@@ -193,7 +243,7 @@ function Contact({ displayMobile }) {
               </label>
             </FormRow>
             <FormRow displayMobile={displayMobile}>
-              <label className="half">
+              <label className="full">
                 <span>* Email</span>
                 <input
                   className="input"
@@ -204,7 +254,9 @@ function Contact({ displayMobile }) {
                   required
                 />
               </label>
-              <label className="half">
+            </FormRow>
+            <FormRow displayMobile={displayMobile}>
+              <label className="full">
                 <span>* Phone</span>
                 <input
                   className="input"
@@ -249,6 +301,7 @@ function Contact({ displayMobile }) {
             <h3>We will be in touch soon.</h3>
           </ThankYouMessage>
         </UpperContainer>
+
         <FormRow alignItems="flex-end" justifyContent="space-between" className="lower-row">
           <InfoContainer className="info-container">
             <h3 className="address">
@@ -259,11 +312,53 @@ function Contact({ displayMobile }) {
               <p>@ROWDTLA</p>
             </a>
           </InfoContainer>
+          <ContactInfoCol className="mobile">
+            <h4>Creative Office Leasing</h4>
+            <div className="contact">
+              <span>Joshua Wrobel (License #01237972)</span>
+              <span>
+                <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+              </span>
+              <span>
+                <a href="tel:2132396001">213.239.6001</a>
+              </span>
+            </div>
+            <div className="contact">
+              <span>Jaclyn Ward (License #01912455)</span>
+              <span>
+                <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+              </span>
+              <span>
+                <a href="tel:3105953618">310.595.3618</a>
+              </span>
+            </div>
+          </ContactInfoCol>
           <button type="submit" value="Submit" className={submitted ? 'active' : ''}>
             Submit
           </button>
         </FormRow>
       </form>
+      <ContactInfoCol className="desktop">
+        <h4>Creative Office Leasing</h4>
+        <div className="contact">
+          <span>Joshua Wrobel (License #01237972)</span>
+          <span>
+            <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+          </span>
+          <span>
+            <a href="tel:2132396001">213.239.6001</a>
+          </span>
+        </div>
+        <div className="contact">
+          <span>Jaclyn Ward (License #01912455)</span>
+          <span>
+            <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+          </span>
+          <span>
+            <a href="tel:3105953618">310.595.3618</a>
+          </span>
+        </div>
+      </ContactInfoCol>
     </ContactContainer>
   );
 }

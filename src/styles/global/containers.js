@@ -26,7 +26,6 @@ const ContainerStyles = createGlobalStyle`
     width: 90%;
     margin: 0 auto;
     padding-top: 120px;
-    height: 100%;
     align-items: center;
     ${mediaMin.tabletLandscape`
       display: flex;
