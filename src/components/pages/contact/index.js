@@ -308,8 +308,8 @@ function Contact({ displayMobile }) {
               777 S. Alameda Street, <br />
               Los Angeles, CA 90021
             </h3>
-            <a href="https://www.instagram.com/rowdtla/" target="_blank" rel="noopener noreferrer">
-              <p>@ROWDTLA</p>
+            <a href="https://www.rowdtla.com" target="_blank" rel="noopener noreferrer">
+              <p>WWW.ROWDTLA.COM</p>
             </a>
           </InfoContainer>
           <ContactInfoCol className="mobile">
