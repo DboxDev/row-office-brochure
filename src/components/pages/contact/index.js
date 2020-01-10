@@ -195,7 +195,7 @@ const InfoContainer = styled.div`
     margin: 0;
   }
   p {
-    font-size: 2vh;
+    font-size: 1.25vh;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 0;
     ${mediaMax.tabletLandscape`
