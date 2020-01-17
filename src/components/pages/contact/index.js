@@ -326,7 +326,7 @@ function Contact({ displayMobile }) {
             <div className="contact">
               <span>Jaclyn Ward (License #01912455)</span>
               <span>
-                <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+                <a href="mailto:jaclyn.ward@am.jll.com">jaclyn.ward@am.jll.com</a>
               </span>
               <span>
                 <a href="tel:3105953618">310.595.3618</a>
@@ -352,7 +352,7 @@ function Contact({ displayMobile }) {
         <div className="contact">
           <span>Jaclyn Ward (License #01912455)</span>
           <span>
-            <a href="mailto:josh.wrobel@am.jll.com">josh.wrobel@am.jll.com</a>
+            <a href="mailto:jaclyn.ward@am.jll.com">jaclyn.ward@am.jll.com</a>
           </span>
           <span>
             <a href="tel:3105953618">310.595.3618</a>
