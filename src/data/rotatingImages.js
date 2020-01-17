@@ -8,7 +8,7 @@ const welcomeCell1 = [
 
 const welcomeCell2 = [
   '/images/pages/home/grids/welcome_grid/woman_looking_through_rack',
-  '/images/pages/home/grids/welcome_grid/white_bar',
+  '/images/pages/home/grids/welcome_grid/bar_seating',
   '/images/pages/home/grids/welcome_grid/people_on_big_steps'
 ];
 
@@ -29,7 +29,7 @@ const welcomeGrid = [welcomeCell1, welcomeCell2, welcomeCell3, welcomeCell4];
 const communityCell1 = [
   '/images/pages/home/grids/community_grid/exercise_class',
   '/images/pages/home/grids/community_grid/man_with_earrings_shopping',
-  '/images/pages/home/grids/community_grid/lady_showing_wine'
+  '/images/pages/home/grids/community_grid/restaurant_interior'
 ];
 
 const communityCell2 = [
@@ -41,7 +41,7 @@ const communityCell2 = [
 const communityCell3 = [
   '/images/pages/home/grids/community_grid/kids_smelling_flowers',
   '/images/pages/home/grids/community_grid/men_cooking',
-  '/images/pages/home/grids/community_grid/eating_on_balcony'
+  '/images/pages/home/grids/community_grid/workout_class'
 ];
 
 const communityCell4 = [
