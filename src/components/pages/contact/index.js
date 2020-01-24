@@ -369,9 +369,9 @@ function Contact({ displayMobile }) {
         </div>
         <div className="contact">
           <span>Matt Johnson (License #02104644)</span>
-          <span>
+          {/* <span>
             <a href="mailto:email@email.com">email@email.com</a>
-          </span>
+          </span> */}
           <span>
             <a href="tel:8054443428">805.444.3428</a>
           </span>
