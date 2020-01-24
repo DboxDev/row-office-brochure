@@ -102,13 +102,13 @@ const SectionOne = ({ revealed }) => {
         </PhotoRow>
         <Row height="45%">
           <MedText>
-            Authentic experiences in a
-            <br /> district charged with innovation,
-            <br /> collaboration and community.
-            <br /> Curated down to every last detail,
-            <br /> ROW DTLA's ever-changing
-            <br /> environment fosters creativity in
-            <br /> every aspect
+            A city-within-a-city that is filled <br />
+            with innovation, collaboration and <br />
+            community. Curated down to <br />
+            every last detail, ROW DTLA's <br />
+            ever-changing environment <br />
+            fosters creativity and authentic <br />
+            experiences in every aspect
           </MedText>
         </Row>
       </ScrollSection>
