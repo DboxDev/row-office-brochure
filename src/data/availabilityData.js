@@ -21,8 +21,7 @@ const availabilityData = [
         floorplans: [
           { number: 410, address: 767 },
           { number: 418, address: 767 },
-          { number: 434, address: 767 },
-          { number: 465, address: 767 }
+          { number: 434, address: 767 }
         ]
       }
     ]
@@ -30,13 +29,17 @@ const availabilityData = [
   {
     sqFt: '7,000-15,000',
     addresses: [
-      {
-        title: '757 S. ALAMEDA',
-        floorplans: [
-          { number: 300, address: 757 },
-          { number: 340, address: 757 }
-        ]
-      },
+      // {
+      //   title: '757 S. ALAMEDA',
+      //   floorplans: [
+      //     { number: 310, address: 757 },
+      //     { number: 320, address: 757 },
+      //     { number: 330, address: 757 },
+      //     { number: 360, address: 757 },
+      //     { number: 370, address: 757 },
+      //     { number: 380, address: 757 }
+      //   ]
+      // },
       {
         title: '767 S. ALAMEDA',
         floorplans: [{ number: 400, address: 767 }]

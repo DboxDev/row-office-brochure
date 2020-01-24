@@ -332,6 +332,15 @@ function Contact({ displayMobile }) {
                 <a href="tel:3105953618">310.595.3618</a>
               </span>
             </div>
+            <div className="contact">
+              <span>Matt Johnson (License #02104644)</span>
+              <span>
+                <a href="mailto:email@email.com">email@email.com</a>
+              </span>
+              <span>
+                <a href="tel:8054443428">805.444.3428</a>
+              </span>
+            </div>
           </ContactInfoCol>
           <button type="submit" value="Submit" className={submitted ? 'active' : ''}>
             Submit
@@ -356,6 +365,15 @@ function Contact({ displayMobile }) {
           </span>
           <span>
             <a href="tel:3105953618">310.595.3618</a>
+          </span>
+        </div>
+        <div className="contact">
+          <span>Matt Johnson (License #02104644)</span>
+          {/* <span>
+            <a href="mailto:email@email.com">email@email.com</a>
+          </span> */}
+          <span>
+            <a href="tel:8054443428">805.444.3428</a>
           </span>
         </div>
       </ContactInfoCol>
