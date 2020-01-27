@@ -17,12 +17,13 @@ const useContactForm = callback => {
 
       const { email, firstName, lastName, phone, spaceAvailable, howHear } = inputs;
 
-      const text = `Hi,\n\nRegistrant Details:\n\n
-        \n\nName: ${firstName} ${lastName}
-        \n\nEmail: ${email}
-        \n\nPhone: ${phone}
-        \n\nSpace requested: ${spaceAvailable}
-        \n\nHow did you hear about us: ${howHear}
+      const text = `New inquiry from the office brochure.
+        \n\nRegistrant Details:
+        \nName: ${firstName} ${lastName}
+        \nEmail: ${email}
+        \nPhone: ${phone}
+        \nSpace requested: ${spaceAvailable}
+        \nHow did you hear about us: ${howHear}
       `;
 
       var emailData = {
