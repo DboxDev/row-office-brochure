@@ -80,7 +80,7 @@ function App() {
       <TypographyStyles />
       <Router>
         <ScrollToTop>
-          {/* {!displayMobile && <VideoIntro />} */}
+          {!displayMobile && <VideoIntro />}
           <Header displayMobile={displayMobile} displayScreenRestrictor={displayScreenRestrictor} />
           <Switch>
             {allRoutes.map(route => {
