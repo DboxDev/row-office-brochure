@@ -18,7 +18,14 @@ const AvailabilityContainer = styled.div`
     td {
       padding: 6vh 0;
       font-size: 2vh;
-
+      &.fp{
+        width: 1px;
+        white-space: nowrap;
+      }
+      &.spacer{
+        width: 5%;
+        white-space: nowrap;
+      }
       &.sq-ft-cell {
         font-family: 'SangBleu Kingdom', serif;
         font-weight: normal;
@@ -36,9 +43,18 @@ const AvailabilityContainer = styled.div`
           &:hover {
             text-decoration: underline;
           }
+          &.download-link{
+            img{
+
+              margin: 0 auto;
+            }
+          }
           img {
             height: 1.4vh;
             margin: 0 10px;
+            &.threedee{
+              height: 100%;
+            }
           }
         }
         .suite {
@@ -110,6 +126,7 @@ function renderFloorplans(floorplans) {
         href={`/floorplans/ROWDTLA_suite_${number}_${address}.pdf`}
         target="_blank"
         rel="noopener noreferrer"
+        className="download-link"
       >
         <img src="/images/icons/download.svg" alt={`download suite ${number}`} />
       </a>
@@ -129,7 +146,7 @@ function render360(floorplans) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/video/player/videoplay_icon.svg" alt={`view walkthrough`} />
+          <img className="threedee" src="/images/icons/3D.svg" alt={`view walkthrough`} />
         </a>
       )
     );
@@ -159,6 +176,7 @@ function renderAvailabilityRows(data) {
             {floorplans && renderFloorplans(floorplans)}
             {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
           </td>
+          <td />
           <td valign="top" className="offices">
             {floorplans && render360(floorplans)}
             {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
@@ -236,7 +254,10 @@ function Facts({ displayMobile }) {
               <th align="left">SQ. FT</th>
               <th align="left">BUILDING</th>
               <th align="left">UNIT</th>
-              <th align="left">FLOOR PLANS</th>
+              <th className="fp" align="left">
+                FLOOR PLANS
+              </th>
+              <th className="spacer" />
               <th align="left">360º</th>
             </tr>
             {renderAvailabilityRows(availabilityData)}
