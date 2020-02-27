@@ -27,6 +27,7 @@ const AvailabilityContainer = styled.div`
       }
       &.offices {
         a {
+          height: 27px;
           display: flex;
           margin-bottom: 1em;
           text-transform: uppercase;
@@ -40,6 +41,12 @@ const AvailabilityContainer = styled.div`
             margin: 0 10px;
           }
         }
+        .suite {
+          height: 27px;
+          display: flex;
+          margin-bottom: 1em;
+          text-transform: uppercase;
+          align-items: center;
       }
     }
   }
@@ -85,9 +92,17 @@ const AvailabilityCard = styled.div`
   }
 `;
 
+function renderSuites(suites) {
+  return suites.map((floorplan, idx) => {
+    const { number, alternateName } = floorplan;
+
+    return <span className="suite">{alternateName || `Suite ${number}`}</span>;
+  });
+}
+
 function renderFloorplans(floorplans) {
   return floorplans.map((floorplan, idx) => {
-    const { address, number, alternateName } = floorplan;
+    const { address, number } = floorplan;
 
     return (
       <a
@@ -96,9 +111,27 @@ function renderFloorplans(floorplans) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span>{alternateName || `Suite ${number}`}</span>
         <img src="/images/icons/download.svg" alt={`download suite ${number}`} />
       </a>
+    );
+  });
+}
+
+function render360(floorplans) {
+  return floorplans.map((floorplan, idx) => {
+    const { walkthrough } = floorplan;
+
+    return (
+      walkthrough && (
+        <a
+          key={`availability-row-floorplan-link-${idx}`}
+          href={walkthrough}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/video/player/videoplay_icon.svg" alt={`view walkthrough`} />
+        </a>
+      )
     );
   });
 }
@@ -119,7 +152,15 @@ function renderAvailabilityRows(data) {
           </td>
           <td valign="top">{title}</td>
           <td valign="top" className="offices">
+            {floorplans && renderSuites(floorplans)}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
+          </td>
+          <td valign="top" className="offices">
             {floorplans && renderFloorplans(floorplans)}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
+          </td>
+          <td valign="top" className="offices">
+            {floorplans && render360(floorplans)}
             {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
           </td>
         </tr>
@@ -194,7 +235,9 @@ function Facts({ displayMobile }) {
             <tr className="lower">
               <th align="left">SQ. FT</th>
               <th align="left">BUILDING</th>
+              <th align="left">UNIT</th>
               <th align="left">FLOOR PLANS</th>
+              <th align="left">360º</th>
             </tr>
             {renderAvailabilityRows(availabilityData)}
           </tbody>
