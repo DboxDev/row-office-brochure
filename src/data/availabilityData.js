@@ -57,7 +57,13 @@ const availabilityData = [
       // },
       {
         title: '767 S. ALAMEDA',
-        floorplans: [{ number: 400, address: 767, walkthrough: '' }]
+        floorplans: [
+          {
+            number: 400,
+            address: 767,
+            walkthrough: 'https://my.matterport.com/show/?m=w7FBKsM6PLF'
+          }
+        ]
       }
     ]
   },
