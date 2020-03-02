@@ -202,6 +202,7 @@ function renderAvailabilityCards(data) {
           {addresses.map((address, idx) => {
             const { floorplans, title } = address;
             const isLastRow = maxAddressIndex === idx || addresses.length === 1;
+            const walkthroughs = floorplans.filter(el => el.walkthrough);
 
             return (
               <>
@@ -211,7 +212,7 @@ function renderAvailabilityCards(data) {
                     {title}
                   </p>
                 </div>
-                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                <div className={`availability-card-row`}>
                   <p>FLOOR PLANS</p>
                   {floorplans.length === 0 && <p>AVAILABLE</p>}
                   {floorplans.length > 0 &&
@@ -232,6 +233,32 @@ function renderAvailabilityCards(data) {
                         </React.Fragment>
                       );
                     })}
+                </div>
+                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                  {walkthroughs.length ? (
+                    <>
+                      <p>360º</p>
+                      {walkthroughs.length === 0 && <p>AVAILABLE</p>}
+                      {walkthroughs.length > 0 &&
+                        walkthroughs.map((office, floorplanIdx) => {
+                          const { number, alternateName, walkthrough } = office;
+
+                          return (
+                            <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
+                              <a
+                                className="floorplan-mobile-link"
+                                href={walkthrough}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span>{alternateName || `Suite ${number}`}</span>
+                              </a>
+                              {floorplanIdx % 2 === 1 ? <br /> : undefined}
+                            </React.Fragment>
+                          );
+                        })}
+                    </>
+                  ) : null}
                 </div>
               </>
             );
