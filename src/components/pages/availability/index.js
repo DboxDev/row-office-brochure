@@ -64,6 +64,10 @@ const AvailabilityContainer = styled.div`
           text-transform: uppercase;
           align-items: center;
       }
+      .spacer{
+        height: 27px;
+        margin-bottom: 1em;
+      }
     }
   }
 `;
@@ -138,17 +142,17 @@ function render360(floorplans) {
   return floorplans.map((floorplan, idx) => {
     const { walkthrough } = floorplan;
 
-    return (
-      walkthrough && (
-        <a
-          key={`availability-row-floorplan-link-${idx}`}
-          href={walkthrough}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="threedee" src="/images/icons/3D.svg" alt={`view walkthrough`} />
-        </a>
-      )
+    return walkthrough ? (
+      <a
+        key={`availability-row-floorplan-link-${idx}`}
+        href={walkthrough}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="threedee" src="/images/icons/3D.svg" alt={`view walkthrough`} />
+      </a>
+    ) : (
+      <div className="spacer" />
     );
   });
 }
