@@ -18,7 +18,14 @@ const AvailabilityContainer = styled.div`
     td {
       padding: 6vh 0;
       font-size: 2vh;
-
+      &.fp{
+        width: 1px;
+        white-space: nowrap;
+      }
+      &.spacer{
+        width: 5%;
+        white-space: nowrap;
+      }
       &.sq-ft-cell {
         font-family: 'SangBleu Kingdom', serif;
         font-weight: normal;
@@ -27,6 +34,7 @@ const AvailabilityContainer = styled.div`
       }
       &.offices {
         a {
+          height: 27px;
           display: flex;
           margin-bottom: 1em;
           text-transform: uppercase;
@@ -35,11 +43,30 @@ const AvailabilityContainer = styled.div`
           &:hover {
             text-decoration: underline;
           }
+          &.download-link{
+            img{
+
+              margin: 0 auto;
+            }
+          }
           img {
             height: 1.4vh;
             margin: 0 10px;
+            &.threedee{
+              height: 100%;
+            }
           }
         }
+        .suite {
+          height: 27px;
+          display: flex;
+          margin-bottom: 1em;
+          text-transform: uppercase;
+          align-items: center;
+      }
+      .spacer{
+        height: 27px;
+        margin-bottom: 1em;
       }
     }
   }
@@ -85,9 +112,17 @@ const AvailabilityCard = styled.div`
   }
 `;
 
+function renderSuites(suites) {
+  return suites.map((floorplan, idx) => {
+    const { number, alternateName } = floorplan;
+
+    return <span className="suite">{alternateName || `Suite ${number}`}</span>;
+  });
+}
+
 function renderFloorplans(floorplans) {
   return floorplans.map((floorplan, idx) => {
-    const { address, number, alternateName } = floorplan;
+    const { address, number } = floorplan;
 
     return (
       <a
@@ -95,10 +130,29 @@ function renderFloorplans(floorplans) {
         href={`/floorplans/ROWDTLA_suite_${number}_${address}.pdf`}
         target="_blank"
         rel="noopener noreferrer"
+        className="download-link"
       >
-        <span>{alternateName || `Suite ${number}`}</span>
         <img src="/images/icons/download.svg" alt={`download suite ${number}`} />
       </a>
+    );
+  });
+}
+
+function render360(floorplans) {
+  return floorplans.map((floorplan, idx) => {
+    const { walkthrough } = floorplan;
+
+    return walkthrough ? (
+      <a
+        key={`availability-row-floorplan-link-${idx}`}
+        href={walkthrough}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="threedee" src="/images/icons/3D.svg" alt={`view walkthrough`} />
+      </a>
+    ) : (
+      <div className="spacer" />
     );
   });
 }
@@ -119,7 +173,16 @@ function renderAvailabilityRows(data) {
           </td>
           <td valign="top">{title}</td>
           <td valign="top" className="offices">
+            {floorplans && renderSuites(floorplans)}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
+          </td>
+          <td valign="top" className="offices">
             {floorplans && renderFloorplans(floorplans)}
+            {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
+          </td>
+          <td />
+          <td valign="top" className="offices">
+            {floorplans && render360(floorplans)}
             {floorplans.length === 0 ? <span>AVAILABLE</span> : ''}
           </td>
         </tr>
@@ -143,6 +206,7 @@ function renderAvailabilityCards(data) {
           {addresses.map((address, idx) => {
             const { floorplans, title } = address;
             const isLastRow = maxAddressIndex === idx || addresses.length === 1;
+            const walkthroughs = floorplans.filter(el => el.walkthrough);
 
             return (
               <>
@@ -152,7 +216,7 @@ function renderAvailabilityCards(data) {
                     {title}
                   </p>
                 </div>
-                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                <div className={`availability-card-row`}>
                   <p>FLOOR PLANS</p>
                   {floorplans.length === 0 && <p>AVAILABLE</p>}
                   {floorplans.length > 0 &&
@@ -174,6 +238,32 @@ function renderAvailabilityCards(data) {
                       );
                     })}
                 </div>
+                <div className={`availability-card-row ${!isLastRow ? 'separator' : undefined}`}>
+                  {walkthroughs.length ? (
+                    <>
+                      <p>360º</p>
+                      {walkthroughs.length === 0 && <p>AVAILABLE</p>}
+                      {walkthroughs.length > 0 &&
+                        walkthroughs.map((office, floorplanIdx) => {
+                          const { number, alternateName, walkthrough } = office;
+
+                          return (
+                            <React.Fragment key={`availability-card-${floorplanIdx}-link`}>
+                              <a
+                                className="floorplan-mobile-link"
+                                href={walkthrough}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span>{alternateName || `Suite ${number}`}</span>
+                              </a>
+                              {floorplanIdx % 2 === 1 ? <br /> : undefined}
+                            </React.Fragment>
+                          );
+                        })}
+                    </>
+                  ) : null}
+                </div>
               </>
             );
           })}
@@ -194,7 +284,12 @@ function Facts({ displayMobile }) {
             <tr className="lower">
               <th align="left">SQ. FT</th>
               <th align="left">BUILDING</th>
-              <th align="left">FLOOR PLANS</th>
+              <th align="left">UNIT</th>
+              <th className="fp" align="left">
+                FLOOR PLANS
+              </th>
+              <th className="spacer" />
+              <th align="left">360º</th>
             </tr>
             {renderAvailabilityRows(availabilityData)}
           </tbody>

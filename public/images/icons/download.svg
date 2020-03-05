@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.86 38.13">
-  <title>Download Icon</title>
-    <g id="Download">
-      <polyline points="1 19.67 1 37.13 44.86 37.13 44.86 19.67" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
-      <polyline points="15.57 19.82 22.82 27.29 30.45 19.66" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
-      <line x1="22.82" y1="27.29" x2="22.82" y2="1" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
-    </g>
-  </svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54.4 45.2" style="enable-background:new 0 0 54.4 45.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>Download Icon</title>
+<g id="Download">
+	<polyline class="st0" points="5.3,23.2 5.3,40.7 49.1,40.7 49.1,23.2 	"/>
+	<polyline class="st0" points="19.8,23.4 27.1,30.8 34.7,23.2 	"/>
+	<line class="st0" x1="27.1" y1="30.8" x2="27.1" y2="4.5"/>
+</g>
+</svg>

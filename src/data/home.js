@@ -113,7 +113,7 @@ const pressLogos = [
   {
     logo: '/images/pages/home/press/la_business_journal.svg',
     alt: 'La Business Journal',
-    href: 'https://rowdtla.com/ghost-management-group-signs-115k-sf-arts-district-lease'
+    href: 'https://rowdtla.com/news/ghost-management-group-signs-115k-sf-arts-district-lease'
   },
   {
     logo: '/images/pages/home/press/la_mag.svg',
@@ -143,7 +143,7 @@ const pressLogos = [
   {
     logo: '/images/pages/home/press/urbanize_la.svg',
     alt: 'Urbanize LA',
-    href: 'https://rowdtla.com/this-weeks-leases-zappos-takes-space-at-row-dtla'
+    href: 'https://rowdtla.com/news/this-weeks-leases-zappos-takes-space-at-row-dtla'
   }
 ];
 
