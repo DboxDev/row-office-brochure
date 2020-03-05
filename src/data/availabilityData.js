@@ -10,8 +10,7 @@ const availabilityData = [
           {
             number: 330,
             address: 757,
-            walkthrough:
-              'https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmy.matterport.com%2Fshow%2F%3Fm%3DKBQvxvGEJKZ&data=02%7C01%7CMatt.Johnson%40am.jll.com%7Ca514d2fb8e3f44f1f14708d7a11f1389%7Cbfef2b06d2564f8ebd038d3687987063%7C0%7C0%7C637155027149615428&sdata=QbH3cN9WFecw1uhSgUI4pXE8kYv3EZMj6BHU54%2BIlS4%3D&reserved=0'
+            walkthrough: ''
           },
           { number: 345, address: 757, walkthrough: '' },
           { number: 350, address: 757, walkthrough: '' },
