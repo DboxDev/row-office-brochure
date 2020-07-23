@@ -5,17 +5,33 @@ const availabilityData = [
       {
         title: '757 S. ALAMEDA',
         floorplans: [
-          { number: 310, address: 757, walkthrough: '' },
-          { number: 320, address: 757, walkthrough: '' },
+          {
+            number: 310,
+            address: 757,
+            walkthrough: 'https://my.matterport.com/show/?m=2rjYji9MPXT',
+          },
+          {
+            number: 320,
+            address: 757,
+            walkthrough: 'https://my.matterport.com/show/?m=B1DH3stwUDq',
+          },
           {
             number: 330,
             address: 757,
-            walkthrough: '',
+            walkthrough: 'https://my.matterport.com/show/?m=rnhJ5kWm4vU',
           },
-          { number: 345, address: 757, walkthrough: '' },
+          {
+            number: 345,
+            address: 757,
+            walkthrough: 'https://my.matterport.com/show/?m=jK8bS8brRDL',
+          },
           { number: 350, address: 757, walkthrough: '' },
           { number: 360, address: 757, walkthrough: '' },
-          { number: 370, address: 757, walkthrough: '' },
+          {
+            number: 370,
+            address: 757,
+            walkthrough: 'https://my.matterport.com/show/?m=WJBZepoZCQH',
+          },
           { number: 380, address: 757, walkthrough: '' },
           { number: 390, address: 757, walkthrough: '' },
         ],
