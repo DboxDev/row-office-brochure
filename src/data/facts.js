@@ -1,0 +1,48 @@
+export const factsArray = [
+  [
+    '3,200 - 400,000 SF of flexible space and 3,200 - 65,000 SF of pre-built spaces',
+    'Tenant controlled air and filters (MERV 13 optional); Efficient VRF systems and outdoor air filtering through the space',
+    '4 stalls per 1,000 SF parking in a 4,000 stall parking structure',
+    'Adjacent to future Arts District South Metro Station',
+    'Shuttles to and from Union Station and 7th Street Metro stop',
+    'Metro Bike and indoor bike room',
+    '24/7 on-site security',
+    'Athletic club with wellness programs and personal training',
+    '7 restaurants and 35 retailers',
+    'Secure and lush, landscaped  outdoor space and expansive rooftop spaces, all disinfected daily with electrostatic misting machines',
+    'Dog-friendly district and buildings',
+  ],
+  [
+    'A CREATIVE “CITY WITHIN A CITY” IN THE ARTS DISTRICT',
+    '1920S HISTORIC BUILDINGS',
+    '32-ACRE INTIMATE, WALKABLE DISTRICT',
+    'EXPANSIVE WINDOWS, ABUNDANT NATURAL LIGHT',
+    'UNPARALLELED VIEWS OF DTLA SKYLINE',
+  ],
+  [
+    'ADJACENT TO FUTURE ARTS DISTRICT SOUTH METRO STATION',
+    '4 PER 1,000 SF PARKING, 4,000 STALL PARKING STRUCTURE',
+    'CONTINUOUS MORNING AND EVENING SHUTTLES TO AND FROM UNION STATION AND 7TH STREET METRO STATION',
+    'METRO BIKE STATION AND INDOOR BIKE ROOM',
+  ],
+  [
+    'FLEXIBLE FLOOR PLATES 3,200 UP TO 400,000 SF WITH THE ABILITY TO GROW',
+    'PREBUILT MOVE-IN READY SPACES FROM 3,600 – 65,000 SF',
+    'OVERSIZED ELEVATORS',
+    'FULLY ACCESSIBLE, DOUBLE-WIDE MODERNIZED STAIRWELLS',
+    'HVAC SERVICED BY TENANT CONTROLLED VRF SYSTEMS (MERV 13 OPTIONAL)',
+    'NET NEUTRAL FIBER CAPABILITIES TO ACCOMMODATE ANY PROVIDER',
+    '24 / 7 ON-SITE SECURITY',
+  ],
+  [
+    'EXCLUSIVE ATHLETIC CLUB WITH WELLNESS PROGRAMS AND PERSONAL TRAINING',
+    '7 RESTAURANTS FEATURING PLENTIFUL OUTDOOR DINING AND TAKE OUT OPTIONS 35 RETAILERS',
+    'ART AND MUSIC ACTIVATIONS',
+    'PRIVATE EVENT SPACES',
+    'CERAMIC STUDIO, WINE & SPIRITS TASTING, ARTISAN WORKSHOPS',
+  ],
+  [
+    'CO-TENANTS INCLUDE: ADIDAS, BE SOCIAL, GHOST MANAGEMENT, J BRAND, MIRO, SOYLENT, SPOTIFY, SPACES, UBTECH, WC + A',
+    'AROUND THE NEIGHBORHOOD: SOHO HOUSE, HAUSER & WIRTH, ART SHARE L.A., DOVER STREET MARKET, WARNER MUSIC GROUP, HONEY, WEWORK, BESTIA, ROLLING GREENS, ANGEL CITY BREWERY',
+  ],
+];
