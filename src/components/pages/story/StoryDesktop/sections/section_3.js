@@ -17,7 +17,7 @@ import {
   Row,
   Spacer,
   PlayerWrapper,
-  SectionCaption
+  SectionCaption,
 } from '../styles';
 
 import { keyFacts, pressLogos } from 'data/home';
