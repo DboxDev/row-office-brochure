@@ -1,18 +1,5 @@
 export const factsArray = [
   [
-    '3,200 - 400,000 SF of flexible space and 3,200 - 65,000 SF of pre-built spaces',
-    'Tenant controlled air and filters (MERV 13 optional); Efficient VRF systems and outdoor air filtering through the space',
-    '4 stalls per 1,000 SF parking in a 4,000 stall parking structure',
-    'Adjacent to future Arts District South Metro Station',
-    'Shuttles to and from Union Station and 7th Street Metro stop',
-    'Metro Bike and indoor bike room',
-    '24/7 on-site security',
-    'Athletic club with wellness programs and personal training',
-    '7 restaurants and 35 retailers',
-    'Secure and lush, landscaped  outdoor space and expansive rooftop spaces, all disinfected daily with electrostatic misting machines',
-    'Dog-friendly district and buildings',
-  ],
-  [
     'A CREATIVE “CITY WITHIN A CITY” IN THE ARTS DISTRICT',
     '1920S HISTORIC BUILDINGS',
     '32-ACRE INTIMATE, WALKABLE DISTRICT',
