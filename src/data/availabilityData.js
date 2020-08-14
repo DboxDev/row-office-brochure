@@ -25,7 +25,6 @@ const availabilityData = [
             address: 757,
             walkthrough: 'https://my.matterport.com/show/?m=jK8bS8brRDL',
           },
-          { number: 350, address: 757, walkthrough: '' },
           { number: 360, address: 757, walkthrough: '' },
           {
             number: 370,
