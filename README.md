@@ -1,29 +1,33 @@
-# ROW OFFICE BROCHURE
+## Row Office Brochure
 
-This site was built with Create React App
+This is the office brochure for ROW DTLA. It was built using CRA on the frontend, has no CMS and interfaces with the DBOX form api.
 
-### `npm start`
+### Framework / Language
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+CRA / React
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### CMS / Backend
 
-### `npm run build`
+None
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hosting
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+DBOX Hosted -- S3, Cloudfront
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CI/CD
 
-### Analyzing the Bundle Size
+AWS Code Pipeline / Code Deploy
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Active Branches
 
-### Deployment
+**Master**:
 
-This website deploys to AWS CodePipeline/Codebuild. The name of the pipeline is `row-office-brochure-dev`. There is a file in the main directory called `buildspec.yml` that deploys to s3 and invalidates the CF distribution.
+**Develop**:
+
+## Additional Integrations
+
+DBOX Form API for form submissions, an email is sent to the client on form submission -- https://github.com/DboxDev/form-api-dbxd
+
+## DNS
+
+Domain nameservers are pointed to AWS. We have control (not ownership) of DNS settings.
