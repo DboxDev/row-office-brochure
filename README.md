@@ -26,7 +26,7 @@ AWS Code Pipeline / Code Deploy
 
 ## Additional Integrations
 
-DBOX Form API for form submissions -- https://github.com/DboxDev/form-api-dbxd
+DBOX Form API for form submissions, an email is sent to the client on form submission -- https://github.com/DboxDev/form-api-dbxd
 
 ## DNS
 
