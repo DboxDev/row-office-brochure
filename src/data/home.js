@@ -10,9 +10,9 @@ const brandArray = [
     alt: 'wca',
   },
   {
-    logo: '/images/pages/home/brands/logos/soho_house_logo.svg',
-    background: '/images/pages/home/brands/backgrounds/sohohouse',
-    alt: 'soho house',
+    logo: '/images/pages/home/brands/logos/hyperloop.svg',
+    background: '/images/pages/home/brands/backgrounds/hyperloop',
+    alt: 'Virgin Hyperloop',
   },
   {
     logo: '/images/pages/home/brands/logos/jbrand_logo.svg',
