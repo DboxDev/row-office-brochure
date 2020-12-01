@@ -31,14 +31,14 @@ const availabilityData = [
             address: 757,
             walkthrough: 'https://my.matterport.com/show/?m=WJBZepoZCQH',
           },
-          { number: 380, address: 757, walkthrough: '' },
+          // { number: 380, address: 757, walkthrough: '' },
           { number: 390, address: 757, walkthrough: '' },
         ],
       },
       {
         title: '767 S. ALAMEDA',
         floorplans: [
-          { number: 330, address: 767, walkthrough: '' },
+          // { number: 330, address: 767, walkthrough: '' },
           {
             number: 410,
             address: 767,
