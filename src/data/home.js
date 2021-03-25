@@ -15,8 +15,8 @@ const brandArray = [
     alt: 'soho house',
   },
   {
-    logo: '/images/pages/home/brands/logos/jbrand_logo.svg',
-    background: '/images/pages/home/brands/backgrounds/j_brand',
+    logo: '/images/pages/home/brands/logos/fashionphile.svg',
+    background: '/images/pages/home/brands/backgrounds/fashionphile',
     alt: 'jbrand',
   },
   {
