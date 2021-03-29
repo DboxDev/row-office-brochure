@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 import { routes, secondaryRoutes } from 'data/routes';
 
@@ -78,6 +79,11 @@ function App() {
       <ContainerStyles />
       <RootStyles />
       <TypographyStyles />
+      <Helmet>
+        <title>ROW DTLA Office Brochure</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+      </Helmet>
       <Router>
         <ScrollToTop>
           {!displayMobile && <VideoIntro />}

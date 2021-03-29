@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
+import { Helmet } from "react-helmet";
 import styled from 'styled-components';
 import StoryDesktop from './StoryDesktop';
 import StoryMobile from './StoryMobile';
@@ -26,7 +27,16 @@ const StoryContainer = styled.div`
 `;
 
 function Story({ displayMobile }) {
-  return <StoryContainer>{displayMobile ? <StoryMobile /> : <StoryDesktop />}</StoryContainer>;
+  return (
+    <StoryContainer>
+      <Helmet>
+        <title>Creative Office Space Downtown Los Angeles, CA | ROW DTLA</title>
+        <meta name="keywords" content="office space downtown los angeles office space for lease downtown los angeles creative office space downtown los angeles" />
+        <meta name="description" content="Creative Office Space for Lease at ROW DTLA. Contemporary offices, creative community and authentic experiences that fosters collaboration for any team." />
+      </Helmet>
+      {displayMobile ? <StoryMobile /> : <StoryDesktop />}
+    </StoryContainer>
+  );
 }
 
 export default Story;
