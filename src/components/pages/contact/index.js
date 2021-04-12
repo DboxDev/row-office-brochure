@@ -333,12 +333,12 @@ function Contact({ displayMobile }) {
               </span>
             </div>
             <div className="contact">
-              <span>Matt Johnson (License #02104644)</span>
+              <span>Cassie Trosclair (License #02021435)</span>
               <span>
-                <a href="mailto:matt.johnson@am.jll.com">matt.johnson@am.jll.com</a>
+                <a href="mailto:cassie.trosclair@am.jll.com">cassie.trosclair@am.jll.com</a>
               </span>
               <span>
-                <a href="tel:8054443428">805.444.3428</a>
+                <a href="tel:3105953613">310.595.3613</a>
               </span>
             </div>
           </ContactInfoCol>
@@ -368,12 +368,12 @@ function Contact({ displayMobile }) {
           </span>
         </div>
         <div className="contact">
-          <span>Matt Johnson (License #02104644)</span>
+          <span>Cassie Trosclair (License #02021435)</span>
           <span>
-            <a href="mailto:matt.johnson@am.jll.com">matt.johnson@am.jll.com</a>
+            <a href="mailto:cassie.trosclair@am.jll.com">cassie.trosclair@am.jll.com</a>
           </span>
           <span>
-            <a href="tel:8054443428">805.444.3428</a>
+            <a href="tel:3105953613">310.595.3613</a>
           </span>
         </div>
       </ContactInfoCol>
