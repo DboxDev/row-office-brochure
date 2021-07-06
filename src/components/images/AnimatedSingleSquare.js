@@ -4,12 +4,11 @@ import styled from 'styled-components';
 
 const AnimatedSingleSquareContainer = styled.div`
   position: relative;
-  height: ${props => `${props.height}px` || 0};
+  padding-bottom: 100%;
 `;
 
 function AnimatedSingleSquare({ imgArray, active }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [divHeight, setDivHeight] = useState(0);
   const numOfImgs = imgArray.length;
   const ref = createRef();
 
@@ -28,31 +27,6 @@ function AnimatedSingleSquare({ imgArray, active }) {
       clearTimeout(timeOut);
     };
   });
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (ref.current !== null) {
-        const refHeight = ref.current.clientHeight;
-        setDivHeight(refHeight);
-      }
-    }, 500);
-    // eslint-disable-next-line
-  }, []);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      if (ref.current !== null) {
-        const refHeight = ref.current.clientHeight;
-        setDivHeight(refHeight);
-      }
-    };
-
-    window.addEventListener('resize', updateHeight);
-
-    return () => {
-      window.removeEventListener('resize', updateHeight);
-    };
-  }, [ref]);
 
   function renderGrid(imgArray) {
     return imgArray.map((src, index) => {
@@ -78,7 +52,7 @@ function AnimatedSingleSquare({ imgArray, active }) {
   }
 
   return (
-    <AnimatedSingleSquareContainer height={divHeight}>
+    <AnimatedSingleSquareContainer>
       {renderGrid(imgArray)}
     </AnimatedSingleSquareContainer>
   );

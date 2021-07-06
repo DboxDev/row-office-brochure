@@ -103,7 +103,7 @@ const colorMap = {
   }
 };
 
-const approvedRouteTitles = ['facts', 'maps', 'availability', 'contact'];
+const approvedRouteTitles = ['home', 'facts', 'maps', 'availability', 'contact'];
 
 function Header({ location, displayMobile, displayScreenRestrictor }) {
   let route = location.pathname.replace('/', '').toLowerCase() || 'home';
